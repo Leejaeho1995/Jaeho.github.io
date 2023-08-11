@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../08.04/js/jquery-1.12.3.js"></script>
+</head>
+<body>
+    <script>   
+    function.ready()
+    function pnum(x , y){
+        if((x < 0 && y> 0) || (x>0&& y<0)){
+            return true;
+        }else{
+            return false;
+        }
+    } 
+
+    console.log(pnum(10,20));
+    console.log(pnum(-10,10));
+    console.log(pnum(10,-9));
+  
+    </script>
+    
+<script>
+    function addJava(str){
+        if(str.substring(0,4)==="Java"){
+        return str;
+        }
+        return "Java" +str;
+    }
+    console.log(addJava("script"));
+    console.log(addJava("Javascript"));
+</script>
+<script>
+    function nums(num){
+        if(num %3==0 ||num %7==0){
+            return true;
+        }else(
+            return false;
+        )
+    }
+    console.log(num(13));
+    console.log(num(9));
+    console.log(num(14));
+</script>
+<script>
+    function check_Numbers(x,y){
+    if ((x>=50 && x<=99) || (y>=50 && y<=99)){
+        return true;
+    }else{
+        return false;
+    }
+}
+    console.log(check_Numbers(12,101));
+    console.log(check_Numbers(52,80));
+    console.log(check_Numbers(15,99));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: pink;      
+            position: relative;
+            margin: 200px;
+            animation-name: ani;
+            animation-duration: 4s;
+            animation-direction: alternate-reverse;
+            animation-fill-mode:both;
+}
+@keyframes ani {
+ 0%{background: red; left: 0px; top: 0;}
+ 25%{background: yellow; left: 200px; top: 0;}
+ 50%{background: blue; left: 200px;top: 200px;}
+ 75%{background: green; left:0;top: 200px;}
+ 100%{background: red; left: 0; top: 0;}
+}
+    </style>
+</head>
+<body>
+   <div class="box">글씨</div>
+
+    
+</body>
+</html>

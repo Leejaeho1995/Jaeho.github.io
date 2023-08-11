@@ -1,0 +1,130 @@
+*box{box-sizing: border-box;}
+body{
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+a,a:link{
+    text-decoration: none;
+    color: #333333;
+}
+a:hover{
+    text-decoration: underline;
+    color: #333333;
+}
+
+header{
+    height: 100px;
+    padding: 30px 20px;
+    background: #3cb149;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+.logo{
+    display: block;
+    width: 200px;
+    height: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 40px;
+    
+}
+
+.containor{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slider{
+    height: 300px;
+    position: relative;
+
+}
+nav{
+    width: 60%;
+    float: right;
+    position: relative;
+}
+ul.main-nav,ul.sub-nav{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.main-nav>li,ul.sub-nav>li{
+    float: left;
+    height: 40px;
+    width: 25%;
+}
+u.main-nav{
+    position: absolute;
+}
+
+ul.sub-nav{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+ul.sub-nav{
+    display: none;
+}
+nav:hover ul.sub-nav{
+    display: block;
+}
+
+ul.main-nav>li a{
+    display: block;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    background: #3cb149;
+
+}
+ul.sub-nav>li a{
+    display: block;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    background: #3cb149;
+}
+ul.main-nav:hover{
+    background: #3cb149;
+    color: #333;
+}
+ul.sub-nav>li a:hover{
+    background: #3cb149;
+    color: #333;
+}
+.main{
+    height: 200px;
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.main>div{
+    display: inline;
+}
+.main1{
+    height: 200px;
+    border-right: 1px dashed;
+}
+.main2{
+    height: 200px;
+    border-right: 1px dashed;
+}
+.main>div{
+    position: absolute;
+    text-align: center;
+
+}
+footer{
+    height: 100px;
+    background: #fff;
+    color: #333;
+    border-top: 3px solid #000;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: block;
+            border: 2px solid #ddd;
+            color: #999;
+            padding: 8px;
+            margin: 15px;
+        }
+    </style>
+        <script src="../08.04/js/jquery-1.12.3.js"></script>
+        <script>
+            $(function(){
+                var obj =[
+                    {"area":"서울"},
+                    {"area":"부산"},
+                    {"area":"김포"},
+                    {"area":"전주"},
+                    {"area":"파주"}
+                ]
+                let li =""
+                $(obj).each(function(i,o){
+                    li += "<li>"+ i+":" + o.area+"</li>"
+                })
+                document.getElementById("area").innerHTML="<ul>"+ li +"</ul>"
+                let li2 = ""
+                $("#menu1 li").each(function(i,o){
+                    console.log(i + ":",o)
+                //    li2 += o
+                })
+                // document.getElementById("clone").innerHTML="<ul>"+ li2 +"</ul>"
+            });
+        </script>
+</head>
+<body>
+    <div id="area"></div>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <div id="clone">
+        이곳에 menu1을 복사해서 넣으시오.
+    </div>
+    
+</body>
+</html>

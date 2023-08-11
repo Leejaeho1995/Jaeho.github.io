@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 검증</title>
+</head>
+
+<body>
+
+    <script>
+        // document.write
+
+        // const userEmail=prompt("이메일 주소를 입력하세요","");
+        // if (userEmail>= (".com",".co.kr","net","or.kr","go.kr")) else{
+        //     document.write(userEmail);
+        //     userEmail++;
+        // }
+        // console.log(userEmail);
+        //@ 포함이 되어 있는지 / 마지막 도메인이 co.kr ,com ,net, or.kr ,go.kr등 가지고 있는지
+        const userEmail = prompt("이메일 주소를 입력하세요", "");
+        let arrurl = ["co.kr", "com", "net", "go.kr", "or.kr"];
+        let check1 = false, check2 = false;
+        if (userEmail.indexOf("@") > 0) { check1 = true; }
+        for (let i = 0; i < arrurl.length; i++) {
+            if (userEmail.indexOf(arrurl[i]) > 0) {
+                check2 = true;
+            }
+        }
+        if (check1 && check2) {
+            document.write(userEmail + "님 환영합니다.");
+
+        }
+
+        else {
+            alert("이메일 형식이 아닙니다.");
+        }
+    </script>
+</body>
+
+</html>

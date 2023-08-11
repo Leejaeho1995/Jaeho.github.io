@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container{ width: 600px; margin-left:auto; margin-right:auto;}
+       .h1{
+         text-align:center;
+         margin:80px 10px;
+       }
+       table{
+          width: 450px;
+       }
+       table,th, td{
+          border-collapse: collapse;
+          border:1px solid #999;
+       }
+       th, td{
+          padding:8px;
+       }
+       /*말줄임 만들기
+       1.텍스트가 박스보다 넘칠경우에도 줄바꿈을 혀옹하지 않는다.  -->white-space:nowrap;
+       2.박스에 넘치는 부분을 가린다.  -->overflow:hidden;
+       3.넘치는 텍스트에 말줄임을 만든다. -->   text-overflow: ellipsis;*/
+       .title{
+        width: 400px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+       }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h1>게시판임</h1>
+       <table>
+          <tr>
+             <th width="50px">번호</th>
+             <th width="400px">제목</th>
+          </tr>
+          <tr>
+             <td style="text-align:center;">1</td>
+             <td>
+                <div class="title">이상은 역사를 맺어, 동력은 장식하는 귀는 과실이 것이다. 고행을 있음으로써 살았으며, 광야에서 얼음에 꾸며 밝은 사는가 봄바람이다.
+                     날카로우나 인간에 고행을 이상은 것이 풀밭에 만물은 꽃이 때까지 것이다. 타오르고 봄날의 무엇을 이것이다. 풍부하게 수 가슴에 그들은 튼튼하며, 창공에 우리는 것이다. 
+                     얼음에 황금시대를 사는가 심장의 할지니, 날카로우나 든 두손을 말이다.
+
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">2</td>
+            <td>
+                <div class="title">청춘의 우리 무엇이 풀밭에 그것은 이것이다. 스며들어 바이며, 군영과 관현악이며, 유소년에게서 청춘이 인생을 끓는 사막이다. 속에 귀는 우는 인생을 석가는 그것은 운다.
+                     그것은 내는 뼈 지혜는 천자만홍이 낙원을 위하여서, 찾아 인간은 칼이다. 같으며, 않는 꾸며 같이, 청춘의 새 할지니, 그것은 칼이다. 얼마나 노래하며 못할 이것은 방황하여도, 뿐이다.
+                      그들은 생생하며, 천고에 트고, 우리 이상의 지혜는 인생의 청춘은 사막이다.</div>
+            </td>
+         </tr>
+       </table>
+   </div>
+</body>
+</html>

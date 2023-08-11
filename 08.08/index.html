@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../08.04/js/jquery-1.12.3.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<!--1번문제-->
+<script>
+    function checkNumbers(){
+    var num1= parseInt(document.getElementById("num1").value);
+    var num2= parseInt(document.getElementById("num2").value);
+    if(num1 > 0 && num2 < 0){
+        document.getElementById("result").textContent="하나는 양수 다른하나는 음수"
+    }else{
+        document.getElementById("result").textContent="양수를 입력해주세요."
+    }
+}
+</script>
+<!--2번째 문제-->
+<script>
+    let java = 0;
+$(function(){
+    $('.prepend').click(function(){
+        $('ol').prepend("<span>java</span>");
+    });  
+});
+
+</script>
+    <!--3번 문제-->
+    <script>
+        for(let i=1;i<=100;i++){
+         if(i%3==0 && i%7!==0){
+       document.write("<span class=red>"+i +"</span>")
+        }else if
+         (i%3!==0 && i%7==0){
+             document.write("<span class=blue>"+ i +"</span>")
+            }else if(i%3==0 && i%7==0){
+                document.write("<span class=green>"+i +"</span>")
+            }
+        }
+    </script>
+    
+    <h3>1번문제</h3>
+    <label for="num1">첫번째 숫자(양수):</label>
+    <input type="number" id="num1">
+    <label for="num2">두번째 숫자(음수): </label>
+    <input type="numver" id="num2">
+    <button onclick="checkNumbers()">확인</button>
+    <p id="result"></p>
+    
+    <h3>2번째 문제</h3>
+    <ol>주어진 문자열앞에 java추가.</ol>
+    <button class="prepend">버튼</button>
+</body>
+
+</html>

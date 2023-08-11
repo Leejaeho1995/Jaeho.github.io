@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .mygallery{
+        position: relative;
+        margin: 30px auto;
+        width: 500px;
+
+    }
+    .arrow{
+        position:absolute;
+        z-index: 10;
+        text-decoration: none;
+        color: #333;
+        top: 45%;
+    }
+    .arrow i{
+        font-size: 60px;
+
+    }
+    .arrow-left{
+        left: 30px;
+    }
+    .aroow-right{
+        right: 30px;
+    }
+    .arrow:hover{
+        color: #999;
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="mygallery" class="mygallery">
+        <img src="./images/images/001.jpg" alt="001" id="gall" alt="#">
+        <a href="jascript:void(0);" class="arrow arrow-left" onclick="gallery(0)"><i class ="fa-solid fa-arrow-left"></i></a>
+        <a href="jascript:void(0);" class="arrow arrow-right" onclick="gallery(1)" ><i class ="fa-solid fa-arrow-right"></i></a>
+    </div>
+      
+    <script>
+        var num=1;
+        function gallery(e){
+            if(e){
+                if(num==8) return;
+                num++;
+
+            }else{
+                if(num==1) return;
+                num--;
+
+            }
+            let imgTag = document.getElementById("gall");
+            imgTag.setAttribute("src", "./images/images/00"+ num +".jpg");
+        }
+    </script>
+</body>
+</html>

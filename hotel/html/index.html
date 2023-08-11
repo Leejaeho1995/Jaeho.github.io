@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Noto+Sans+KR:wght@300&family=Pacifico&family=Poppins:ital,wght@0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../css/jquery.datetimepicker.min.css">
+<link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/style.css">
+ <script src="../js/jquery-1.12.3.js"></script>
+ <script src="../js/jquery.datetimepicker.full.min.js"></script>
+ <script src="../js/style.js"></script>
+    
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href="#"><img src="../logo.png" alt="hotel-logo" /></a>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#">accommodation</a>
+                   <ul class="sub-nav">
+                    <li><a href="#">수페리어 더블</a></li>
+                    <li><a href="#">수페리어 트윈</a></li>
+                    <li><a href="#">디럭스 패밀리 트윈</a></li>
+                    <li><a href="#">온돌</a></li>
+                    <li><a href="#">주니어 스위트 월플</a></li>
+                    <li><a href="#">주니어 스위트 더블</a></li>
+                    <li><a href="#">주니어 스위트 온돌</a></li>
+                    <li><a href="#">라마다 스위트</a></li>
+                    <li><a href="#">키즈룸</a></li>
+                    <li><a href="#">주니어 키즈 스위트</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">dining</a></li>
+                <li><a href="#">banquet & meeting</a></li>
+                <li><a href="#">facilities</a>
+                    <ul class="sub-nav">
+                        <li><a href="#">비즈니스 센터</a></li>
+                        <li><a href="#">휘트니스 센터</a></li>
+                        <li><a href="#">코인 런드리</a></li>
+                        <li><a href="#">키즈존</a></li>
+                        <li><a href="#">CU 편의점</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">offers</a>
+                    <ul class="sub-nav">
+                        <li><a href="#">객실패키지</a></li>
+                        <li><a href="#">프로모션 & 이벤트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">location</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+           <div class="language">
+              <a href="#"><i class="fa-solid fa-globe"></i> KR</a>
+              <div class="toggle">
+                 한국어 <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div class="global-language">
+                  <a href="#">English</a>
+                  <a href="#">中文</a>
+                  <a href="#">日本語</a>
+              </div>
+           </div>
+           <a href="#" class="room-booking">객실 예약하기</a>
+        </div>
+    </header>
+    <div class="slide">
+        <div class="slidein"><img src="../design/architecture-6646154_1920.jpg" alt="1"></div>
+        <div class="slidein"><img src="../design/beach-6301597_1920.jpg" alt="2"> </div>
+        <div class="slidein"><img src="../design/bedroom-1285156_1920.jpg" alt="3"> </div>
+        <div class="slidein"><img src="../design/bedroom-5664221_1920.jpg" alt="4"> </div>
+        <div class="slidein"><img src="../design/building-66789_1920.jpg" alt="5"> </div>
+
+        <h1 class="slide-title">
+            ramada encore by wyndham<br>
+            gimpo han river hotel
+        </h1>
+        <p class="slide-p">자연과 어우러진 최고의 쉼터, 라마다앙코르 김포한강호텔에서 편안한 휴식을 경험</p>
+        <a href="javascript:void(0)" class="arr arr-left"><img src="../arrow_back.svg" class="img" alt="왼쪽버튼"></a>
+        <a href="javascript:void(0)" class="arr arr-right"><img src="../arrow_forward.svg" class="img" alt="오른쪽버튼"></a>
+
+    </div>
+    <div class="datebox container">
+        <form id="myform" class="myform d-flex" method="post">
+           <div> 
+             <input type="text" name="check_in" readonly id="check_in" />
+             <i class="fa-regular fa-calendar-days"></i>
+           </div>  
+           <div> 
+             <input type="text" name="check_out" readonly id="check_out" />
+             <i class="fa-regular fa-calendar-days"></i>
+           </div>
+           <div>
+              <select name="rooms" id="rooms">
+                 <option value="">객실수</option>
+                 <option value="1">객실수 1</option>
+                 <option value="2">객실수 2</option>
+                 <option value="3">객실수 3</option>
+                 <option value="4">객실수 4</option>
+                 <option value="5">객실수 5</option>
+                 <option value="6">직접입력</option>
+              </select>
+           </div>  
+           <div>
+            <select name="adults" id="adults">
+                <option value="">성인</option>
+                <option value="1">성인 1</option>
+                <option value="2">성인 2</option>
+                <option value="3">성인 3</option>
+                <option value="4">성인 4</option>
+                <option value="5">성인 5</option>
+                <option value="6">직접입력</option>
+             </select>                 
+           </div>
+           <div>
+            <select name="childs" id="childs">
+                <option value="">아동</option>
+                <option value="1">아동 1</option>
+                <option value="2">아동 2</option>
+                <option value="3">아동 3</option>
+                <option value="4">아동 4</option>
+                <option value="5">아동 5</option>
+                <option value="6">직접입력</option>
+             </select>                 
+           </div>
+           <div>
+               <input type="text" placeholder="협력업체코드" name="cp_code" id="cp_code">
+           </div>
+           <div>
+              <button type="button" class="btn">SEARCH</button>
+           </div>
+        </form>
+    </div>
+
+</div>
+
+    <section class="main02">
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GDlW9yc1JkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="col-7">
+            <h1>라마다앙코르 바이원덤 김포한강호텔</h1>
+            <p>라마다앙코르 바이윈덤 김포한강호텔은 전세계적인 예약망과 마케팅 시스템을 구비한 세계적인 호텔 브랜드인 라마다와 제휴하여 2019년 3월 김포시 아라육로에 개관하였습니다.</p>
+                <p>지하 3층부터 지상 14층까지 총 594개 11타입의 객실과 키즈룸, 키즈존, 레스토랑, 연회장, 비즈니스 센터, 휘트니스 센터, 코인 런드리 등의 부대시설로 고객에게 편의와 휴식을 제공하고 있습니다.</p>
+                <p>14층에 준비된 월풀룸은 자연의 채광이 좋은 인테리어와 여유로운 한강 전경, 탁 트인 시야의 아침.저녁이 펼쳐지는 곳으로 한 폭의 수채화에 채색을 하는 마음으로 자연의 웅장함을 객실에 펼쳐놓았습니다.</p>        
+                <p>김포국제공항과 자동차로 10분거리로 연결되고, 킨텍스와 20분거리에 위치, 경인아라뱃길, 아라마리나 수상레저체험센터, 김포 경인여객터미널이 위치하며 합리적인 가격대의 관광과 힐링을 위한 호텔 상품을 경험할 수 있는 곳입니다.</p>
+                <a href="#">자세한 내용보기</a>
+        </div>
+    </div>
+</div>
+    </section>
+    <section class="main03">
+        <div class="container">
+            <div class="row">
+                <dlv class="col-6 h350">
+                    <span>location</span>
+                    <div>김포공항과 거리가 10분거리에,</div>
+                </dlv>
+                <dlv class="col-6 h350"><span>rooms & suites</span>
+                    <div>김포공항과 거리가 10분거리에,</div>
+                </dlv>
+                </dlv>
+                <dlv class="col-6 h350"><span>banquee & meeting</span>
+                    <div>김포공항과 거리가 10분거리에,</div>
+                </dlv>
+                </dlv>
+                <dlv class="col-6 h350"><span>dining</span>
+                    <div>김포공항과 거리가 10분거리에,</div>
+                </dlv>
+                </dlv>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

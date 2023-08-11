@@ -1,0 +1,64 @@
+javascript Array 관련함수
+join (연결문자) -- 배열 객체의 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환
+reverse() -- 배열 객체의 데이터 순서를 거꾸로 바꾼 후 반환
+sort() --배열 객체의 데이터를 오름차순으로 정렬
+slice(index1,index2) -- index1에서 index2 구간만큼 잘라서 배열 객체로 가져옴
+splice() -- 지정데이터를 삭제하고 그 구간에 새로운 데이터를 삽입
+concat() -- 2개의 배열 객체를 하나로 결합
+pop() -- 배열에 저장된 데이터중 마지막 인덱스에 저장된 데이터를 삭제
+push(new data) -- 배열의 마지막 인덱스에 새로운 데이터를 삽입
+shift() -- 배열에 저장된 데이터중 첫번째 인덱스에 저장된 데이터를 삭제
+unshift(new data) --배열의 첫번째 인덱스에 새로운 데이터를 삽입
+length -- 배열의 데이터개수를 반환
+flat() -- 다차원으로 된 배열을 하나의 차원으로 줄임
+toString() --배열의 원소를 쉼표로 구분하는 하나의 데이터로 반환
+
+------------------------------------------------------------------------
+
+transform: 
+
+translate(x,y) -- 이동  translateX(), translateY()
+rotate (x,y,z) --회전 rotateX(), rotateY() ,rotateY()
+scale() -- 크기 scaleX(), scaleY() 
+skew() --모서리각도 조절 skewX() , skewY()
+matrix() --scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()
+
+transition :
+transition-delay (움직임을 시작할 때 까지의 시간 )딜레이
+transition-duration (움직이는 동안의 시간)
+transition-property (움직임의 대상)
+transition-timing-function -
+
+-------------------------------------------------------------------------
+
+움직이는 방법을 미리 등록해놓고 이름을 정함.
+이름을 불러와서 애니메이션을 실행
+animation-name
+animation-delay
+animation-duration
+animation-timing-function
+animation-iteration-count 애니메이션을 몇번 할지 결정
+infinite -계속반복실행
+
+animation-direction :(normal -기본) (reverse -역방향으로 재생) (alternate -정방향 재생후 역방향 재생) (alternate-reverse - ) 
+
+animation-fill-mode 끝났을때 (none 기본, 최초의 상태) , (forwards 마지막 키프레임에서 정지) (backwards 첫 번째 키프레임에서 정지) both 
+
+@keyframe 이름{
+
+    박스가 회전하면서 커짐
+}
+
+.box{
+    animation-name:이름
+}
+<div.class="box></div>
+
+
+
+
+
+
+
+
+

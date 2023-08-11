@@ -1,0 +1,44 @@
+● SQL ( Structured Query Language)
+- 데이터베이스에 있는 필요한 정보를 사용할 수 있도록 도와주는 언어
+- 사용방법이나 문법이 다른언어 (Java , C , C# , Javacript)보다 단순하다.
+- 대부분의  DBMS 프로그램들이 비슷하기 때문에 모든 DBMS에서 사용가능.
+- 인터프리터 
+- 대소문자를 구별하지 않음 (단, 데이터 내용은 구별함)
+
+● DML (Data Mainpulation Language)
+- 테이블의 데이터를 조작하는 기능 ( 가장 많이 사용하게 되는 기능) 
+- CRUD (Create, Retrieve , Upadte , Delete)  -> 기본적인 데이터 처리기능
+(C)reate= insert = 데이터를 입력하는 기능. << insert into 테이블명 (컬럼명) Values (값); >>
+(R)etrieve = Select = 데이터를 조회 << select 컬럼명 from 테이블명 where 조건절; >>
+(U)padte = Upadte= 데이터를 수정 << update 테이블명 set 컬럼명 =값... where 조건절; >>
+(D)elete = Delete = 데이터를 삭제 << delete from 테이블명 where 조건절; >>
+-select 컬럼명 from 테이블명 where(조건) 컬럼= 조건;
+- 문자열은 '' 작은따옴표로 사용한다.
+- 같다는 표시는 == x // = o
+- 다르다는 표시는 != (ISO표준은아님)  <> 이게 정식표준
+
+insert into 테이블명 (컬럼1, 컬럼2, ....) Values (값1, 값2,...)
+-> insert into ~~~~~
+
+Upadte
+update 테이블명 set 컬럼명 
+
+Delete
+delete from 테이블명 where 조건절;
+
+
+
+
+●DDL ( Data Definition Language)
+- DB , 테이블 의 스키마를 정의, 수정
+Create : 데이터베이스 객체 생성.
+Drop : 데이터베이스 객체 삭제.
+Alter : 기존 데이터베이스를 다시 정의 
+
+
+
+●DCL ( Data Control Language)
+- DB 나 테이블의 접근권한 or CRUD의 권한을 정의하는 기능
+- 특정 사용자에게 테이블의 조회권한 허가/금지 권한의 부여및 회수
+GRANT : 권한 부여
+REVOKE : 권한 취소

@@ -1,0 +1,104 @@
+             div
+             ul
+     li                li
+  span span             p
+ 
+- div요소는 ul 의 부모이다. 모든 다른 요소들의 조상이다.
+- ul요소는 li의 부모이다. div요소의 자식이다.
+- li요소는 span의 부모이다. ul요소의 자식이다. div의 자손이다.
+- span요소는 좌측 li의 자식이고, ul div의 자손이다
+- 우측 li의 는 p의 부모이고 ul 의 자식이다.
+- p는 우측li의 자식이며 ul div의 자손이다.
+
+parent() - 부모
+parents() - 조상
+parentsUntil() - ~~부터 ~~선택 까지의 사이 요소애들만
+
+- 자식관계
+children()
+find()
+
+first-child
+last-child
+nth-child()
+first-of-type
+last-of-type
+nth-of-type()
+
+형제관계 ( siblings)
+siblings()
+next()
+nextAll()
+nextUntil()
+prev()
+prevAll()
+prevUntil()
+
+
+필터링
+first()
+last()
+eq(n) --> 배열번호
+filter()
+not()
+
+----------------------------------------------------------
+
+Jquery ( 배열 , object 메서드(함수))
+each() / $.each()  - $(요소).each(function(){}); $.each($(요소).function(){}); 
+배열에 저장된 문서 객체만큼 반복실행. 저장된 배열객체에 인덱스 순서대로 접근하여 객체선택.
+
+$.map() - $.map(Array, function) 
+배열에 저장된 데이터 수만큼 반복실행. 새로 저장된 배열 객체를 반환.
+
+$.grep() - $.grep(Array,function) 
+map과 같으나 반환값이 true인 경우에만 배열 데이터가 인덱스 오름차순으로 새 배열에 저장되어 그 배열을 반환
+
+$.inArray() - $.inArray(data, Array, start index) 
+배열안에서 데이터를 찾는다. 가장 먼저 찾은 데이터의 인덱스 반환
+
+-----------
+
+1. 쿼리결과 중복제거 distinct
+2. 논리연산자의 사용법 (and, or, not, in, between )
+3. 쿼리 결과 정렬(order by)
+
+
+Distinct
+select문의 결과값에서 특정 컬럼만 출력할 경우 중복된값이 있다면 이를 제거해서 표시하는 기능
+select distinct 컬럼명1, 컬럼명2...from 테이블명
+
+----
+AND OR NOT
+select 문의 조건절에 논리조건을 적용
+
+select * from 테이블명 where (not)조건1 and/or (not)조건2...
+국가코드가 kor이면서 인구가 100만 보다 많은 도시
+select * from city where countryCode='Kor' and population>1000000;
+국가코드가 kor chn jpn 인 도시를 찾으시오c
+select * from city where countryCode= 'kor'or countryCode='jpn' or countryCode='chn';
+select * from city where countryCode in('kor','chn','jpn');
+국가코드가 kor 가 아니면서 인구가 100만 이상인 도시
+select * from city where countryCode !='KOR and population>=1000000;
+
+국가코드가 'kor'이고 인구가 100만이상 500만이하인 도시
+select * from city where countryCode= 'kor'and (population>=1000000 and population<=5000000);
+select * from city where countryCode= 'kor'and (population between 1000000 and 5000000);
+
+
+-----
+결과값 정렬
+order by asc(오름차순 정렬) / desc(내림차순 정렬)
+
+기본값은 asc (오름차순 정렬)1 2 3 4...--
+한국의 도시를 찾아 인구수가 많은 순서대로 정렬
+select * from city where countryCode= 'kor' order by Population desc;
+from city order by countryCode desc, Population asc;
+select Distinct countryCode,population
+ from city order by countryCode desc, population asc;
+
+
+-----------------------------
+
+
+부트스트랩 css js

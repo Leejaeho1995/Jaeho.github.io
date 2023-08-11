@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 500px;
+            background: pink;
+            position: relative;
+        }
+        #anim{
+            width: 50px;
+            height: 50px;
+            background:blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="anim"></div>
+    </div>
+    <button onclick="movAnim()">누르세요</button>
+
+    <script>
+        function movAnim(){
+            let int = null;
+            let anim = document.getElementById("anim");
+            let pos = 0;
+            clearInterval(int);
+            int = setInterval(fr,5);
+            function fr(){
+                if(pos == 450){
+                    clearInterval(int);
+                }else{
+
+                
+                pos++;
+                anim.style.top = pos + "px"; 
+                anim.style.left = pos + "px";
+            }
+            }
+        }
+    </script>
+</body>
+</html>

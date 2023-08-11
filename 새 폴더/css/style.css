@@ -1,0 +1,131 @@
+*{box-sizing: border-box;}
+body{
+    color: #222328;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+a,a:link{
+    text-decoration: none;
+    color: #222328;
+
+}
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    height: 100px;
+    padding: 30px 20px;
+    background: pink;
+}
+nav{
+    width: 60%;
+    float: right;
+    position: relative;
+}
+ul.main-nav,ul.sub-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.main-nav>li,ul.sub-nav>li{
+    float: left;
+    height: 40px;
+    width: 25%;
+    padding: 5px;
+}
+ul.main-nav>li a{
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #d4c625;
+    text-align: center;
+}
+ul.main-nav>li a:hover{
+    background: rgba(200,255,255,0.8);
+    color: #333;
+}
+nav:hover ul.sub-nav{
+    display: block;
+}
+ul.sub-nav{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+ul.sub-nav{
+ display: none;
+}
+
+ul.sub-nav>li a{
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background: #d4c625;
+    border-bottom: 1px dashed #333;
+}
+ul.sub-nav>li a:hover{
+    background: rgba(200,255,255,0.8);
+}
+
+.slider{
+    height: 300px;
+    position: relative;
+}
+.text_box{
+    width: 350px;
+    height: 80px;
+    background: rgba(0,0,0,0.7);
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border-radius: 10px;
+}
+.main{
+    height: 200px;
+}
+footer{
+    height: 100px;
+    background: #ddd;
+    color: #fff;
+    border-top: 3px solid #000;
+}
+footer div{
+   float: left;
+
+}
+.logo{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.logo, .sns{
+    width: 300px;
+}
+.copy{
+    /* width: calc(100% - 600px); */
+    width: 600px;
+    text-align: center;
+    color: #000;
+    line-height: 100px;
+}
+.sns{
+    text-align: right;
+    padding: 30px 50px;
+
+}
+.sns>a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #d4c625;
+    margin-left: 15px;
+    border-radius: 10px;
+}

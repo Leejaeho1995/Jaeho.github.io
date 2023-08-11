@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const loginid ="ezen";
+        const loginpass ="1234";
+
+
+        const userid = prompt("아이디를 입력","");
+        const userpass = prompt("비밀번호를 입력","");
+        const login =("userid" + "userpass")
+        // if (userid == loginid && userpass == loginpass) {
+        //     document.write("환영합니다.");}
+        //     else{
+        //         document.write("다시입력하시오.");}
+        if (userid == loginid)
+        if (userpass == loginpass) {document.write("환영합니다."+ "userid님");
+            
+        }else{
+            alert("아이디가 틀렸습니다.");
+            location.reload();
+        }
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>

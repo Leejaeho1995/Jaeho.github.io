@@ -1,0 +1,58 @@
+함수란? 코드의 저장공간 ,코드공장 (만들어놓은 저장소)
+a + 1 =10
+let var const //
+function -->함수선언
+----함수의 모습 ----
+function 함수명(){    ---->제일 기본형
+    실행코드
+}
+
+let 변수 =function(){
+    실행코드
+}   -->이렇게도 사용가능
+-------
+ES6(ECMAScript 6)
+let 변수 = ()=>{
+    실행코드
+}
+
+-----------------------
+
+input 으로 name area 를 매개변수로 받아 button을 클릭하면
+안녕하세요? name입니다.사는곳은 area 입니다.
+
+
+var 변수; <==전역변수              //전역변수와 지역변수는 별개로 실행 //매개변수는 지역변수와 같다.
+var result <==전역변수
+if(){
+    let 지역변수;
+}
+-function(e<==매개변수) {
+    var 변수; <==지역변수
+    var result <==지역변수
+    let 변수2;
+}
+
+-----------------------------내장함수 정리 ---------------------------
+encodeURL() 문자를 유니코드값으로 인코딩 (영문,숫자,일부기호는 제외) ex > encodeURL("?query=값")
+encodeURL(Component) 문자를 유니코드값으로 인코딩 (기호도 인코딩함) ex >encodeURLComponent("?query=값");
+decodeURL() 유니코드값을 다시 문자화
+decodeURL(Component) "
+parselnt() 문자열 데이터를 정수형으로
+parseFloat() 문자열 데이터를 실수형으로 
+Number() 숫자형 데이터로 반환
+String() 문자형 데이터로 반환
+Boolean() 논리형 데이터로 반환
+isNaN() is Not a Number 문자형이면 true을 반환 ex> let num ="5-3"; --> isNaN(num) ->true / let num2= "53" isNaN(num2)=false;
+eval() 문자형 데이터를 따옴표 없는 js코드로 처리하는 함수  ex >mun =:15-3"; eval(num)=18
+
+
+1. 버튼은 클릭할때마다 (#ff0, #f6c0, #fcf, #cf0, #39f)의 색상값 중 1개가 랜덤으로 선택되어 body에 적용되도록 
+(힌트 1단계-버튼 클릭하면 함수호출 2단계-Math.random() length이용 3단계-documen.getElementById("아이디").style.backgroundColor=??? )
+
+2.
+
+
+
+ 이미지 4가지 옵션
+all print screen speech 

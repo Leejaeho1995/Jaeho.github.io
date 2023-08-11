@@ -1,0 +1,24 @@
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Bungee Spice', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+*box{box-sizing: border-box;}
+@font-face {
+    font-family: 'rbmn';
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/RobotoMono-Italic.eot);
+}
+
+.box{
+    border: 1px solid #333;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    white-space: nowrap; /*줄바꿈 되지않도록*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

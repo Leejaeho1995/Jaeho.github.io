@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: block;
+            border: 2px solid #ddd;
+            color: #999;
+            padding: 8px;
+            margin: 15px;
+        }
+    </style>
+        <script src="../08.04/js/jquery-1.12.3.js"></script>
+        <script>
+            $(function(){
+                let arr1 =[
+                 {"area":"서울",
+                "name":"홍길동"},
+                {"area":"김포",
+                "name":"김포수"},
+                {"area":"부산",
+                "name":"나부산"},
+                {"area":"고양",
+                "name":"박고양"}
+            ]
+            console.log(arr1)
+            let arr2 = $.map(arr1,function(a,b){
+                if(a.area=="김포"){
+                    return a
+                }
+            })
+            console.log(arr2)
+            })
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

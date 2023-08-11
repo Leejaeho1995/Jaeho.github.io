@@ -1,0 +1,43 @@
+증감연산자     =는 오른쪽에 있는 값을 왼쪽에 대입시킨다.
+
+while for 과 같이 많이 사용됨
+변수 ++;       ++변수;
+
+왼쪽으로 오른쪽 가면서 연산
+let B= 10;
+let A= ++B;
+A= 11   B=11
+
+let A =B++;
+
+A=10 B=11
+
+
+3 **2 = 9
+
+x = 5;
+x **=2;   25
+x=x**2;
+
+
+and = &&
+or = || 
+true && true = true
+true && false = false
+flase && true = false
+flase && flase = false
+
+ture || ture = ture
+ture || false = ture
+false || ture = ture
+false || false = false
+
+!( )not 연산자는 결과값의 반대를 알려준다.
+3항 연산
+
+
+3항 연산 
+숙제 적정체중
+평균체중 = (신장 -100) +0.9;
+평균체정 + - 5키로 까지는 정상체중입니다 -출력
+그렇지 않을경우 정상 체중이 아닙니다.

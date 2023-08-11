@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hi id="demo"></hi>
+    <a href="#" onclick="window.close()">이 페이지닫기</a>
+    <!-- <a href="#" onclick="window.opener.close()">부모 페이지닫기</a> -->
+    <a href="https://naver.com" onclick="window.opener.location.href='https://naver.com">네이버열기</a>
+    <script>
+        const h=navigator.language;
+        document.getElementById("deno").innerHTML=h;
+    </script>
+    
+</body>
+</html>

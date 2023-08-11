@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: block;
+            border: 2px solid #ddd;
+            color: #999;
+            padding: 8px;
+            margin: 15px;
+        }
+    </style>
+        <script src="../08.04/js/jquery-1.12.3.js"></script>
+        <script>
+            // $(function(){
+            //     const maxnum = $("div").length;
+            //     for(let i=0;i<maxnum;i++)
+            //     if(i%2==0){
+            //         $("div").eq(i).css({
+            //             backgroundColor:"yellow",
+            //             color:"#333"
+            //         })
+            //     }
+            // });
+            $(function(){
+                $("div").filter(".box").css({
+                    backgroundColor:"yellow",
+                    color:"#333"
+                })
+            })
+        </script>
+</head>
+<body>
+        <div>
+            <h3>첫 번째 제목입니다.</h3>
+            <p>첫 번째 내용입니다.</p>
+        </div>
+        <div class="box">
+            <h3>두 번째 제목입니다.</h3>
+            <p>두 번째 내용입니다.</p>
+        </div>
+        <div>
+            <h3>세 번째 제목입니다.</h3>
+            <p>세 번째 내용입니다.</p>
+        </div>
+        <div class="box">
+            <h3>네 번째 제목입니다.</h3>
+            <p>네 번째 내용입니다.</p>
+        </div>
+        <div>
+            <h3>다섯 번째 제목입니다.</h3>
+            <p>다섯 번째 내용입니다.</p>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        let result = 0; //예상정답
+        let correctNumber = 0; //컴퓨터가 생각한 정답
+        let tryNumber = 0;
+        $(document).ready(function(){
+            correctNumber= Math.floor(Math.random()*100)+ 1;
+            // $('#correct').val(correctNumber);
+        });
+        function tryU(){
+            $('#try').val(tryNumber) //input id=try에 시도횟수를 등록
+            tryNumber++; //함수가 실행될때 마다 값이 1씩증가
+            let hint= "";
+            let user = parseInt($('#user').val()); //유저가 입력한 값을 받아옴
+            if(correctNumber == user) result= user+ "는 정답입니다.";
+            else if(user <correctNumber ) hint = "숫자를 높이세요.";
+            else hint="숫자를 더 낮춰주세요.";
+            $('#hint').val(hint);
+            $('#correct').val(result);
+        }
+    </script>
+</head>
+<body>
+    <h1>컴퓨터가 생각한 글자를 알아맞춰 보세요</h1>
+    <ul>
+        <li><label>입력한 숫자</label>
+            <input type="text" id="user">
+            <button type="button" class="btn" onclick="tryU()">확인</button>
+        </li>
+        <li><label>시도횟수</label>
+            <input type="text" id="try" readonly>
+        </li>
+    </ul>
+    <div>
+        <label>힌트</label>
+        <input type="text" id="hint" />
+        <input type="text" id="correct" />
+    </div>
+    
+</body>
+</html>

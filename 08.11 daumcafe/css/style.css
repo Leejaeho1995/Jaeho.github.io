@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@700&family=Pacifico&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,800&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap");
+@import url('reset.css');
+@import url(bootstrap-grid.min.css);
+*{box-sizing: border-box;}
+body{
+    font-family: 'Noto Serif KR', serif;
+    color: #333;
+    font-size: 16px;
+}
+.text-center{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.flex-wrap-wrap{
+    flex-wrap: wrap;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-direction-row{
+    flex-direction: row;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-item-center{
+    align-items: center;
+}
+.d-block{
+    display: block;
+}
+.d-inline-block{
+    display: inline-block;
+}
+
+/* header*/
+header{
+    padding-top: 8px;
+    padding-left: 5px;
+}
+.small-logo a{
+    display: inline-block;
+    width: 42px;
+    height: 17px;
+    background: url(../img/minidaum_v5.png) no-repeat left top;
+    background-size: 290%;
+}
+.small-email{
+    width: 24px;
+    height: 24px;
+    background: url(../img/minidaum_v5.png) no-repeat left -23px;
+    background-size: 545%;
+}
+.small-list{
+    width: 24px;
+    height: 26px;
+    background: url(../img/minidaum_v5.png) no-repeat -35px -22px;
+    background-size: 545%;
+    position: relative;
+    cursor: pointer;
+}
+.small-navbox{
+    position: absolute;
+        top: 28px;
+        right: 0;
+        display: none;
+}
+.malpoogsun{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+    background: url(../img/minidaum_v5.png) no-repeat -70px -90px;
+    background-size: 600%;
+}
+.small-in-navbox{
+    margin-top: 17px;
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+.small-top-icon{
+    padding: 15px 20px;
+    border-bottom: 1px solid #e4e4e4;;
+}
+.small-top-icon img{
+    width: 36px;
+    height: 36px;
+}
+.small-top-icon .col-3{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.small-top-icon p{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.small-top-icon a{
+    font-weight: 600;
+    text-decoration: none;
+}
+.small-top-icon a:hover{
+    text-decoration: underline;
+}
+.btn-login{
+    width: 50px;
+    height: 24px;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    line-height: 12px;
+    color: #666;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.top-right-nav{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*서브메뉴*/
+.small-top-list{
+    padding: 20px 38px;
+    font-size: 11px;
+}
+.small-top-list li{
+    width: 25%;
+    border-right: 1px solid #e4e4e4;
+}
+.small-top-list li:last-child{
+    border: none;
+}
+.small-top-list a{
+    display: block;
+    text-decoration: none;
+    line-height: 25px;
+    padding-left: 10px;
+    font-weight: 300;
+}
+.small-top-list a:hover{
+    text-decoration: underline;
+}
+/*전체보기*/
+.top-right-all{
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    font-size: 14px;
+}
+.top-right-all a{
+    text-decoration: none;
+}
+.top-right-all a:hover{
+    text-decoration: underline;
+}
+@media (max-width:760px){
+
+.text-sm-center{
+    text-align: center;
+}
+.d-sm-flex{
+    display: flex;
+}
+.flex-sm-wrap-wrap{
+    flex-wrap: wrap;
+}
+.flex-sm-direction-column{
+    flex-direction: column;
+}
+.flex-sm-direction-row{
+    flex-direction: row;
+}
+.justify-sm-content-between{
+    justify-content: space-between;
+}
+.align-sm-item-center{
+    align-items: center;
+}
+.d-sm-block{
+    display: block;
+}
+.d-sm-inline-block{
+    display: inline-block;
+}
+
+}
+.mainimg{
+    margin-top: 10px;
+    text-align: left;
+}
+.main-nav{
+    float: right;
+    margin-right: -3px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+.main-nav-login{
+    float: left;
+}
+.main-nav-menu img{
+    float: left;
+    display: none;
+}
+.sub-nav{
+    text-decoration: none;
+    display: none;
+}

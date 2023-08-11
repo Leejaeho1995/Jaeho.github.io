@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str ="<table>";
+            str + ="<thead>";
+                str + ="<tr>";
+                    str + ="<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>";
+                    str + ="</tr>";
+                    str + ="</thead>";
+                    str + ="<tobody>";
+                        document.write(str);
+                        let k =1;
+                        for(let i =0; i<5;i++){
+                            document.write("<tr>")
+                                for(let j=1; j<8; j++){
+                                    if(k>30){
+                                document.write(<"<td></td>")
+                                }else{
+                                document.write("<td>"+k+"</td>")
+                                }
+                                k++
+                            }
+                            document.write("</tr>")
+                        }
+                        str2 = "</tobody></table>"
+                        document.write(str2)
+    </script>
+    
+</body>
+</html>

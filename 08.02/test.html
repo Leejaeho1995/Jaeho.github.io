@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#high").click(function(){
+
+           
+            $("#box").resize(function(){
+                
+
+            })
+        })
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="box"></div>
+    <button onclick="resize" id="high">박스가 커집니다.</button>
+    
+</body>
+</html>

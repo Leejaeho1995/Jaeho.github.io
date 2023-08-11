@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container * {
+            display: block;
+            border: 2px solid #ddd;
+            color: #999;
+            padding: 8px;
+            margin: 15px;
+        }
+    </style>
+        <script src="../08.04/js/jquery-1.12.3.js"></script>
+        <script>
+            $(function(){
+                $("h2").nextUntil("div").css({
+                    color:"red",
+                    borderColor:"red"
+                })
+            });
+        </script>
+</head>
+<body>
+    <div class="container">
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h4>h4</h4>
+        <p>p</p>
+        <div>div</div>
+        <h1>h1</h1>
+    </div>
+    
+</body>
+</html>

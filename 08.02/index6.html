@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1200px;
+            height: 800px;
+            background: #ddd;
+            margin: 0 auto;
+        }
+        .popup{
+            width: 300px;
+            height: 220px;
+            background: #fff;
+            border: 1px solid #999;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+            position: fixed;
+            top: calc(50% - 170px);
+            left: calc(50% - 150px);
+            display: none;
+        }
+
+    </style>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            //Jquery를 시작합니다.
+            $("p").click(function(){
+                alert("눌렀음.");
+            })
+        });
+        $(document).ready(function(){
+$("#show").click(function(){
+    $(".popup").show();
+});
+
+$("#close").click(function(){
+    $('.popup').hide();
+});
+$("#toggle").click(function(){
+    $('.popup').toggle();
+});
+
+$("#anim").click(function(){
+    $(".popup").animate({
+        left:'250px',
+        top:'250px',
+        width:'100px',
+        height:'100px'
+    })
+});
+
+});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="popup">팝업</div>
+        <button class="button" id="show">팝업보임</button>
+        <button class="button" id="close">팝업안보임</button>
+        <button class="button" id="toggle">팝업자동</button>
+        <button class="button" id="anim">움직이기</button>
+    </div>
+    
+</body>
+</html>    

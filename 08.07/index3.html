@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #333;
+            background: yellow;
+            font-size: 30px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+    <script src="../08.04/js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $('.box').addClass("hide");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">안녕하세요</div>
+    <button>지우기</button>
+    
+</body>
+</html>

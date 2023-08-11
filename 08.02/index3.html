@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" onsubmit="return validateForm()">
+        <ul>
+            <li>
+                <input type="text" name="uname" placeholder="이름">
+            </li>
+            <li>
+                <input  type="password" name="upass" placeholder="비밀번호">
+            </li>
+            <li>
+                <button type="submit">전송</button>
+            </li>
+        </ul>
+    </form>
+    <p id="sample"></p>
+    <script>    
+       function validateForm(){
+        let uname = document.forms["myform"]["uname"].value;
+        if(uname == ""||uname.length<2){
+            alert("이름이 없거나 한글자 이하입니다.");
+            return false;
+        }
+       }
+    </script>
+</body>
+</html>

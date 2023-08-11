@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <-- for를 이용해서 1부터 100까지 수중에서 5의 배수일 경우 빨간색
+    7의 배수일경우 초록색, 5의 배수이면서 7의 배수일경우 파란색 -->
+    <script>
+        for(let i=1;i<=100;i++){
+            if(i%5==0 && i%7!==0){
+                document.write("<p class=red>" + i+ "</p>")
+            }else if(i%5!=0 && i%7==0){
+                document.write("<p class=green>" + i + "</p>")
+            }else if(i%5==0 && i%7==0){
+                document.write("<p class=blue>" + i + "</p>")
+            }else{
+                document.write("<p>" + i + "</p>")
+            }
+    
+        }
+
+
+
+     
+    </script>
+    9단곱셈 1*1 ~ 9*9까지 
+<!-- <script>
+    for(let i= 1; i <=9; i++){
+        for(let j= 1; j<=9; j++){
+            document.write(i+"*"+ j + "=" +i*j,"<br>")
+        }
+    }
+    </script>
+    <script>
+        for(let h =1; h<=3; h++){
+            for( e= 1; e<=2; e++){
+                document.write(h+"행"+ e +"열" +"<br>")
+            }
+            document.write("<br>")
+        } -->
+    <!-- </script>
+    break; 반복문 중간에 멈추고 끝. -->
+   
+        <!-- // for(let i =1; i<=10; i++){
+        //     if(i==6) break;
+        //     document.write(i, "<br>")
+        // } -->
+        <!-- //  continue; 문 다음에 오는 코드는 무시하고 다음 연산을 진행.
+        // for(let i =1; i<=10; i++){
+        //     if(i%2==0)continue
+        //     document.write(i, "<br>")
+        // } -->
+       
+   
+    
+</body>
+</html>

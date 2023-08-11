@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <sapn onclick="view();">누르세요</sapn>
+      function view(){}-->
+    <sapn onclick="view();">누르세요</sapn>
+    <div id="mydiv">누르세요@@</div>
+
+    <script>
+        const mydiv= document.getElementById("mydiv");
+        mydiv.onclick= view;
+        mydiv.addEventListener('click',function(){
+           alert("눌렀음")
+        });
+
+
+function view(){
+    alert("눌렀습니다.");
+}
+    </script>
+    
+</body>
+</html>

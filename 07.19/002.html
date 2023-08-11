@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--post: 내부적으로 폼을 전송하는방식
+        =>눈에 보이지 않음
+        =>보안성이 좋다
+        =>최대크기가 정해져 있지 않아 많은 양을 보낼 수 있다.
+        =>단점.서버가 다를 경우 post 전송은 불가능하다.
+
+    get: 파라미터창을 통해 전송하는방식
+    =>보안성이 좋지 않다.
+    =>최대크기가 정해져있다.
+    =>장점.서버가 다를경우에도 전송이 가능하다.-->
+
+    <!--button의 종류 세가지
+    button reset submit-->
+
+    <form action="https://search.naver.com/search.naver" method="get">
+        <h2>네이버</h2>
+        <input type="text" name="query" value="">
+       <input type="password">
+       <input type="button" value="버튼">
+       <input type="reset" value="초기화">
+       <input type="submit" value="전송">
+
+    </form>
+
+    <form action="https://search.daum.net/search" method="get">
+        <h2>다음</h2>
+        <input type="text" name="q" value="">
+       <input type="password">
+       <input type="button" value="버튼">
+       <input type="reset" value="초기화">
+       <input type="submit" value="전송">
+
+    </form>
+    <form action="https://google.com/search" method="get">
+        <h2>구글</h2>
+        <input type="text" name="q" value="">
+       <input type="password">
+       <input type="button" value="버튼">
+       <input type="reset" value="초기화">
+       <input type="submit" value="전송">
+
+    </form>
+    
+</body>
+</html>

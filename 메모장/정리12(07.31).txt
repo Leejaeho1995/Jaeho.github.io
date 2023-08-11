@@ -1,0 +1,87 @@
+
+문자열
+------------------
+charAt(index) 문자열에서 해당 인덱스 번호의 문자를 반환
+
+inderOf("찾을문자") 일치하는 문자를 찾는다.(첫번째 문자만 찾음) 문자가 없으면 -1 을반환
+
+lastindexO 일치하는 문자를 오른쪽부터 찾는다.(오른쪽부터 첫번째 문자를 찾아 인덱스 번호반환) 문자가 없으면 -1을 반환
+
+mach("찾을문자") indexOf와 같음.(단 문자가 없으면 null를 반환)
+
+search("찾을문자") 일치하는 문자를 찾는다(첫번째 문자만 찾아 인덱스 번호반환) 문자가 없으면 -1을 반환
+
+relpace("바꿀문자","새문자") ch--relpaceAll ("바꿀문자", "찾을문자")
+
+slice(a , b) 첫번째 인덱스 부터 두번째 인덱스 이전까지
+
+substring(a , b) 첫번째 인덱스 부터 두번째 인덱스 이전까지
+
+substr(a,문자개수) - 첫번째 시작인덱스번호, 두번째 길이
+
+split("문자") 해당 문자로 데이터를 나눔
+
+ToLower 소문자로
+
+toUpper 대문자로
+
+charCodeAt ch--해당인덱스의 아스키코드값을 출력.반환받기 String.formCharCode(번호)
+
+length 문자열의 길이를 찾아준다
+
+
+
+------------------------------------------------------------------------------
+
+window객체의 종류 
+-open("URL","새창이름","새창옵션")
+* widow:새창의 너비 
+* height:새창의 높이 
+* left:x축간격 
+* top :y축간격 
+* scollbars :yes or no  
+* location: yes or no(URL영역 보이거나 숨김) 
+* status (상태창) 
+* toolbars(도구영역)
+-close()
+------------------------------------------------------------------------------
+
+alert() 
+prompt() 
+confirm() 
+moveTo(x,y) -지정한 새창의 위치를 이동시킴
+resizeTo(width,height) 지정한 새창크기를 변경
+setinterval(함수,시간) 지정된 시간 간격으로 함수를 계속해서 호출
+setTimeout(함수,시간) 지정된 시간에 단 한번 함수를 호출
+---------------------
+브라우저 객체 계층구조
+
+widow  -> document .screen , location , history ,navigator
+
+@ document ->body div img a form input..등 
+
+@ screen -> width height availwidth (작업표시줄 제외한 너비) availheight , colorDepth(모니터표현 가능한 컬러 bit반환) 
+
+@ location -> href- 주소 ,hash- URL해시값 , hostname -호스트이름 
+host- 호스트이름+포트번호 , search -쿼리요청값 반환 , reload()- 새로고침
+protocol -http 반환
+
+@ history -> back() , forward()go(이동숫자) , length
+
+@navigator (userAgent)->1.플랫폼 2.운영체제 3.브라우저 엔진이름 4.브라우저 이름 5.호환가능한 다른브라우저 이름
+
+
+
+
+
+----------------------------------------------------------
+
+flex  (자식들의 값을 정함)   가로(row) 세로(column)
+1.flex-direction: column , row(기본값) ,column-reverse , row-reverse
+2.flex-warp: warp , nowarp(기본값);
+1+2 flex-flow: row warp;  // flex-flow는 flex-direction, flex-warp
+justify-content:flex-start , end , center  
+space-around (여백을 똑같이 맞춰줌), 
+space-between(양쪽끝에 박스를 고정시키고 나머지 가운데 여백공간을 똑같이맞춰줌)
+
+align-items:flex-start,  flex-end , center ,baseline , stretch(기본값)

@@ -1,0 +1,20 @@
+
+.btn{
+    width: 35px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.btn>span{
+    display: block;
+    height: 5px;
+    background: #000;
+    margin: 8px 0;
+    transition: 0.5s;
+}
+.change>span:first-child{
+    transform: translate(0,11px) rotate(-45deg);
+}
+.change>span:last-child{
+    transform: translate(0,-11px) rotate(45deg);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mytime"></h1>
+    <script>
+        // function sum(num1,num2){
+        //     return num1 + num2;
+
+        // }
+        // var result =sum(10,34);
+        // document.write(result);
+        //return 결과값을 반환
+        setInterval(nowTime,1000);
+
+        function nowTime(){
+        const d =new Date();
+        let y=d.getFullYear();
+        let m=d.getMonth();
+        let dd=d.getDate();
+        let h=d.getHours();
+        let mm=d.getMinutes();
+        let s=d.getSeconds();
+        let rs=y+ "년"+ (m+1) + "월"+dd +"일" +h +"시";
+        rs +=mm+"분"+s +"초";
+        document.getElementById("mytime").innerHTML="지금은"+rs +"입니다";
+        // document.write("지금은"+rs+"입니다.");
+        }
+        // setinterval (함수이름,시간)
+    </script>
+    
+</body>
+</html>

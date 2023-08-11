@@ -1,0 +1,345 @@
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Bungee Spice', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+body{
+    margin:0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#212529;
+    font-size:16px;
+    padding-top:100px;
+}
+header{
+    width:100%;
+    height:100px;
+    position:fixed;
+    z-index:99;
+    display:flex;
+    justify-content: space-between;
+    background-color:rgba(255,255,255,0.9);
+    top:0;
+    left:0;
+    border-bottom:1px solid #ddd;
+}
+.logo{
+    padding:20px 25px;
+    width:30%;
+}
+.logo img{
+    height:50px;
+}
+nav{
+    width:60%;
+    height:100%;
+}
+ul.main-nav{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+ul.main-nav>li{
+   position:relative;
+}
+ul.main-nav>li>a{
+    padding:13px 20px;
+    text-decoration:none;
+    font-family:'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight:600;
+    color:#212529;
+    white-space: nowrap;
+    display:block;
+    transition:all 300ms ease;
+}
+ul.main-nav>li:hover{
+    background-color:#b03025;
+}
+ul.main-nav>li:hover>a{
+   color:#fff; 
+}
+ul.sub-nav{
+    position:absolute;
+    width:220px;
+    z-index:100;
+    display:none;
+}
+ul.sub-nav a{
+    display:block;
+    padding:13px 20px;
+    text-decoration: none;
+    color:#fff;
+    background-color:rgba(176, 48, 37, 0.9);
+    transition: 300ms;
+}
+ul.sub-nav a:hover{
+    background-color:rgba(0,0,0,0.9);
+}
+.right{
+    width:30%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.language{
+    display:flex;
+    justify-content:flex-end;
+    width:58%;
+    font-size:14px;
+    position:relative;
+}
+.language a{
+    text-decoration: none;
+    color:#212529;
+    font-weight: 300;
+    margin-right:15px;
+}
+.language i{
+    margin-right: 5px;
+}
+.toggle{
+    cursor:pointer;
+}
+.global-language{
+    position:absolute;
+    background-color:rgba(255,255,255,0.9);
+    padding-top:10px;
+    padding-bottom:10px;
+    width:150px;
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.15);
+    top: 30px;
+    left:160px;
+    display:none;
+}
+.global-language a{
+    display:block;
+    line-height:30px;
+    width:100%;
+    border-bottom:1px dotted #999;
+    padding-left:15px;
+}
+.global-language a:last-child{
+    border:none;
+}
+.global-language a:hover{
+    color:#b03025;
+    background:rgba(254,253,252,1);
+}
+.toggle{
+    border-left:1px solid #888;
+    padding-left:10px;
+}
+a.room-booking{
+    color:#fff;
+    background:#b03025;
+    display:flex;
+    height:100%;
+    width:180px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;    
+}
+
+/** 배너 **/
+.slide{
+    width:100%;
+    height:600px;
+    position:relative;
+}
+.slide img{
+    width:100%;
+    height:800px;
+    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.slidein{
+    position:absolute;
+    width:100%;
+    height:800px;
+    top:0;
+    left:0;
+    display:none;
+}
+.slide-title{
+    padding:10px 25px;
+    font-size:53px;
+    color:#fff;
+    background-color:rgba(0,0,0,0.4);
+    position:absolute;
+    text-transform: uppercase;
+    font-weight:700;
+    text-align:center;
+    line-height:70px;
+    z-index:10;
+    top: 120px;
+    left:50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
+}
+.slide-p{
+    font-size:24px;
+    width:55%;
+    text-align:center;
+    font-weight:400;
+    padding:10px 25px;
+    background-color:rgba(0,0,0,0.4);
+    position:relative;
+    top:300px;
+    color:#fff;
+    margin-left:auto;
+    margin-right:auto;
+    z-index:10;
+}
+.arr{
+    position:absolute;
+    display:block;
+    width:90px;
+    height:90px;
+}
+.arr-left{
+    top:50%;
+    left:50px;
+}
+.arr-right{
+    top:50%;
+    right:50px;
+}
+.arr .img{
+    width:90px;
+    height:90px;
+}
+/** 날짜 선택 ai **/
+.dateboxcontainer{
+    background:#fff;
+    position:relative;
+    padding:20px 25px;
+    top:550px;
+}
+form.d-flex>div{
+    width:100%;
+    position:relative;
+}
+.d-flex>div>i.fa-regular{
+    position:absolute;
+    right:12px;
+    top:12px;
+}
+form.d-flex>div:not(:first-child){
+    margin-left:10px;
+}
+
+.myform input,
+.myform select,
+.myform button{
+    width:100%;
+    border:1px solid rgb(169,169,160);
+    padding:12px 10px;
+    background:#fff;
+}
+.myform button{
+    background:#a01310;
+    color:#fff;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+/**** section 02****/
+.main02{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.main02 h1{
+    font-size: 42px;
+    font-weight: 500;
+    margin: 30px 0;
+    letter-spacing: -0.5px;
+}
+.main02 p{
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.main02 a{
+    border: 1px solid #0000;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    transform: 200ms;
+}
+.main02 a:hover{
+    background: #000;
+    color: #fff;
+}
+.main02 .align-self{
+    align-self:center;
+}
+/**/
+.main03{
+    height: 860px;
+    background-image: url(../design/exclusive-banquet-1812772_1920.jpg);
+    background-repeat: no-repeat;
+}
+.main03 .container{
+    height: inherit;
+}
+.main03 .row{
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+.row .h350{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+.h350:first-child{
+    background-image: url(../design/restaurant-1837150_1920.jpg);
+    background-size: cover;
+}
+.h350:nth-child(2){
+    background-image: url(../design/ship-105596_1920.jpg);
+    background-size: cover;
+}
+.h350:nth-child(3){
+    background-image: url(../design/towel-759980_1920.jpg);
+    background-size: cover;
+}
+.h350:last-child{
+    background-image: url(../design/villa-1737168_1920.jpg);
+    background-size: cover;
+}
+.h350 span{
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.h350>div{
+position: absolute;
+background-color: rgba(176, 48, 37, 0.9);
+overflow: hidden;
+width: 100%;
+height: 0%;
+text-align: center;
+padding-top: 0;
+}
+.h350:hover div{
+    height: 100%;
+    padding-top: 200px;
+}
+.h350:hover span{
+top: 45%;
+}

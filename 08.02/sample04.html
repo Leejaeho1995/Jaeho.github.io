@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style> 
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ul{
+        list-style-type: none;
+    }
+    .container{
+        display: flex;
+       margin-left: auto;
+       margin-right: auto;
+        background: pink;
+        width: 500px;
+        height: 300px;
+
+
+    }
+    .container div{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+    </style>
+</head>
+<body>
+    <header class="home"><h1>로그인창</h1></header>
+
+    <div class="container">
+        <a href="./sample03.html" onclick="window.close().href"> 이 페이지닫기</a>
+        <div class="login">
+            <ul>
+                <li>아 이 디<input type="text" class="name1" name="username" placeholder="아 이 디"></li>
+                <li>비밀번호<input type="password" class="password1" name="userps" placeholder="비밀 번호"> </li>
+                <button type="submit">로그인</button>
+                
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

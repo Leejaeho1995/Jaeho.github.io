@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid #333;
+            width: 900px;
+            margin: 10px auto;
+            padding: 15px;
+        }
+        .inbox{
+            float: left;
+            height: 200px;
+            width: 33.33333%;
+            border: 1px solid #ddd;
+        }
+        .clear::before{
+            content: "안녕";
+        }
+        .clear::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        *{box-sizing: border-box;}
+        body{
+            margin: 0;
+        }
+        header{
+           height: 90px;
+           border-bottom: 1px solid #999;
+           padding-top: 48px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 600px;
+            margin: auto;
+        }
+        li.mainnav{
+            float: left;
+            width: 25%;
+            font-size: 20px;
+            position: relative;
+        
+        }
+        /* li.mainnav:nth-child(even)>a{
+            background-color: blueviolet;
+   even , 2n 짝수만 odd , 2n-1홀수만 / 
+        } */
+      li.mainnav>a{
+        display: block;
+        line-height: 40px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        background-color: white;
+      }
+      li.mainnav>a:hover{
+        background-color: aquamarine;
+        color: #6f0303;
+      }
+      li.mainnav:first-child>a{
+        border-left: 1px solid #999;
+      }
+      li.mainnav:last-child>a{
+        border-right: 1px solid #999;
+      }
+      li.mainnav:hover>.subnav{
+        display: block;
+      }
+      .subnav{
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        background-color: #ddd;
+        z-index: 100;
+        padding: 20px 10px;
+
+      }
+      .slide{
+        width: 1300px;
+        height: 550px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .slide img{
+        max-width: 100%;
+      }
+    </style>
+
+</head>
+<body>
+   <header>
+    <nav>
+<ul>
+    <li class="mainnav"><a href="#">main01</a>
+    <ul class="subnav">
+        <li><a href="#">sub01</a></li>
+        <li><a href="#">sub02</a></li>
+        <li> <a href="#">sub03</a></li>
+        <li><a href="#">sub04</a></li>
+    </ul>
+    </li>
+    <li class="mainnav"><a href="#">main02</a>
+        <ul class="subnav">
+            <li><a href="#">sub01</a></li>
+            <li><a href="#">sub02</a></li>
+            <li> <a href="#">sub03</a></li>
+            <li><a href="#">sub04</a></li>
+        </ul>
+        </li></li>
+    <li class="mainnav"><a href="#">main03</a>
+        <ul class="subnav">
+        <li><a href="#">sub01</a></li>
+        <li><a href="#">sub02</a></li>
+        <li> <a href="#">sub03</a></li>
+        <li><a href="#">sub04</a></li>
+        </ul>
+        </li>
+    <li class="mainnav"><a href="#">main04</a>
+        <ul class="subnav">
+            <li><a href="#">sub01</a></li>
+        <li><a href="#">sub02</a></li>
+        <li> <a href="#">sub03</a></li>
+        <li><a href="#">sub04</a></li>
+        </ul>
+        </li>
+  
+</ul>
+
+    </nav>
+   </header>
+   <div class="slide">
+    <img src="" alt=" "/> 
+</div>
+
+<!-- 가상요소 box clear를 주고 .clear 스타일시트에서 적용 -->
+<div class="box clear">
+    <div class="inbox">1</div>
+    <div class="inbox">2</div>
+    <div class="inbox">3</div>
+
+</div>
+
+</body>
+</html>

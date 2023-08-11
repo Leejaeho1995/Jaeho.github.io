@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="num1" id="num1">
+        <input type="text" name="num2" id="num2">
+        <button type="button" onclick="val(1)">더하기</button>
+        <button type="button" onclick="val(3)">곱하기</button>
+        <button type="button" onclick="val(2)">빼기</button>
+        
+    </form>
+
+
+    <script> //
+        function val(e)//여기서부터//
+        {
+            var result;
+          
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        switch(e){
+            case 1:result= num1 + num2; break;
+            case 2:result= num1 - num2; break;
+            case 3:result= num1 * num2; break;
+
+        }//여기까지가 함수 
+        alert(result);  //함수{}안에서만 실행된다. 
+        //return result: 하면 결과값이 나온다.
+        }
+        
+
+    </script>
+
+    
+</body>
+</html>

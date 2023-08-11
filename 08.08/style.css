@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Noto+Sans+KR:wght@300;700&family=Pacifico&family=Poppins:ital,wght@0,700;0,800;0,900;1,800&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap');
+*{box-sizing: border-box;}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.container{
+    width: 800px;
+    margin: 40px auto;
+}
+.accordian{
+    background-color: #ededed;
+    color: #333;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+.accordian:hover{
+    background: #ccc;
+}
+.active{
+    background: #ccc;
+    font-weight: 600;
+}
+.panel{
+    border: 1px solid #ccc;
+    padding: 0 25px;
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-out;
+}
+.panel p{
+    padding: 25px 0;
+}

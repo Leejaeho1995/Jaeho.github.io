@@ -1,0 +1,119 @@
+Javascript event
+--- 마우스 이벤트 ---
+
+click 요소에 마우스를 클릭했을때
+dblclick 요소에 마우스를 더블클릭 했을때
+museover 요소에 마우스를 오버했을때
+museout 요소에 마우스를 아웃 했을때
+mosuedown  -   mouseup
+mousemove 마우스를 움직일때
+conextmenu 마우스 오른쪽 버튼 누를때
+
+--- 키 이벤트 ---
+
+keydown 키를 눌렀을때
+keyup 키를 떼었을때
+keypress 키룰 누른 상태에서
+
+--- 폼 이벤트 ---
+focus 요소에 포커스가 이동 되었을때
+blur 요소에서 포커스가 벗어날때
+change 요소에서 값이 변경되었을때
+submit 폼값이 전송될때
+reset reset 버튼을 누를떄
+select input이나 textarea 요소 안의 텍스트를 드래그하여 선택하였을때
+
+--- 기타 이벤트 ---
+load 페이지의 로딩이 있을때
+abort 로딩이 중단 되었을때
+unload 페이지가 다른곳으로 이동될때
+resize 요소의 사이즈가 변경되었을때
+scroll 스크롤바를 움직였을때
+
+１.인라인 방식
+<요소명 on이벤트명 = 자바스크립트코드> </요소명>
+
+２.고전 방식
+<요소명 id=아이디> </요소명>
+let 변수 = document.getElementById("아이디");
+변수.onclick = function{}(자바스크립트)
+
+３.이벤트 리스너 이용
+let 변수 = document.getElementById("아이디");
+변수.addEventListener("click",function(){
+    자바스크립트
+});
+
+
+Javascript Dom (document)
+id값을 이용 - document.getElementById;
+
+태그이름 이용 -document.getElementsByTagName("이름");
+
+class 값을 이용 -document.getElementsClassName("클래스");
+
+특정 요소를 지정해서 이용 :querySelector; querySelectorAll
+
+
+
+
+
+Javascript --> (jquery)
+
+--익스플로러 .네이게이트 (웹 브라우저 대표2개)  //
+
+Javascript ---> 바닐라 스크립트 (순수 자바스크립트) vs6
+
+
+
+jquery 
+$ -jquery실행 함수
+//$(document).ready(function(){
+    자바스크립트코드
+});
+$(function()){
+    자바스크립트코드};
+
+
+    hide ()= display:none;
+    show ()= display.block
+    toggle()
+    
+    fadeIn() fadeOut() fadeToggle() fadeTo()
+
+    slideDown() slideUp() slideToggle()
+
+
+
+    width 100 height 100 바탕파랑박스 만든후
+    버튼을 클릭할때마다 width height가 50씩 커지도록 
+
+
+
+    요소가 갖고있는 성질
+    dislpay : block inline none
+            inline-block     
+            flex  justfit-conent:  align-items
+
+    요소의 위치상태를 지정하는 옵션
+    position : static -자체적인 위치값은 없다. margin등을 이용하여 위치를 정한다
+                absolute - top left 위치값은 갖는다 . 다른상대적인박스는 무시한다.
+                relative margin ㅅ ㅏ용가능 top left값도 사용가능하다 (static+ absolute)
+              fixed -뷰포트에 고정된 top left값 
+              
+              margin --바깥여백
+              margin-top margin left margin-right margin-bottom-->
+              margin -30px; -> top 30 right30 bottom30 left30
+              margin- 30px 20px 10px -> top30 left right20 bottom 10
+              margin- 30 20 10 0-> top30 right20 bottom10 left 0
+
+              padding --안쪽여백
+               padding-top padding left padding-right padding-bottom-->
+              padding -30px; -> top 30 right30 bottom30 left30
+              padding- 30px 20px 10px -> top30 left right20 bottom 10
+              padding- 30 20 10 0-> top30 right20 bottom10 left 0
+              
+              외곽선
+              border-width , border-style, border-color --> border 1px solid #333;
+              
+

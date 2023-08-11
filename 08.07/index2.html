@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../08.04/js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $('.prepend').click(function(){
+                $('ol').prepend("<li>요소안의 앞</li>");
+            });
+            $('.append').click(function(){
+                $('ol').append("<l>요소안의 뒤</l>");
+            });
+            $('.after').click(function(){
+                $('ol').after("<p>요소밖의 뒤</p>");
+            });
+            $('.before').click(function(){
+                $('ol').before("<p>요소밖의 앞</p>");
+            });
+            $('ol').append('li추가 되었습니다'); //.appendTo('ol');이렇게도 사용가능
+            $('li:first-child').remove(); //remove 요소 자체를 삭제 empty 요소안의 내용만 삭제
+        });
+
+    </script>
+</head>
+<body>
+    <ol>
+        <li>김 철수</li>
+        <li>홍 길동</li>
+        <li>이 순이</li>
+    </ol>
+    <!--append() 요소 안쪽의 뒤
+        prepend() 요소 안쪽의 앞
+        after() 요소 바깥의 뒤
+        before() 요소 바깥의 앞-->
+    <button class="prepend">prepend</button>
+    <button class="append">append</button>
+    <button class="after"> after</button>
+    <button class="before">before</button>
+</body>
+</html>

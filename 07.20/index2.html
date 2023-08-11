@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정체중</title>
+</head>
+<body>
+    <h1> 당신의 체중은 안전합니까?</h1>
+    <p id ="username"></p>
+    <p id ="result"></p>
+    <script>
+        let name = prompt("당신의 이름은 무엇입니까?");
+        let height = prompt("당신의 키는?","0");
+        let weight = prompt("당신의 몸무게는?","0");
+
+     let nomal = (height-100)*0.9;
+        
+       let result= (weight >= nomal -5 && weight <= nomal + 5) ? "적정체중입니다.":"적정체중이아닙니다.";
+
+       document.getElementById("username").innerHTML ="반갑습니다." + name;
+       document.getElementById("result").innerHTML = name + result;
+
+    </script>
+</body>
+</html>

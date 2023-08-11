@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *.box{box-sizing: border-box;}
+        body{
+            opacity: 1;
+        }
+        body.loaded{
+            opacity: 0.5;
+        }
+        .main-box{
+            display: flex;
+            width: 1200px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .sub-box{
+            display: flex;
+            width: 800px;
+            height: 400px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background: pink;
+        }
+        .sub-box a{
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <link rel="stylesheet" href="./css/test.css">
+    <div class="btn" onclick="mynav(this)">
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        function mynav(e){
+            e.classList.toggle("change");
+        }
+    </script>
+
+    <div class="main-box">
+        <div class="sub-box">
+            <button><a href="./sample04.html" onclick="window.opener">로그인</a></button>
+        </div>
+    </div>
+</body>
+</html>

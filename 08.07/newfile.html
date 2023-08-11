@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide{
+            width: 1000px;
+            height: 500px;
+            border: 1px solid #333;
+           margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slidein{
+            position:absolute;
+            top: 0;
+            left: 0px;
+            width: 3000px;
+            height: 500px;
+            
+        }
+        .slidein div{
+            width: 1000px;
+            height: 500px;
+            float: left;
+        }
+        .slidein div.fst{
+            background: pink;
+        }
+        .slidein div.nth{
+            background: blue;
+        }
+        .slidein div.lst{
+            background: green;
+        }
+    </style>
+    <script src="../08.04/js/jquery-1.12.3.js"></script>
+    <script>
+    //     $(function(){
+    //         setInterval(autoslide, 2000);
+    //     });
+
+    //         function autoslide(){
+    //         $(".slidein").animate({
+    //         left: '-1000px'
+    //         }, 500, function(){
+    //             $('slidein>div:first-child()').appendTo(".slidein");
+    //             $('slidein>div:first-child()').remove();
+    //             $(".slidein").css("left","0");
+            
+    //     });
+    // } 
+    // 좌우 슬라이드
+        setInterval(function(){
+            $('.slidein').animate({top:'-='+300},500 function(){
+                $('.slidein>div:first-child()').appendTo('.slidein')
+                $('slidein').css({top:0})
+            })
+        }, 3000);
+
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <div class="slidein">
+            <div class="fst"></div>
+            <div class="nth"></div>
+            <div class="lst"></div>
+        </div>
+    </div>
+</body>
+</html>

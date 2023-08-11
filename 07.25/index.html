@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submenu{
+            display: none;
+        }
+        .mainmenu:hover>.submenu{
+            display: block;
+        }
+        a,a:link{
+            color: green;
+            text-decoration: none;
+
+        }
+        a:hover{
+            color: blue;
+            text-decoration: underline overline;
+        }
+        .box{
+            border: 1px solid #333;
+            width: 300px;
+            height: 200px;
+            display: none;
+        }
+        .box1{
+            border: 1px solid #333;
+            width: 300px;
+            height: 200px;
+            /* visibility: hidden; */
+            opacity: 0;
+        }
+        .box2{
+            border: 1px solid #333;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainmenu">
+    <a href="http://naver.com" >네이버</a>
+    <a href="#" class="submenu">네이버서브메뉴1</a>
+    </div>
+   <!-- div박스에 container클라스 아이디로 cont를 입력하세요. -->
+   <!-- div#container.cont #은 id class는 . -->
+    <!-- <div class="container" id="cont"></div> -->
+    <!-- ul>li 하위태그 ul>li* li태그 갯수만큼 생성 -->
+ <!-- ul>li*5 -->
+ <div class="box1">box1</div>
+<div class="box2">box2</div>
+
+
+
+
+
+</body>
+</html>

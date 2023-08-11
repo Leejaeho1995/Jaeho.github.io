@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+    // window.location.href="https://naver.com"
+    const mydate = new Date();
+    document.write("<h1>현재 날짜 정보</h1>");
+    let nowday;
+    let yoil;
+    switch(mydate.getDay()){
+        case 0:
+            yoil ="일";
+            break;
+            case 0:
+            yoil ="일";
+            break;
+            case 1:
+            yoil ="월";
+            break;
+            case 2:
+            yoil ="화";
+            break;
+            case 3:
+            yoil ="수";
+            break;
+            case 4:
+            yoil ="목";
+            break;
+            case 5:
+            yoil ="금";
+            break;
+            case 6:
+            yoil ="토";
+            break;
+
+
+
+    }
+
+    nowday =mydate.getFullYear() +"년" + (mydate.getMonth()+1) + "월";
+    nowday += mydate.getDate() + "일" + mydate.getHours() + "시"
+    nowday +=mydate.getMinutes() + "분" + mydate.getSeconds() + "초";
+    document.write("지금은" + nowday + " "+ yoil + "요일 입니다.");
+
+
+    const gunwoobirth = new Date(1999,7,29);
+    let theday;
+    switch(gunwoobirth.getDay()){
+        case 0:
+         theday ="일";
+            break;
+            case 0:
+            theday ="일";
+            break;
+            case 1:
+            theday ="월";
+            break;
+            case 2:
+            theday ="화";
+            break;
+            case 3:
+            theday ="수";
+            break;
+            case 4:
+            theday ="목";
+            break;
+            case 5:
+            theday ="금";
+            break;
+            case 6:
+            theday ="토";
+            break;    
+    }
+    nowday =mydate.getFullYear() +"년" + (mydate.getMonth()+1) + "월";
+    nowday += mydate.getDate() + "일" + mydate.getHours() + "시"
+    nowday +=mydate.getMinutes() + "분" + mydate.getSeconds() + "초";
+    document.write("건우의 생일은" +""+ theday  + "입니다.");
+
+    const lastDate = new Date(2023,11,20);
+    const diffDate = lastDate.getTime() - mydate.getTime();
+    const Datediff = Math.ceil(diffDate/(60*1000*60*24));
+    document.write("수료까지 남은일은" + Datediff + "일 입니다."+"<br>");
+
+
+
+    </script>
+</body>
+</html>

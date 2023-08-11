@@ -1,0 +1,50 @@
+윈도우의 fonts 폴더에 설치 할 수 있는 기본폰트 확장자
+1. otf > open type fonts
+-어도비 마이크로소프트 (고해상도 출력 작업)
+
+
+2. ttf > ture type font
+-애플 마이크로소프트
+
+
+@font-face{
+    폰트이름 정하고 경로를 나열
+}
+
+body{
+    font-famiy:폰트이름,폰트종류꼭 써준다.; ( 종류-> sans-self;)
+    color:폰트컬러
+    font-style :필기체 normal italic(이탤릭체) ,oblique(텍스트가 기울어짐)
+    font-weight :두께 100 ,300 ,400(normal) //lighter normal, bold bolder
+    font-size 
+    font-variant : normal , small-caps (작은대문자)
+}
+
+text-align: (정렬) center left right justify
+text-decoration --> (text-decoration-line + text-decoration-color + text=decoration-style + text-decoration-thckness)
+text-decoration: none, underline;
+
+text-transform: uppercase (대문자). lowercase , capitalize (대문자 스타일 예>Text)
+
+자간,행간 
+letter-spacing(글자와 글자사이의 간격) ,
+ word-spacing (단어와 단어사이의 간격)
+ line-height(한 줄의 위 아래 간격) (텍스트를 세로 간격으로 맞출때)
+ text-indent ()요소의 첫줄을 들여쓰기
+
+ text-overflow : clip , ellipsis(말줄음), "-"  (줄바꿈을 해줘야함)
+ white-space :nowarp (줄바꿈을 하지 않음)
+
+ text-shadow : x축 y축 흐림 크기 색깔
+
+ display : block  inline  inline-block  flex
+
+ position static(기본) absolute relative fixed sticky
+ 
+ box모델
+ border
+padding
+margin
+outline
+
+

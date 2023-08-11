@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body id="body">
+    <button onclick="mycol()">누르세요</button>
+    <script>                 //** let myfumc = function ->변수형은 안됌
+        // function myfunc(){  //** 함수의 Hoisting < 자바스크립트가 맨위로 올려버림>
+        //     //** 변수형 함수는 Hoisting 되지 않음 / 일반함수는 Hoisting가능
+        //     document.write("반갑습니다.","<br>");
+        //     document.write("자바스크립트","<br>");
+        // }
+//** 가동을 시키지 않아 아무것도 안나옴
+// myfunc();    //alert()  wirte() Date() prompt() ->함수
+// var count=0;
+// myfumc()
+// function myfumc(){
+//     count++;
+//     document.write("Hello"+count,"<br>");
+// }
+// var color =["yellow","green","blue","purple"];
+// var i=0;
+
+// function changecolor(){
+//     i++;
+//     if(i>=color.length){
+//         i=0;
+//     }
+//    var bodyTag =document.getElementById("body");
+//    bodyTag.style.backgroundColor =color[i];
+
+// // }
+
+// const mycol = () => {
+//     let arrColor = ["red","blue","green","yellow","pink"];
+//     let arrNum = arrColor.length;
+//     let i =0;
+//     i++;
+//     if(i>=arrColor){
+//         i=0;
+  
+//     }
+//     let bodyTeg = document.getElementById("body");
+//     bodyTeg.style.backgroundColor = arrColor[i];
+    
+// }
+
+const mycol = () =>{
+    let arrColor = ["red","blue","green","yellow","pink"];
+    let arrNum = Math.floor(Math.random() * arrColor.length);
+    let bodyTeg = document.getElementById("body");
+    bodyTeg.style.backgroundColor = arrColor[arrNum];
+
+}
+    </script>
+
+
+    
+</body>
+</html>

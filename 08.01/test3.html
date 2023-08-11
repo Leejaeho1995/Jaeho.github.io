@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼을 클릭할때마다 색상값 랜덤으로body 적용</title>
+</head>
+<body id="body">
+    <button onclick="changecolor()">색상 랜덤변경</button>
+    <script>
+        var color =["#ff0","#6c0","#fcf","#cf0","#39f"];
+        var i=0;
+        function changecolor(){
+            i=5;
+            if(i>=color.length){
+                i=Math.ceil(Math.random()*5);
+            }
+var bodyTag=document.getElementById("body");
+bodyTag.style.backgroundColor=color[i];
+
+        }
+    </script>
+    
+
+</body>
+</html>

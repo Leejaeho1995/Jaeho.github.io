@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 208px;
+            height: 206px;
+            background: pink;
+            background: url(../images/KakaoTalk_20230804_103031843_01.jpg) no-repeat;
+            background-size: cover;
+            position: relative;
+            
+        }
+        .box img{
+            position: absolute;
+            top: 94px;
+            left: 95px;
+            display: none;
+
+        }
+        .merong{
+            width: 70px;
+            height: 40px;
+            background: yellowgreen;
+            text-align: center;
+            border-radius: 30px;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            transform: rotate(50deg);
+            color: #fff;
+            top: 0px;
+            right: -20px;
+            opacity: 0;
+        }
+        .merong::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-style: solid;
+            border-top-color: yellowgreen;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            position: absolute;
+            bottom: -10px;
+            right: 25px;
+        }
+
+    </style>
+    <script src="../js/jquery-1.12.3.js"></script>
+    <script>
+        let num =0
+        $('.box img').eq(num).fadeIn(0)
+        setInterval(function(){
+            if(num<2){
+                num++;
+            }else{
+                num=0
+            }
+            $('.box img').fadeOut(500)
+            $('.box img').eq(num).fadeIn(500)
+        },1000);
+      
+        //jquery 콜백
+        // $(function(){
+        //     $('.box').animate({
+        //         width:'200px',
+        //         height:'200px'
+        //     }, 3000, function(){
+        //     alert("애니메이션이 완료 되었습니다.");
+        // });
+        // });
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="../images/KakaoTalk_20230804_103031843.png" alt="혓바닥">
+        <div class="merong">메롱</div>
+       </div>
+    <div class="btnbox">
+        <button>메롱하기</button>
+    </div>
+</body>
+</html>

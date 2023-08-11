@@ -1,0 +1,169 @@
+*{box-sizing: border-box;}
+.container{
+    width: 1330px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #333;
+    height: 100px;
+}
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 100px;
+    border: 1px dashed red;
+    display: flex;
+    flex-wrap: wrap;
+}
+[class^="col"]{
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.col-12{
+    flex: 0 0 auto;
+    width: 100%; 
+}
+.col-11{flex: 0 0 auto;
+    width: 91.6666663%;
+
+}
+.col-10{flex: 0 0 auto;
+    width: 83.33333%;
+
+}
+.col-9{flex: 0 0 auto;
+    width: 75% ;
+
+}
+.col-8{flex: 0 0 auto;
+    width: 66.666666%;
+
+}
+.col-7{
+    flex:0 0 auto;
+width: 58.333333%;}
+
+.col-6{
+    flex: 0 0 auto;
+    width: 50%;
+}
+.col-5{
+    flex: 0 0 auto;
+    width: 41.666667%;
+}
+.col-4{
+    flex: 0 0 auto;
+    width: 33.33333%;
+}
+.col-3{
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-2{flex: 0 0 auto;
+    width: 16.66666667%;
+}
+.col-1{
+    flex: 0 0 auto;
+    width: 8.3333333%;
+}
+@media (max-width: 1000px) {
+    .col-tb12{
+    flex: 0 0 auto;
+    width: 100%; 
+}
+.col-tb11{flex: 0 0 auto;
+    width: 91.6666663%;
+
+}
+.col-tb10{flex: 0 0 auto;
+    width: 83.33333%;
+
+}
+.col-tb9{flex: 0 0 auto;
+    width: 75% ;
+
+}
+.col-tb8{flex: 0 0 auto;
+    width: 66.666666%;
+
+}
+.col-tb7{
+    flex:0 0 auto;
+width: 58.333333%;}
+
+.col-tb6{
+    flex: 0 0 auto;
+    width: 50%;
+}
+.col-tb5{
+    flex: 0 0 auto;
+    width: 41.666667%;
+}
+.col-tb4{
+    flex: 0 0 auto;
+    width: 33.33333%;
+}
+.col-tb3{
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-tb2{flex: 0 0 auto;
+    width: 16.66666667%;
+}
+.col-tb1{
+    flex: 0 0 auto;
+    width: 8.3333333%;
+}
+    
+}
+@media (max-width:576px){
+    .col-mb-12{
+        flex: 0 0 auto;
+        width: 100%; 
+    }
+    .col-mb11{flex: 0 0 auto;
+        width: 91.6666663%;
+    
+    }
+    .col-mb10{flex: 0 0 auto;
+        width: 83.33333%;
+    
+    }
+    .col-mb9{flex: 0 0 auto;
+        width: 74.999999% ;
+    
+    }
+    .col-mb8{flex: 0 0 auto;
+        width: 66.666666%;
+    
+    }
+    .col-mb7{
+        flex:0 0 auto;
+    width: 58.333333%;}
+    
+    .col-mb6{
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-mb5{
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-mb4{
+        flex: 0 0 auto;
+        width: 33.33333%;
+    }
+    .col-mb3{
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-mb2{flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-mb1{
+        flex: 0 0 auto;
+        width: 8.3333333%;
+    }
+
+}

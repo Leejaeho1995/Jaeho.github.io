@@ -1,0 +1,166 @@
+객체 -존재하는 모든 것
+두가지의 특성 - 생성자 ,속성 , 기능 (함수)
+예)Tv 객체 -50인치 LG,삼성,검정 등 -속성
+tv를 켜다 ,끄다 ,채널을 돌리다 -기능
+
+
+
+@ javascript 는 객체기반 언어 (만드는것 자체로 객체가 됌)
+const 회사 ={
+    속성:속성값,
+    기능:기능값
+}
+@ javascript의 내장객체
+문자(String) 날짜 (Date) 배열(Array), 수학(Math), 정수(int)
+생성자 함수 -> new Date(); // New String();
+
+날짜객체 Date()
+getFullYear() -- 연도 정보를 가져옴 (getYear()두자리,getFullYear()네자리)
+getMonth() -- 월 정보를 가져옴 (현재 월 +1)
+getDate() -- 일 정보를 가져옴
+getDay() -- 요일 정보를 가져옴 (일:0 ~ 토:6)
+getHours() -- 시 정보를 가져옴
+getMinutes() -- 분 정보를 가져옴
+getSeconds() -- 초 정보를 가져옴
+getMiliseconds() -- 밀리초 정보를 가져옴
+getTime() -- 1970년 1월1일부터 현재까지의 경과된 시간을 밀리초로 표기
+toGMTString() -- GMT표준 표기 방식으로 문자형 데이터로 변환
+
+수학객채 Math()
+Math.abs(숫자) -- 절댓값을 반환
+Math.max(숫자1,숫자2,숫자3) -- ()안에 가장 큰 수를 반환
+Math.min(숫자1,숫자2,숫자3) -- ()안에 가장 작은 수를 반환
+Math.pow(숫자,제곱값) -- 숫자의 거듭제곱값을 반환 (ES6: 숫자**제곱값)
+Math.random() --0~1 사이의 난수를 발생
+Math.round(숫자) -- 소수 첫째자리에서 반올림 (정수)
+Math.ceil(숫자) -- 소수 첫째자리에서 무조건 올림 (정수)
+Math.floor(숫자) -- 소수 첫째자리에서 무조건 내림 (정수)
+Math.sqrt (숫자) -- 숫자의 제곱근을 반환
+Math.Pl -- 원주율 상수
+
+
+
+
+
+
+
+
+
+
+@ 브라우저 객체모델 (BOM)
+location(주소창) , window(브라우저) , screen(화면) , history , navigator , document(문서 영역)
+
+
+
+
+
+
+
+@ java 객체지향 언어
+class 회사{
+    //속성 
+    생성자 회사(){}
+    일하다({})
+}
+
+
+
+
+--------------------------------------
+
+우리반 
+철수 영수 민수 순이 영희
+우리반 =[철수,영수,민수,순이,영희];    -->배열 (0번부터 시작)
+
+배열을 선언하는 두가지 방법.  javascript > typescript
+(문자열,정수 등 같이 사용은 가능 권고하진 않음.)
+let 우리반 = new Array();
+1.let 우리반 =new Array ("철수","영수","민수","순이","영희");
+2.let 우리반 =["철수","영수","민수","순이","영희"];
+
+--> 우리반[0] -철수
+
+
+
+
+
+-------------------------
+
+
+body = 기본16px
+px
+1em =16px
+rem = 루트크기를 기준으로 잡음.
+
+------------모바일----------
+v는 뷰포트
+vw 1vw는 width =1%
+vh 1vh는 heigth =1%
+vmin
+vmax
+
+
+
+
+
+
+---------------
+박스- 가운데로 위치잡는법
+margin left right auto;
+
+박스 - 위치값 포지션으로 잡힌애들 가운데로 위치잡는법
+calc(50% - 절반값);
+
+
+
+
+-----------------
+
+transform: 
+
+translate(x,y) -- 이동  translateX(), translateY()
+rotate (x,y,z) --회전 rotateX(), rotateY() ,rotateY()
+scale() -- 크기 scaleX(), scaleY() 
+skew() --모서리각도 조절 skewX() , skewY()
+matrix() --scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()
+
+transition :
+transition-delay (움직임을 시작할 때 까지의 시간 )딜레이
+transition-duration (움직이는 동안의 시간)
+transition-property (움직임의 대상)
+transition-timing-function -
+
+움직이는 방법을 미리 등록해놓고 이름을 정함.
+이름을 불러와서 애니메이션을 실행
+animation-name
+animation-delay
+animation-duration
+animation-timing-function
+animation-iteration-count 애니메이션을 몇번 할지 결정
+infinite -계속반복실행
+
+animation-direction :(normal -기본) (reverse -역방향으로 재생) (alternate -정방향 재생후 역방향 재생) (alternate-reverse - ) 
+
+animation-fill-mode 끝났을때 (none 기본, 최초의 상태) , (forwards 마지막 키프레임에서 정지) (backwards 첫 번째 키프레임에서 정지) both
+
+@keyframe 이름{
+
+    박스가 회전하면서 커짐
+}
+.box{
+    animation-name:이름
+}
+<div.class="box></div>
+
+
+
+
+----------------------------
+.box{
+            width: 0px;
+            height: 0px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent green blue transparent;
+
+        }

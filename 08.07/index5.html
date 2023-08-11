@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            background: dodgerblue;
+            justify-content: flex-end;
+            height: 200px;
+            
+        }
+        .container div{
+            background: #fff;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--order
+    flex-grow 늘어나는것을 정할 수 있음
+    flex-shirnk 줄어드는것을 정할 수 있음
+    flex basis
+    flex - grow shrink basis
+    align-self-->
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self:center;">3</div>
+        <div>3</div>
+        <div>4</div>
+
+    </div>
+    
+</body>
+</html>

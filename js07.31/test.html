@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--배열객체와 수학객체를 이용하여 다음코드를 완성하라.
+    점심시간에 돈까스 된장국 김치찌개 회덮밥 컵라면 피자 중 어떤 메뉴를 선택할지 고민이다.
+    그냥 컴퓨터가 자동으로 선택하도록 하자-->
+    <script>
+        let menu= prompt(a="1번돈까스,2번 된장국,3번 김치찌개,4번 회덮밥,5번 컵라면,6번 피자");
+        let mainmenu;
+        switch(menu){
+            case "1번 돈까스":mainmenu =1; break;
+            case "2번 된장국":mainmenu =2; break;
+            case "3번 김치찌개":mainmenu =3; break;
+            case "4번 회덮밥":mainmenu =4; break;
+            case "5번 컵라면":mainmenu =5; break;
+            case "6번 피자":mainmenu =6; break;
+        }
+    
+        let com=Math.ceil(Math.random()*6);
+
+        document.write(com)
+            
+
+        const mennu =["돈까스","된장국","김치찌개","회덮밥","컵라면","피자"];
+
+let i= Math.floor(Math.random()*mennu.length);
+document.getElementById("menuu").textContent =mennu[i];
+    </script>
+</body>
+</html>

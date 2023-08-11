@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const site =prompt("네이버,다음,구글,야후 중 하나를 입력하세요.");
+    let url;
+    switch(site){
+        case "네이버":
+            url = "naver.com";
+            break;
+
+            case "다음":
+            url = "daum.net";
+            break;
+
+            case "구글":
+            url = "google.com";
+            break;
+        
+            case "야후":
+            url = "yahoo.com";
+            break;
+            default:
+                alert("보기중 하나를 입력하셔야 합니다.");
+                
+    }
+    if(url) location.href="https://"+url;
+</script>
+    
+</body>
+</html>

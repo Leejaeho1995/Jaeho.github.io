@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            /*ajax 메소드
+                $.ajax()
+                $.get() -get() 방식으로 http 요청
+                $.post() -post() 방식으로 http 요청
+                $.getScript() - 웹페이지 script 추가
+                $.getJSON() - 응답을 json으로 받음
+                .load() 서버에서 읽은 후 데이터를 요소에 배치
+                */
+
+                /*
+                url:"요청 url"
+                data:"요청과 함께 보내는 string 또는 json"
+                method : get 또는 post (외부서버 전송일때 post는 불가능 get만 가능)
+                    허용되지 않는 외부서버는 cors 에러발생 (보안에러)
+                dataType: "json" // 서버에 보내줄 데이터 타입 
+                success: function(data){}
+                .done(function(data)){
+
+                }.fail(function(xhr,상태_status 오류명_errThrown){
+
+                })
+
+                $.ajax({
+
+                })
+                */
+               $('button').click(function(){
+                $.ajax("box.html")
+                .done(function(){
+                    alert('성공')
+                })
+                .fail(function(){
+                    alert('실패')
+                })
+                .always(function(){
+                    alert('완료')
+                })
+        })
+    })
+    </script>
+</head>
+<body>
+    <div id="box"><p>이곳은 div box 영역입니다.</p></div>
+    <button>데이터를 읽어오기</button>
+    
+</body>
+</html>

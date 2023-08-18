@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align:center;
+            margin:60px 30px;
+        }
+        table{
+            width:600px;
+            margin:40px auto;
+            border:1px solid #333;
+        }
+        th, td{
+            padding:15px;
+            border:1px solid #333;
+        }
+        table,th,td{
+            border-collapse:collapse;
+        }
+    </style>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+           //$.get(url, callback)
+           $.ajax({
+              url: "members.xml",
+              dataType: "xml"
+           })
+           .done(function(data){
+              const xmlData = $(data).find("info");
+              const listLength = xmlData.length;
+              //console.log(listLength);
+              if(listLength){
+                 let tbl = "";
+                 $(xmlData).each(function(){
+                    tbl += "<tr><td>";
+                    tbl += $(this).find("no").text();
+                    tbl += "</td><td>";
+                    tbl += $(this).find("name").text();
+                    tbl += "</td><td>";
+                    tbl += $(this).find("age").text();
+                    tbl += "</td><td>";
+                    tbl += $(this).find("job").text();
+                    tbl += "</td></tr>";  
+                 });
+                 //$("tbody").html(tbl);
+                 $("tbody").append(tbl);
+              }
+           })
+           .fail(function(xhr, status){
+                console.log("데이터를 읽어오는데 실패함."+status);
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>회원명단</h1>
+<table>
+    <thead>  
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+    </tr>
+    </thead>  
+    <tbody>
+        <!-- members.json의 정보를 읽어서 이곳에 출력 하세요.-->
+        <td>0</td>
+        <td>샘플맨</td>
+        <td>30</td>
+        <td>백수</td>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+비동기
+
+xml ->JSON
+ajax  -> JSON
+날씨데이터 전송받아서 웹페이지->
+모바일웹 (cordova)
+
+new FormData()
+serialize()
+serializeArray
+
+ajax
+---------------------------
+
+
+일부만 조회 limit --> 오라클 ROWNUM
+
+상품테이블
+1.상품이름 가격 .....
+2.상품이름 가격 .....
+3.상품이름 가격....
+
+
+주문테이블
+
+1.주문자이름 주문자주소 지불가격 2---
+
+
+주문자이름 주문자주소 지불가격 상품테이블번호
+
+select * from table1(주문테이블) join table2(상품테이블) on 주문테이블.상품테이블번호=상품테이블번호.
+
+city 테이블과 country 테이블을 조인하시오.
+select * from city join country on city.CountryCode = country.Code;
+(city 테이블과 country 테이블의 공통되는 부분을 확인후 컬럼을 이용하여 조인)
+
+countryCode와 해당나라의 GNP를 출력
+select city.CountryCode, country.GNP from city join country on city.CountryCode=country.Code;
+
+select count(*)
+==================
+2. 내부 join 과 외부 join
+
+조인시 null 값을 허용 여부에 따라 내부조인(불가)과 외부조인(허용)으로 구분
+inner join – null 값을 허용하지 않음
+left join – 왼쪽 테이블의 null값을 포함해서 표시
+right join – 오른쪽 테이블의 null값을 포함해서 표시
+full join - mysql은 지원하지 않음
+
+-------------------------------
+3.ALIAS
+sql 쿼리 결과생성시 컬럼명에 대한 별명을 사용해 표시하는 기능
+select 테이블명1.컬럼명 as 별명1…. from …
+조인할 때 많이 사용됨
+
+컬럼명 as 다른이름
+select city.countryCode as cc, country.Name As cn
+ from
+city join country
+ on city.countrycode = country.code
+ where city.countrycode='kor';
+
+
+ ---------------------------------
+
+ 4.view
+
+ sql 쿼리의 결과값을 임시 테이블로 저장해서 사용
+사용용도가 끝나면 명시적으로 삭제 (drop view …)
+create view 뷰이름 as select ….
+
+
+select city.countryCode as cc, country.Name As cn
+ from
+city join country
+ on city.countrycode = country.code
+ where city.countrycode='kor';

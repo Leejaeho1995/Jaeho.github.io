@@ -1,0 +1,77 @@
+id :1 title:순이 content '김철수가 방에 들어 갔습니다'
+select * from 테이블 where content LIKE ='철수'
+'_철수% 
+
+like 검색은 db에 부담이 된다.
+
+select * from bbs where title = ' %검색내용%' or content LIKE '&검색내용&';
+----
+like 검색에서 or 은 db에 부담이 된다.
+
+
+1. city 테이블에서 국가코드가 k로 시작되는 모든 컬럼을 검색
+select * from city where countryCode LIKE 'k%';
+
+2. 끝에 k 가 있는
+select * from city where countryCode LIKE '%k';
+
+3. 중간에 k 가 있는
+select * from city where countryCode LIKE '%k%'
+
+4. k로 시작되는 세글자의 국가코드를 가진
+select * from city where countryCode LIKE 'k__%';
+
+bbs
+title
+content
+
+db내용이 없을 경우 null   ( 자바스크립트에서 ) 100 + null = '100' ( 문자열 + 숫자열= 문자열)
+1 => true
+0 = > false
+
+str값이 있으면 -> true
+str 값이 없으면 (null) -> false
+
+
+select * from 테이블 where 컬럼 is null;
+
+1. country 테이블에서 LifeExpectancy 이 없는 국가의 개수를 표시
+select count(*) from country where LifeExpectancy is null;
+2. 있는 국가의 개수를 표시해라
+select count(*) from country where LifeExpectancy is not null;
+
+
+
+
+-----------------------------------
+null 함수
+
+숫자컬럼을 연산해야 할 때 null을 처리해주는 함수
+null 값이 나오면 다른 값(주로 0)으로 대체해서 계산에 문제 없도록 처리
+ifnull / coalesce(mysql) ,  innull(sql server),  nvl(오라클)
+숫자연산 / 집합함수 (예: sum(), avg())의 경우는 처리가 내장되있음
+직접 함수나 쿼리에 넣는 경우는 null함수를 사용해야 함
+
+기대수명이 들어있는 개수를 표시하되
+ 1. null값을 미반영해서 표시
+select count(LifeExpectancy) from country;
+
+2. null 값을 반영해서 표시
+select count(IFNULL(LifeExpectancy,0)) from country;
+
+avg(LifeExpectancy)
+avg(IFNULL(LifeExpectancy)
+-------------------------------------------
+GROUP BY
+집합함수와 같이 사용해 그룹별 연산을 함
+select 컬럼명, 집합함수(컬럼명) from 테이블명 group by 컬럼명
+
+city 국가 코드별로 도시 숫자를 구하시오.
+select countryCode, count(countrycode) from city group by countryCode;
+
+HAVING
+집합연산(GROUP BY)에 where 조건절 대체로 사용
+
+city 국가 코드별로 도시 숫자를 구하시오.
+단, 도시가 70개 이상인 국가만 표시하시오.
+select countryCode, count(countrycode) from city group by countrycode HAVING count(countryCode) >= 70;

@@ -1,0 +1,44 @@
+1데이터베이스 sakila의 actor 테이블에서 배우의 이름과 성을 출력
+use sakila;
+select first_name,last_name from actor;
+select * from actor;
+
+2. 데이터베이스 world의 country에서 나라이름이 아프카니스탄,방글라데시 중국인곳의 컬럼 출력
+use world;
+select * from country where name='afghanistan' or name='bangladesh' or name='china';
+select * from 
+
+3.actor컬럼의 middle_name을 first+name과 last_name아이에 추가
+#create alter drop
+alter table actor add middle_name varchar(45) after first_name;
+
+4.추가한 컬럼이름을 middle_name에서 blob로 변경
+alter table actor modify column middle_name blob;
+5.추가한 컬럼을 삭제
+alter table actor drop column middle_name;
+
+6. 데이터 베이스 sakila에서 회원의 풀네임과 주소를 출력
+select * from staff;
+select s.first_name, s.last_name, a.address
+from staff s INNER JOIN address a on s.address_id = a.address_id;
+
+
+
+city에서 case when도시명이 3자를 넘는경우 
+then앞쪽 세글자를 대문자로 출력,도시인구수도 출력
+
+select
+ case
+ when length(Name) > 5
+then upper(mid(Name,1,3))
+when length(Name) <= 5
+then
+mid(Name,1,3)
+end as Names,
+population from city;
+
+---
+
+cordova
+장점 :안드로이드 , ios 동시개발 가능하다
+약점 : 웹뷰를 통한 개발이기 떄문에 복잡해지면 속도가 저하된다.

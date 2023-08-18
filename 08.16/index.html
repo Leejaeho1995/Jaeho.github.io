@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" src="../Bootstrap/css/bootstrap-grid.css">
+    <style>
+        h1.text-center{
+          margin: 50px 0 30px;
+          text-align: center;
+        }
+        .imgbox img{
+          max-width: 100%;
+        }
+        #pr .col-3{
+            margin-bottom: 30px;
+        }
+      </style>
+      <script src="../js/jquery-1.12.3.js"></script>
+
+      <script>
+        $(function(){
+            $(function(){
+            let pro= "product"
+            changeProduct(pro)
+            $('.btn').click(function(e){
+                e.preventDefault()
+                pro = $(this).data("any")
+                changeProduct(pro)
+
+            })
+        })
+ 
+        function changeProduct(pro){
+            $.get(pro+".json",function(data){
+                let products= data.product;
+                let str="";
+                for(let i=0;i< products.length;i++){
+                    str+= '<div class="col-3">'+
+                          '<div class="imgbox">' +
+          '<img src=" ' + products[i].img +' " alt="이미지">'+
+             '</div>' +
+        '<p>'+ products[i].title +'</p>'+
+        '<p><del>'+ products[i].pricedel+'</del>'+
+        '<ins>'+ products[i].priceadd +'</ins></p>'+
+     '</div>'+
+    '</div>'
+                }
+                $("#pr").html(str)
+            })
+        }
+        })
+    
+      </script>
+</head>
+<body>
+    <h1 class="text-center">상품목록</h1>
+  <div class="container">
+    <a href="#" class="btn" data-link="product.json">첫 번째</a>
+    <a href="#" class="btn" data-link="product2.json">두 번째</a>
+    <div class="row" id="pr">
+      <div class="col-3">
+        <div class="imgbox">
+          <img src="../08.01/images/images/001.jpg" alt="이미지">
+        </div>
+        <p>좋은 상품입니다.</p>
+        <p><del>12,000원</del><ins>10,000원</ins></p>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

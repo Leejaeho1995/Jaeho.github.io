@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.3.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+.weather{ 
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #b6022f;
+    background: #fff;
+    float: left;
+    display: block; 
+    margin: 10px;
+    text-align: center;
+    font-weight: 400;
+}
+.weather-nav{
+    background: #f7e8eb;
+    border-right: 1px solid #f7e8eb;
+    border-bottom: 1px solid #f7e8eb;
+    margin: 10px;
+    padding: 20px;
+}
+.weather-nav-th{
+    font-size: 20px;
+    border-bottom:1px solid #f7e8eb;
+    border-right: 1px solid #f7e8eb;
+    padding: 20px;
+
+}
+        </style>
+    <script>
+        $(function(){
+            const url = "https://api.openweathermap.org/data/2.5/weather?q=Gimpo&=lang=kr&appid={API key}"
+            $.get(url,function(rs){
+                console.log(rs)
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <table class="weather">
+        <tr>
+        <td class="weather-nav">날짜</td>
+            <th class="weather-nav-th">오늘</th>
+            <th class="weather-nav-th">내일</th>
+            <th class="weather-nav-th">모레</th>
+
+        </tr>
+        <tr>
+            <td class="weather-nav">날씨</td>
+            <th class="weather-nav-th">맑음</th>
+            <th class="weather-nav-th">구름많음</th>
+            <th class="weather-nav-th">소나기</th>
+        </tr>
+        <tr>
+            <td class="weather-nav">최저/최고온도</td>
+            <th class="weather-nav-th">24/35</th>
+            <th class="weather-nav-th">30/32</th>
+            <th class="weather-nav-th">20/25</th>
+        </tr>
+        <tr>
+            <td class="weather-nav">강수확률</td>
+            <th class="weather-nav-th">40%</th>
+            <th class="weather-nav-th">50%</th>
+            <th class="weather-nav-th">60%</th>
+        </tr>
+    </table>
+
+    </div>
+</body>
+</html>

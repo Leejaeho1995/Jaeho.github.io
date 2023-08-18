@@ -1,110 +1,394 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/jquery.js"></script>
-    <script src="./js/script.js"></script>
-  </head>
-  <body>
-    <!--header 디자인-->
-    <header>
-      <div class="container nav-top">
-        <div class="row justify-content-between">
-          <div class="small-logo"><a href="#"></a></div>
-          <div class="top-right-nav">
-            <button type="button" class="btn-login">로그인</button>
-            <a href="#" class="small-email d-inline-block"></a>
-            <div class="small-list d-inline-block">
-              <div class="small-navbox">
-                <!--말풍선 백그라운드 표시-->
-                <div class="malpoogsun"></div>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <script src="./js/jquery.js"></script>
+      <script src="./js/script.js"></script>
+    </head>
+    <body>
+      <!--header 디자인-->
+      <header>
+        <div class="container nav-top">
+          <div class="row justify-content-between">
+            <div class="small-logo"><a href="#"></a></div>
+            <div class="top-right-nav">
+              <button type="button" class="btn-login">로그인</button>
+              <a href="#" class="small-email d-inline-block"></a>
+              <div class="small-list d-inline-block">
+                <div class="small-navbox">
+                  <!--말풍선 백그라운드 표시-->
+                  <div class="malpoogsun"></div>
 
-                <!--보더가 1인 외곽선-->
-                <div class="small-in-navbox">
-                  <!--상단 아이콘 그룹 크기 가로세로 36-->
-                  <div class="small-top-icon">
-                    <div class="d-flex">
-                      <div class="col-3">
-                        <a href="#"
-                          ><img src="./img/ic_cafe.png" alt="cafe"
-                        /></a>
-                        <p class="text-center"><a href="#">카페</a></p>
-                      </div>
-                      <div class="col-3">
-                        <a href="#"
-                          ><img src="./img/ic_news.png" alt="news"
-                        /></a>
-                        <p class="text-center"><a href="#">뉴스</a></p>
-                      </div>
-                      <div class="col-3">
-                        <a href="#"><img src="./img/ic_map.png" alt="map" /></a>
-                        <p class="text-center"><a href="#">지도</a></p>
-                      </div>
-                      <div class="col-3">
-                        <a href="#"
-                          ><img src="./img/ic_shopping.png" alt="shopping"
-                        /></a>
-                        <p class="text-center"><a href="#">쇼핑</a></p>
+                  <!--보더가 1인 외곽선-->
+                  <div class="small-in-navbox">
+                    <!--상단 아이콘 그룹 크기 가로세로 36-->
+                    <div class="small-top-icon">
+                      <div class="d-flex">
+                        <div class="col-3">
+                          <a href="#"
+                            ><img src="./img/ic_cafe.png" alt="cafe"
+                          /></a>
+                          <p class="text-center"><a href="#">카페</a></p>
+                        </div>
+                        <div class="col-3">
+                          <a href="#"
+                            ><img src="./img/ic_news.png" alt="news"
+                          /></a>
+                          <p class="text-center"><a href="#">뉴스</a></p>
+                        </div>
+                        <div class="col-3">
+                          <a href="#"><img src="./img/ic_map.png" alt="map" /></a>
+                          <p class="text-center"><a href="#">지도</a></p>
+                        </div>
+                        <div class="col-3">
+                          <a href="#"
+                            ><img src="./img/ic_shopping.png" alt="shopping"
+                          /></a>
+                          <p class="text-center"><a href="#">쇼핑</a></p>
+                        </div>
                       </div>
                     </div>
-                  </div> <!--small top icon-->
-                  <ul class="small-top-list d-flex">
-                    <li>
+                    <!--small top icon-->
+                    <ul class="small-top-list d-flex">
+                      <li>
                         <a href="#">블로그</a>
                         <a href="#">티스토리</a>
                         <a href="#">카카오</a>
                         <a href="#">브런치</a>
                         <a href="#">게임</a>
-                    </li>
-                    <li>
+                      </li>
+                      <li>
                         <a href="#">스포츠</a>
                         <a href="#">연예</a>
                         <a href="#">영화</a>
                         <a href="#">웹툰</a>
                         <a href="#">멜론</a>
-                    </li>
-                    <li>
+                      </li>
+                      <li>
                         <a href="#">어학사전</a>
                         <a href="#">번역</a>
                         <a href="#">단어장</a>
                         <a href="#">맞춤법검사</a>
                         <a href="#">백과사전</a>
-                    </li>
-                    <li>
+                      </li>
+                      <li>
                         <a href="#">금융</a>
                         <a href="#">부동산</a>
                         <a href="#">자동차</a>
                         <a href="#">메이커스</a>
                         <a href="#">같이가치</a>
-                    </li>
-                  </ul>
-                  <!--전체 보기-->
-                  <div class="top-right-all text-center">
-                    <a href="#">전체보기</a>
+                      </li>
+                    </ul>
+                    <!--전체 보기-->
+                    <div class="top-right-all text-center">
+                      <a href="#">전체보기</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="gnb-bar">
-        <a href="#" class="logo">CAfe</a>
-        <ul class="gnb">
-            <li><a href="#" class="active">홈</a></li>
-            <li><a href="#" class="table-icon">테이블</a></li>
-            <li><a href="#" class="active">팬카체</a></li>
-            <li><a href="#" class="active">카페랭킹</a></li>
-            <li><a href="#" class="active">내카페</a></li>
-        </ul>
-        <form name="serch" method="get">
-            <div>전체검색</div>
-            <input type="text" class="search-form" placeholder="검색어 입력">
-        </form>
-      </div>
-    </header>
-  </body>
-</html>
+        <div class="gnb-bar container">
+          <a href="#" class="logo">Cafe</a>
+          <ul class="gnb">
+            <li class="active"><a href="#">홈</a></li>
+            <li class="table-icon"><a href="#">테이블</a></li>
+            <li><a href="#">팬카체</a></li>
+            <li><a href="#">카페랭킹</a></li>
+            <li><a href="#">내카페</a></li>
+          </ul>
+          <form name="search" class="search" id="search" method="get">
+            <div class="search-select">
+              <span>전체검색</span>
+              <i class="fa-solid fa-angle-down"></i>
+              <ul class="select-value">
+                <li class="active">전체검색</li>
+                <li>통합검색</li>
+                <li>카페검색</li>
+                <li>테이블검색</li>
+              </ul>
+            </div>
+            <input type="text" class="search-form" placeholder="검색어 입력" />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </header>
+      <section class="slider" id="main01">
+        <div class="container">
+          <!--루프-->
+          <div class="row flex-direction-column slide-row zindex">
+            <h2><span>이야기 하나</span>아직도 풀지 못한 고대 문명의 흔적</h2>
+            <ul class="slider-list">
+              <li class="active animate__fadeInUP">
+                <a href="#">
+                  <span>철이 없었던 미야문명의 건축물...jpg</span>
+                  <span class="sub"
+                    >*여성시대* 차분한 20대들의 아름다운 공간</span
+                  >
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>기원전 5세기 인간의 상상력 수준</span>
+                  <span class="sub">이종 격투기</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>11세기 고대 문명 대멸망기의 미스테리</span>
+                  <span class="sub">이종 격투기</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>최근 강력하게 제기된 초고대문명</span>
+                  <span class="sub">도탁스</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--루프-->
+          <!-- 루프 -->
+          <div class="row flex-direction-column slide-row">
+            <h2><span>이야기 둘</span> 세상 재미난 것이 남의 집 불구경</h2>
+            <ul class="slider-list">
+              <li class="active animate__fadeInUP">
+                <a href="#">
+                  <span>이직 중도퇴사자 연말정산 받는법</span>
+                  <span class="sub">밀리토리네</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>충주맨이 이직 안하는이유</span>
+                  <span class="sub">이종격투기</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>BC 11세기 고대 문명 대멸망기의 미스테리</span>
+                  <span class="sub">아이폰 넷플릭스</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>최근 강력하게 제기된 초고대문명 아틀란티스의</span>
+                  <span class="sub">도탁스</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /루프-->
+          <!-- 루프 -->
+          <div class="row flex-direction-column slide-row">
+            <h2><span>이야기 셋</span>피부과 시술을 받느냐 !? 마느냐 !?</h2>
+            <ul class="slider-list">
+              <li class="active animate__fadeInUP">
+                <a href="#">
+                  <span>철이 없었던 마야문명의 건축물..JPG</span>
+                  <span class="sub">영국 프리미어리그</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>기원전 5세기 인간의 상상력 수준</span>
+                  <span class="sub">이종격투기</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>BC 11세기 고대 문명 대멸망기의 미스테리</span>
+                  <span class="sub">방가방가</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>초전도체</span>
+                  <span class="sub">하이용</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /루프-->
+          <!-- 루프 -->
+          <div class="row flex-direction-column slide-row">
+            <h2>
+              <span>이야기 넷</span>이건 세상에서 제일비싼 단독공연 가수는..
+            </h2>
+            <ul class="slider-list">
+              <li class="active animate__fadeInUP">
+                <a href="#">
+                  <span>철이 없었던 마야문명의 건축물..JPG</span>
+                  <span class="sub">＊여성시대＊운 공간</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>기원전 5세기 인간의 상상력 수준</span>
+                  <span class="sub">이종격투기</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>BC 11세기 고대 문명 대멸망기의 미스테리</span>
+                  <span class="sub">넷플릭스</span>
+                </a>
+              </li>
+              <li class="animate__fadeInUP">
+                <a href="#">
+                  <span>최근 강력하게 제기된 초고대문명</span>
+                  <span class="sub">도탁스</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /루프-->
+        </div>
+        <a href="#" class="slide-btn slide-left"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></a>
+        <a href="#" class="slide-btn slide-right"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
+      </section>
+      <!--하단-->
+      <section class="best-cafe" id="main02">
+        <div class="inner_main02">
+          <div class="mainheader">
+            <ul class="menu01">
+              <li class="mycafe">내 카페</li>
+              <li class="gesipan"><a class="link-item">즐겨찾기 게시판</a></li>
+            </ul>
+            <div class="inner_sub">
+              <a href="#" target="_blank" class="link-item">알림</a>
+              <a href="#" target="_blank" class="link-item">쪽지</a>
+            </div>
+          </div>
+
+          <div id="home_top" class="mainheadline">
+            <ul class="menu02">
+              <li class="menu02-list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://img1.daumcdn.net/thumb/C151x151/?fname=https://t1.daumcdn.net/cfile/cafe/99BC534C5ABB2A372E"
+                      />
+
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">디젤매니아</strong>
+                          <p class="ptxt">대한민국 최대 명품 정보공유 커뮤니티</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu02">
+              <li class="menu02list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://img1.daumcdn.net/thumb/C151x151/?fname=https://t1.daumcdn.net/cfile/cafe/244AF8375365E5A12C"
+                      />
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">전통음식만들기</strong>
+                          <p class="ptxt">전통음식을 사랑하고,만들고,즐기며..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu02">
+              <li class="menu02list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://img1.daumcdn.net/thumb/C151x151/?fname=http://cfile256.uf.daum.net/image/990EE4405BF76F252FF2D3"
+                      />
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">도시의 밤을 불사르며..</strong>
+                          <p class="ptxt">대리운전기사들의 바쁜 삶과 애환..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu02">
+              <li class="menu02list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://img1.daumcdn.net/thumb/C151x151/?fname=http://cfile265.uf.daum.net/image/2519F9385143275E0907CF"
+                      />
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">art,culture,fashion by..</strong>
+                          <p class="ptxt">오즈세컨을 사랑하는 사람들의 모임!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu02">
+              <li class="menu02list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://img1.daumcdn.net/thumb/C151x151/?fname=https://t1.daumcdn.net/cfile/cafe/2256513954213BF316"
+                      />
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">굿모닝 말레이시아[G.M]</strong>
+                          <p class="ptxt">여행, 어학연수, 홈스테이 등..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu02">
+              <li class="menu02list">
+                <a href="#" target="_blank" class="link-item02">
+                  <div class="menu02_sub">
+                    <div class="menu02_subb">
+                      <img
+                        src="https://t1.daumcdn.net/cafe_image/cafetop/2019/favorite_defalut.png"
+                      />
+                      <div class="menu02_box">
+                        <div class="menu02_boxtxt">
+                          <strong class="strtxt">카페만들기</strong>
+                          <p class="ptxt">지금 카페를 만들어 보세요!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>

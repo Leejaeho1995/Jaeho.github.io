@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $("form").submit(function(e){
+                e.preventDefault()
+                const data= $('form').serializeArray()
+                const json_data= JSON.stringify(data)
+                console.log(json_data)
+            })
+        })
+
+
+        // $(function(){
+        //     $("form").submit(function(e){
+        //         e.preventDefault()
+        //         const data = new FormData(e.target);
+        //         const uid =data.get("name")
+        //         const pass= data.get("pass")
+        //         console.log(uid,pass)
+        //     })
+        // })
+
+
+        // $(function(){
+        //     $("form").submit(function(e){
+        //         if($("#name").val()==""|| $("#pass").val()==""){
+        //             alert("아이디 , 비밀번호를 입력하세요")
+        //             e.preventDefault()
+        //         }else{
+        //             $('form').submit()
+        //         }
+        //     })
+        // })
+    </script>
+</head>
+<body>
+    <form action="index.html" id="form" method="post">
+        <input type="text" id="name" name="name" placeholder="아이디">
+        <input type="password" id="pass" name="pass" placeholder="비밀번호">
+        <input type="submit">
+    </form>
+    
+    
+</body>
+</html>

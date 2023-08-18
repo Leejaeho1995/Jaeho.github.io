@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField">
+<button id="convertButton">첫단어 대문자</button>
+<p id="output"></p>
+
+<script>
+function capitalizeFirstLetter(str) {
+  const words = str.split(' ');
+  const capitalizedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  return capitalizedWords.join(' ');
+}
+
+const inputField = document.getElementById('inputField');
+const convertButton = document.getElementById('convertButton');
+const output = document.getElementById('output');
+
+convertButton.addEventListener('click', () => {
+  const inputValue = inputField.value;
+  const modifiedValue = capitalizeFirstLetter(inputValue);
+  output.textContent = modifiedValue;
+});
+</script>
+</body>
+</html>

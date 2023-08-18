@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jquery-1.12.3.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./slick-1.8.1/slick/slick.js"></script>
+  </head>
+  <body>
+    <header class="bg-white position-fixed">
+      <!--가져오는 정보
+            도시명, 날씨 , 날씨상세,아이콘, 현재온도,체감온도,최저/최고온도
+            습도,기압,가시거리,풍속,풍향,구름,일몰,일출
+        -->
+      <h1 class="logo text-center py-3">WEIN'S WeatherMaP</h1>
+      <div class="container">
+        <form class="row justify-content-end">
+          <input
+            type="search"
+            name="searchcity"
+            class="search"
+            placeholder="도시명을 입력하세요"
+          />
+          <button type="button" class="btn-search">
+            <i class="ri-search-line ri-xi"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+    <section class="banner py-5" id="banner">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-5 slider">
+            <h1>MY MOBILE APP</h1>
+            <p class="desc">download this cool app for free</p>
+            <p class="text">
+              밝은 것은 사람은 앞이 것이다. 있음으로써 길지 얼마나 할지니,
+              인생에 인생을 천지는 봄바람이다. 같이 새 충분히 가슴에 청춘은
+              사랑의 거선의 끓는다.
+            </p>
+            <p class="text">
+              가진 반짝이는 있는 그것은 피어나는 수 교향악이다. 얼음이 수 품고
+              인생을 보내는 간에 군영과 끓는 이것이다. 피고, 웅대한 이상의
+              사람은 하는 앞이 끓는 영락과 그와 부패뿐이다.
+            </p>
+            <a href="#" class="btn-download">DownLoad</a>
+          </div>
+          <div class="col-7 d-flex weather-slick justify-content-between">
+            <div class="mobile-phone">
+              <div
+                class="top d-flex justify-content-between align-items-center"
+              >
+                <i class="ri-menu-line"></i>
+                <p class="mobile-date">2023.08.17</p>
+              </div>
+              <div class="content">
+                <h1 class="text-center today-city-name">GIMPO-SI</h1>
+                <p class="text-center today-city-time">00시</p>
+                <div class="weatherbox d-flex">
+                  <div class="col-6">
+                    <i class="wi wi-day-sunny"></i>
+                  </div>
+                  <div class="col-6 today-temp">25<span>℃</span></div>
+                </div>
+
+                <div class="col-12 text-center mt-2 today-temp-arrow">
+                  <i class="ri-arrow-down-line"></i
+                  ><span class="today-down-temp">30℃/</span>
+                  <span class="today-up-temp">50℃</span
+                  ><i class="ri-arrow-up-line"></i>
+                </div>
+                <div
+                  class="col-12 mt-5 next-date temp-box-pr d-flex justify-content-between"
+                >
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--모바일폰-->
+            <div class="mobile-phone pup">
+              <div
+                class="top d-flex justify-content-between align-items-center"
+              >
+                <i class="ri-menu-line"></i>
+                <p class="mobile-date">2023.08.17</p>
+              </div>
+              <div class="content">
+                <h1 class="text-center today-city-name">GIMPO-SI</h1>
+                <p class="text-center today-city-time">00시</p>
+                <div class="weatherbox d-flex">
+                  <div class="col-6">
+                    <i class="wi wi-day-sunny"></i>
+                  </div>
+                  <div class="col-6 today-temp">25<span>℃</span></div>
+                </div>
+
+                <div class="col-12 text-center mt-2 today-temp-arrow">
+                  <i class="ri-arrow-down-line"></i
+                  ><span class="today-down-temp">30℃/</span>
+                  <span class="today-up-temp">50℃</span
+                  ><i class="ri-arrow-up-line"></i>
+                </div>
+                <div
+                  class="col-12 mt-5 next-date temp-box-pr d-flex justify-content-between"
+                >
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-phone">
+              <div
+                class="top d-flex justify-content-between align-items-center"
+              >
+                <i class="ri-menu-line"></i>
+                <p class="mobile-date">2023.08.17</p>
+              </div>
+              <div class="content">
+                <h1 class="text-center today-city-name">GIMPO-SI</h1>
+                <p class="text-center today-city-time">00시</p>
+                <div class="weatherbox d-flex">
+                  <div class="col-6">
+                    <i class="wi wi-day-sunny"></i>
+                  </div>
+                  <div class="col-6 today-temp">25<span>℃</span></div>
+                </div>
+
+                <div class="col-12 text-center mt-2 today-temp-arrow">
+                  <i class="ri-arrow-down-line"></i
+                  ><span class="today-down-temp">30℃/</span>
+                  <span class="today-up-temp">50℃</span
+                  ><i class="ri-arrow-up-line"></i>
+                </div>
+                <div
+                  class="col-12 mt-5 next-date temp-box-pr d-flex justify-content-between"
+                >
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--모바일폰-->
+            <div class="mobile-phone pup">
+              <div
+                class="top d-flex justify-content-between align-items-center"
+              >
+                <i class="ri-menu-line"></i>
+                <p class="mobile-date">2023.08.17</p>
+              </div>
+              <div class="content">
+                <h1 class="text-center today-city-name">GIMPO-SI</h1>
+                <p class="text-center today-city-time">00시</p>
+                <div class="weatherbox d-flex">
+                  <div class="col-6">
+                    <i class="wi wi-day-sunny"></i>
+                  </div>
+                  <div class="col-6 today-temp">25<span>℃</span></div>
+                </div>
+
+                <div class="col-12 text-center mt-2 today-temp-arrow">
+                  <i class="ri-arrow-down-line"></i
+                  ><span class="today-down-temp">30℃/</span>
+                  <span class="today-up-temp">50℃</span
+                  ><i class="ri-arrow-up-line"></i>
+                </div>
+                <div
+                  class="col-12 mt-5 next-date temp-box-pr d-flex justify-content-between"
+                >
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                  <div class="temp-box">
+                    <div class="next-temp">
+                      <span>TUE</span>
+                      <span>25℃</span>
+                    </div>
+                    <div class="next-icon">
+                      <i class="wi wi-day-sunny"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--MOBILE PHONE 끝-->
+<section class="main01" id="main01">
+  <div class="container">
+    <div class="row flex-dirction-column">
+      <h1>GIMPO 지역 상세 날씨</h1>
+      <table class="table table-bordered table-hover">
+        <tr>
+          <th>현재온도</th>
+          <td>26℃</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">흐림</i>
+          </td>
+        </tr>
+        <tr>
+          <th>체감온도</th>
+          <td>30℃</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">맑음</i>
+          </td>
+        </tr>
+        <tr>
+          <th>최저기온</th>
+          <td>32℃</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">구름많음</i>
+          </td>
+        </tr>
+        <tr>
+          <th>최고기온</th>
+          <td>36℃</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>습도</th>
+          <td>65%</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>기압</th>
+          <td>정상</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>가시거리</th>
+          <td>2km</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>풍속</th>
+          <td>10ms/5m</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>풍향</th>
+          <td>북서풍</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>구름</th>
+          <td>구름없이 맑음</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>일몰</th>
+          <td>AM 06: 16</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+        <tr>
+          <th>일출</th>
+          <td>PM 19:44</td>
+          <th>날씨</th>
+          <td>
+            <i class="ri-menu-line">소나기</i>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>

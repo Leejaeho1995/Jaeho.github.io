@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align:center;
+            margin:60px 30px;
+        }
+        table{
+            width:600px;
+            margin:40px auto;
+            border:1px solid #333;
+        }
+        th, td{
+            padding:15px;
+            border:1px solid #333;
+        }
+        table,th,td{
+            border-collapse:collapse;
+        }
+    </style>
+    <script src="../새 폴더/js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+           //$.get(url, callback)
+           $.ajax({
+              url: "index.json",
+              dataType: "json"
+           })
+           .done(function(data){
+              //받은 info 배열의 갯수 data.info.length;
+              let obj = data.info;
+              let tbl = "";
+              console.log(obj.length); 
+              for(let i=0; i<obj.length; i++){
+                 tbl +="<tr>"
+                 tbl += "<td>"+obj[i].no+"</td>";
+                 tbl += "<td>"+obj[i].name+"</td>";
+                 tbl += "<td>"+obj[i].age+"</td>";
+                 tbl += "<td>"+obj[i].job+"</td>";
+                 tbl += "</tr>";
+              }
+              $("tbody").html(tbl);
+           })
+           .fail(function(xhr, status){
+                console.log("데이터를 읽어오는데 실패함."+status);
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>회원명단</h1>
+<table>
+    <thead>  
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+    </tr>
+    </thead>  
+    <tbody>
+        <!-- members.json의 정보를 읽어서 이곳에 출력 하세요.-->
+    </tbody>
+</table>
+</body>
+</html>

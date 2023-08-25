@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('weather-icons.min.css');
+@import url('weather-icons-wind.min.css');
+@import url('remixicon.css');
+@import url('./slick/slick.css');
+@import url('./slick/slick-theme.css');
+@import url('../Bootstrap/css/bootstrap.min.css');
+
+.bg-white .position-fixed{
+    position: fixed;
+}
+.float-right{
+    float: right;
+    display: flex;
+}
+.mobile-phone{
+    width:300px;
+    height:550px;
+    background:#8bc7e3;
+    border-radius:5px;
+    overflow:hidden;
+}
+.mobile-phone .content{
+    background-color:#cce4f0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+ }
+ .mobile-phone.pup .content{
+     background-color:rgb(235, 222, 242);
+ }
+ .today-city-name{
+     color:#276873;
+     font-size:22px;
+     font-weight:700;
+     margin: 50px 0 10px;
+ }
+ .today-city-time{
+     margin-bottom:40px;
+ }
+ .weatherbox{
+     width:65%;
+     margin:50px auto 60px;
+     text-align:center;
+ }
+ .weatherbox .wi{
+     font-size:65px;
+ }
+ .weatherbox .today-temp{
+     color:#276873;
+     font-size:20px;
+     line-height:50px;
+     font-weight:900;
+ }
+ .today-temp span{
+     font-size:13px;
+     vertical-align: text-top;
+ }
+ .today-temp-arrow{
+     font-size:13px;
+ }
+ .today-temp-arrow span{
+     margin-left:3px;
+     margin-right:3px;
+ }
+ 
+ .temp-box-pr{
+     padding-left:10px;
+     padding-right:10px;
+ }
+ .temp-box{
+     width:80px;
+     height:90px;
+     border-radius:5px;
+     background:#599bb3;
+     padding:5px;
+     font-size:12px;
+     letter-spacing:-1px;
+     color:#fff;
+     font-weight:600;
+     text-align:center;
+ }
+ .mobile-phone.pup .temp-box{
+    background:rgb(209, 193, 219);
+}
+.temp-box i{
+    font-size:20px;
+    margin-top:5px;
+}
+.wi{
+   text-shadow:0 0 10px rgba(84,100,8,0.5);
+}
+footer{
+    margin-top:50px;
+    padding-top:60px;
+    padding-bottom:80px;
+    text-align:center;
+    color:#efefef;
+    background-color:#3d768a;
+}
+
+@media (max-width: 768px) {
+
+
+    .text-sm-center{
+        text-align:center;
+    }
+    .d-sm-flex{
+        display:flex;
+    }
+    .flex-sm-wrap-wrap{
+        flex-wrap:wrap;
+    }
+    .flex-sm-direction-column{
+        flex-direction:column;
+    }
+    .flex-sm-direction-row{
+        flex-direction:row;
+    }
+    .justify-sm-content-between{
+        justify-content:space-between;
+    }
+    .align-sm-items-center{
+        align-items:center;
+    }
+    .d-sm-block{
+        display:block;
+    }
+    .d-sm-inline-block{
+        display:inline-block;
+    }
+    
+ }

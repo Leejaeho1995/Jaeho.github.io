@@ -1,0 +1,30 @@
+-unique-
+userid
+
+aaa
+ddd
+ssss
+ccc
+asd
+aaa
+
+외래키.
+상품테이블    주문테이블
+상품번호          사용자이름
+ 이름                        주소
+가격                      지불방법
+옵션                        그외 각정정보
+                                  상품번호 -외래키
+------------------------------------등등
+
+
+1.testDb 생성
+2. testDb에 BusinessCard 테이블 만들기
+BusinessCard의 컬럼과 제약조건은 아래와 같음.
+
+num 정수형 자동증가 primary key
+name 가변형텍스트 40, 동일한값 허용하지 않음, not null
+address 가변형 100
+telephone 고정텍스트 15, 
+
+3.Salary 테이블 ( num(primarykey) not null, salary_amount int, business_card_id(외래키),

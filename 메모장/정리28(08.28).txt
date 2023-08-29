@@ -1,0 +1,46 @@
+테이블에 컬럼 추가/삭제/수정
+추가 alter table 테이블명 add 추가할 컬럼명 데이터타입
+삭제 alter table 테이블명 drop  column 컬럼명
+
+
+수정 컬럼명을 변경할때-> alter table 테이블명 change 컬럼명 수정할컬럼명 데이터타입
+데이터타입을 변경할때 -> alter table 테이블명 modify 컬럼명 데이터타입
+
+----------------------------------
+
+기본키 제약조건 추가/ 기본키 제약조건 삭제
+alter table 테이블명 add primary key 컬럼명
+alter table 테이블명 add constraint 제약명 unique (컬럼명1,컬럼명2)
+alter table 테이블명 drop 
+
+
+--------------------------
+자바에서 class  는 생성자
+class 이름 {
+    str name
+    int age
+    생성자임--> 이름(name,age){
+        this.name=name
+        this.age =age
+    }
+}
+변수 =new 이름('철수',20)
+
+ex ->
+
+function Animal(type,name,sound){
+    this.type=type
+    this.name=name
+    this.sound=sound
+    this.say= function(){
+        console.log(this.sound)
+    }
+}
+const rabbit =new Animal('토끼','빙키','깡총')
+const frog = new Animal('개구리','개리','개굴')
+
+console.log(rabbit.say()) /깡총
+console.log(frog.say())  /개굴
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="st1"></p>
+    <p id="st2"></p>
+    <script>
+        const mem={
+            name:'user',
+            pass:'1234'
+        }
+        //obj를 문자열로 변환
+        const memString= JSON.stringify(mem)
+        
+        //변환정보를 localStorage에 저장 (setItem) (키 , 값)
+        window.localStorage.setItem('members',memString)
+
+        //localStorage에서 가져오기(getitem)
+        const ms=window.localStorage.getItem('members')
+        const msobj=JSON.parse(ms)
+        document.getElementById('st1').innerHTML=msobj.name
+        document.getElementById('st2').innerHTML=msobj.pass
+    </script>
+    
+</body>
+</html>

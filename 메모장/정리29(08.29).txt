@@ -1,0 +1,3 @@
+Seesion    ( localStorage, SeesionStorage -<저장공간)
+
+localStorage 사용자가 머무는동안 세션

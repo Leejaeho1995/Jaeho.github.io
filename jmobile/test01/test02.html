@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 앱 제작test02</title>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.css">
+    <script src="../js/jquery-1.12.3.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div data-role="page" id="main">
+            <div data-role="panel" id="mypanel" 
+            data-position="left"
+            data-display="push"
+            data-theme="b">
+                <!-- panel content goes here -->
+              </div><!-- /panel -->
+              <h3>My panel</h3>
+              <p>이곳이 주로 메뉴가 나오는 penel입니다</p>
+              <a href="#" data-rel="close" class="ui-btn ui shadow"></a>
+<!--popup-->
+              <div data-role="popup" id="popupDialog"
+              data-overlay-theme="b" data-theme="b"
+              data-dismissible="false"
+              style="max-width:400px">
+              <div data-role="header" data-theme="a">
+                <h1>성인인증</h1>
+              </div>
+              <div role="main" class="ui-content">
+                <h3>당신은 몇 살이나 되었나여?</h3>
+                <a href="#" class="ui-btn ui-conrner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">미성년입니다.</a>
+                <a href="#" class="ui-btn ui-conrner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">성인입니다.</a>
+              </div>
+            </div>
+    <!--헤더-->
+    <div data-role="header">
+        <h1>Header</h1>
+    </div>
+
+    <!--본문-->
+    <div role="main" class="ui-content">
+        <p>이 곳이 main 페이지의 본문</p>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#sub01">서브01 페이지로 이동</a></li>
+            <li><a href="test01.html">서브02 페이지로 이동</a></li>
+            <li>링크가 없는 텍스트</li>
+        </ul>
+        <a href="#mypanel">panel 열기</a>
+        <a href="#popupDialog" data-rel="popup" class="ui-btn ui-corenr-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">성인인증</a>
+    </div>
+    <!--푸터-->
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+
+
+    <!--헤더-->
+    <div data-role="page" id="sub01">
+    <div data-role="header">
+        <a href="test01.html" data-icon="back">Back</a>
+        <h1>Header Sub01</h1>
+        <a href="test02.html#sub02" data-icon="check">check</a>
+    </div>
+    <!--본문-->
+    <div role="main" class="ui-content">
+        <p>이 곳이 sub01 페이지의 본문</p>
+        <ul>
+            <li><a href="#main">메인페이지로 이동</a></li>
+        </ul>
+        <a href="#mypanel"></a>
+    </div>
+    <!--푸터-->
+    <div data-role="footer">
+        <div class="ui-grid-b">
+            <div class="ui-block-a">A</div>
+            <div class="ui-block-b">B</div>
+            <div class="ui-block-b">C</div>
+        </div>
+        <h4>Footer sub01</h4>
+    </div>
+</div>
+</body>
+</html>

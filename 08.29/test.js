@@ -23,3 +23,16 @@ const animal= new Animal('동물')
 animal.speak()
 const dog= new Dog('메리','시츄')
 dog.speak()
+
+function first(){
+    second()
+    console.log("첫번째 실행.")
+}
+function second(){
+    third()
+    console.log("두번째 실행.")
+}
+function third(){
+    console.log("세번째 실행.")
+}
+first()

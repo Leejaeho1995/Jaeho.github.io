@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="fr-btn">사과</button>
+    <button class="fr-btn2" onclick="frView.call(this)">사탕2</button>
+
+    <script>
+        const frbtn= document.querySelector(".fr-btn") 
+        //이벤트 핸들러
+        //frbtn.addEventListener("click",frView)
+        //property방식
+        //frbtn.onclick =frView
+
+        frbtn.addEventListener("click",frView) //이벤트핸들러
+        function frView(){
+            document.write("사과입니다.")
+            document.write(this)
+            console.log(this)
+        }
+
+    </script>
+    
+</body>
+</html>

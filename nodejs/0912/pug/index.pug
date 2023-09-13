@@ -1,0 +1,18 @@
+
+extends layout
+
+block content
+ -const node = 'Node.js'
+ -const js = 'javascrpit'
+
+    div
+     h1 Welcome to Express #{title}
+        p
+            | 안녕하세요? 퍼그입니다
+            | 여러줄을 입력해봅시다
+            br
+            | 태그로 넣을수도 있습니다
+            | 이상입니다. 
+            ul
+                for fruit in['사과','배','딸기','수박','메론','키위']
+                 li= fruit

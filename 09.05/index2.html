@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="ap">사과</button>
+    <button class="gr">포도</button>
+    <button class="ba">바나나</button>
+
+    
+    <script>
+        const ap = addEventListener("click",apView)
+        function apView(){
+            document.write("사과입니다.")
+            document.write(this)
+        }
+    const gr= document.querySelector(".gr")
+    function clickgr(event){
+        console.log("포도입니다.")
+        console.log(this)
+    }
+    gr.onclick =clickgr
+
+    </script>
+
+</body>
+</html>

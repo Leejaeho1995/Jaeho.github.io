@@ -1,0 +1,92 @@
+[
+    {
+        "foodId":1,
+        "foodTitle":"한우 치즈 버거 세트",
+        "foodDescription":"패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
+        "foodStar": ["star", "star", "star", "star", "half"],
+        "foodPrice": 15000,
+        "foodTopping":
+        [
+            {"img":"top1","toppingName":"고기추가","toppingPrice":1000},
+            {"img":"top2","toppingName":"야채추가","toppingPrice":300},
+            {"img":"top3","toppingName":"치즈추가","toppingPrice":600},
+            {"img":"top4","toppingName":"딸기쨈추가","toppingPrice":800}
+        ],
+
+        "foodImg":"img/Home/Trending Picks/Burger-img.png",
+        "detailUrl":"img/Home/Trending Picks/Burger-img.png"
+        
+    },
+    {
+        "foodId":2,
+        "foodTitle":"치킨한마리 셋트",
+        "foodDescription":"패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
+        "foodStar": ["star", "star", "star", "star", "half"],
+        "foodPrice": 15000,
+        "foodTopping":
+        [
+            {"img":"top1","toppingName":"고기추가","toppingPrice":1000},
+            {"img":"top2","toppingName":"야채추가","toppingPrice":300},
+            {"img":"top3","toppingName":"치즈추가","toppingPrice":600},
+            {"img":"top4","toppingName":"딸기쨈추가","toppingPrice":800}
+        ],
+
+        "foodImg":"img/Home/Trending Picks/Chciken-Bucket-Img.png",
+        "detailUrl":"img/Home/Trending Picks/Chciken-Bucket-Img.png"
+        
+    },
+    {
+        "foodId":3,
+        "foodTitle":"치즈 베이컨 버거 세트",
+        "foodDescription":"패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
+        "foodStar": ["star", "star", "star", "star", "half"],
+        "foodPrice": 15000,
+        "foodTopping":
+        [
+            {"img":"top1","toppingName":"고기추가","toppingPrice":1000},
+            {"img":"top2","toppingName":"야채추가","toppingPrice":300},
+            {"img":"top3","toppingName":"치즈추가","toppingPrice":600},
+            {"img":"top4","toppingName":"딸기쨈추가","toppingPrice":800}
+        ],
+
+        "foodImg":"img/Home/Trending Picks/Cheese-Bacon-Burger-Img.png",
+        "detailUrl":"img/Home/Trending Picks/Cheese-Bacon-Burger-Img.png"
+        
+    },
+    {
+        "foodId":4,
+        "foodTitle":"하와이안 피자",
+        "foodDescription":"패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
+        "foodStar": ["star", "star", "star", "star", "half"],
+        "foodPrice": 15000,
+        "foodTopping":
+        [
+            {"img":"top1","toppingName":"고기추가","toppingPrice":1000},
+            {"img":"top2","toppingName":"야채추가","toppingPrice":300},
+            {"img":"top3","toppingName":"치즈추가","toppingPrice":600},
+            {"img":"top4","toppingName":"딸기쨈추가","toppingPrice":800}
+        ],
+
+        "foodImg":"img/Home/Trending Picks/Hawaiian-ham-and-pineapple-pizza.png",
+        "detailUrl":"img/Home/Trending Picks/Hawaiian-ham-and-pineapple-pizza.png"
+        
+    },
+    {
+        "foodId":5,
+        "foodTitle":"1995 버거 세트",
+        "foodDescription":"패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
+        "foodStar": ["star", "star", "star", "star", "half"],
+        "foodPrice": 15000,
+        "foodTopping":
+        [
+            {"img":"top1","toppingName":"고기추가","toppingPrice":1000},
+            {"img":"top2","toppingName":"야채추가","toppingPrice":300},
+            {"img":"top3","toppingName":"치즈추가","toppingPrice":600},
+            {"img":"top4","toppingName":"딸기쨈추가","toppingPrice":800}
+        ],
+
+        "foodImg":"img/Home/Trending Picks/Veg-and-cheese-handy-burger.png",
+        "detailUrl":"img/Home/Trending Picks/Veg-and-cheese-handy-burger.png"
+        
+    }
+]

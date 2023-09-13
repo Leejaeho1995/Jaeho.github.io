@@ -1,0 +1,149 @@
+html,body{
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+/*SectionA*/
+
+.section-a{
+  background-color: #27b7eb;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  position: relative;
+}
+.section-a h2{
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+}
+.section-a h1{
+  font-size: 4em;
+  max-width: 65%;
+  margin: 0 auto;
+  line-height: 1.2em;
+  color: #6a5fcc;
+}
+.icon-box{
+  font-size: 2.5em;
+  color: #fff;
+  width: 250px;
+  text-align: right;
+}
+.icon-box span{
+  display: inline-block;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+/*SectionB*/
+.section-b{
+  margin-bottom: 20px;
+}
+.title{
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+  height: 80px;
+}
+.container{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title span{
+  color: #f1d257;
+  font-size: 4em;
+  display: inline-block;
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.title h1{
+  font-size: 4em;
+  color: #59bb93;
+  letter-spacing: -2px;
+  position: absolute;
+  top: 10px;
+  left: 45px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-4{
+  width: 33.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card-img{
+  width: 100%;
+  height: 285px;
+  overflow: hidden;
+}
+.card-img img{
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+.card-img img:hover{
+  transform: scale(1.1,1.1);
+}
+.card-content{
+  background-color: #efefef;
+  padding: 20px;
+}
+.card-content h2,
+.card-content h4{
+  margin: 0;
+}
+.card-content h4{
+  color: #59bb93;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card-content h2{
+  color: #000;
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.card-content p{
+  font-size: 1em;
+  line-height: 1.5;
+}
+.more{
+  font-size: 1.5em;
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+.more:hover{
+    transform: translateX(10px);
+}
+
+footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #6a5fcc;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+form{
+    width: 500px;
+    height: 350px;
+    margin: 40px auto;
+    border: 1px solid #ededed;
+    box-sizing: 0 0 15px 0 rgba(0,0,0,0.1);
+    padding: 50px;;
+}
+form label{
+    width: 30px;
+}

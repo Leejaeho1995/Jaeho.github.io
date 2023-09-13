@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form id="form" method="post">
+            <input type="text" name="userid" placeholder="회원아이디"> <br>
+            <input type="password" name="userid" placeholder="회원아이디"> <br>
+
+            <label> 회원아이디를 저장합니다. <input type="checkbox" name="chk" value="ok"></label> <br>
+            <button type="submit">로그인</button>
+        </form>
+    
+    <script>
+        function setCookie(cookieName, cookieValue, cookieExpire, cookiePath, cookieDomain, cookieSecure){
+            let cookieText = escape(cookieName) + '=' + escape(cookieValue);
+            cookieText += (cookieExpire ? '; EXPIRES = '+ cookieExpire.toGMTString():'')
+            cookieText += (cookiePath ? '; PATH ='+cookiePath:'')
+            cookieText += (cookieDomain ? '; DOMAIN ='+cookieDomain:'')
+            cookieText += (cookieSecure ? '; SECURE =':'')
+            console.log(cookieText)
+            document.cookie = cookieText
+        }
+    // setCookie('userid','hong',1,'/');
+    function getCookie(cookieName){
+        let cookieValue = null
+        if(document.cookie){
+            const array = document.cookie.split((escape(cookieName)+'='))
+            if(array.length >= 2){
+                const arraySub = array[1].split(';')
+                cookieValue = unescape(arraySub[0])
+            }
+        }
+        return cookieValue;
+    }
+    function delCookie(cookieName){
+        let tmp = getCookie(cookieName)
+        if(tmp){
+            setCookie(cookieName, tmp, (new Date(1)))
+        }
+    }
+    //getcookie userid 를 받아서
+
+    </script>
+</body>
+</html>

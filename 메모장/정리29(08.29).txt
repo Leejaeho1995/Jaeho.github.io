@@ -1,3 +1,12 @@
 Seesion    ( localStorage, SeesionStorage -<저장공간)
 
 localStorage 사용자가 머무는동안 세션
+
+
+
+노드의 정의
+
+런타임
+노드:자바스크립트 런타임
+
+런타임

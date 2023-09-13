@@ -1,0 +1,21 @@
+1. cordova --> nodejs
+2. 안드로이드 (java 11) 프로그램
+안드로이드 스튜디오
+gradle
+-
+3. ios ( xcode)
+
+
+nodejs
+java 11 (window 환경변수 설정 시스템 > 고급시스템설정 > 환경변수)
+
+JAVA_HOME
+
+변수값: 경로
+
+[path 편집누른후 ]%JAVA_HOME%\bin
+
+변수이름 :ANDROID_HOME
+변수값 경로
+
+%ANDROID_HOME%\paltform-tools

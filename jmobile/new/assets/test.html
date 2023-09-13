@@ -3,27 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>배열함수 저장</title>
 </head>
 <body>
-    <p id="st1"></p>
-    <p id="st2"></p>
-    <script>
-        const mem={
-            name:'user',
-            pass:'1234'
-        }
-        //obj를 문자열로 변환
-        const memString= JSON.stringify(mem)
+    <div>
+        <label>test1</label>
+        <input type="text" id="test1">
+    </div>
+    <div>
+        <label>test2</label>
+        <input type="text" id="test2">
+    </div>
+    <div>
+        <label>test3</label>
+        <input type="text" id="test3">
+    </div>
+    <div>
         
-        //변환정보를 localStorage에 저장 (setItem) (키 , 값)
-        window.localStorage.setItem('members',memString)
+        <button id="btn">저장</button>
+    </div>
 
-        //localStorage에서 가져오기(getitem)
-        const ms=window.localStorage.getItem('members')
-        const msobj=JSON.parse(ms)
-        document.getElementById('st1').innerHTML=msobj.name
-        document.getElementById('st2').innerHTML=msobj.pass
+    <script>
+      const btn= document.getElementById("btn")
+      const test1 = document.getElementById("test1")
+      const test2 = document.getElementById("test2")
+      const test3 = document.getElementById("test3")
+
+      let myStorage=[]
+      if(localStorage.getItem("test")){
+       myStorage.push(JSON.parse(localStorage.getItem("test")))}
+
+      console.log(myStorage)
+
+      btn.addEventListener("click",()=>{
+        let dummy= [
+            {"test1":test1.value},
+            {"test2":test2.value},
+            {"test3":test3.value}
+        ]
+        myStorage.push(dummy)
+        localStorage.setItem("test",JSON.stringify(myStorage))
+      });
     </script>
     
 </body>

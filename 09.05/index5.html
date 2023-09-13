@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index5</title>
+</head>
+<body>
+    <h1 id="deesert"></h1>
+    <script>
+    //  오늘 먹어여할 간식을 모두 먹었습니다. 를 출력 dessert()함수이용-->
+    // 3부터 크면 good  작으면 eat실행
+        function dessert(count,eat,good) {
+            count < 3 ? eatDessert() : goodDessert()
+        }
+        function eatDessert(){
+            document.write('오늘 먹어야 할 간식을 먹어주세요')
+        }
+        function goodDessert(){
+            document.write('오늘 먹어야할 간식을 모두 먹었습니다.')
+        }
+        dessert(4,eatDessert,goodDessert)
+
+        function ntime(){
+            const start= Date.now()
+            for(let i=0;i<100000000;i++){}
+                const end = Date.now()
+                document.write(end-start + "ms")
+            
+        }
+        ntime()
+    </script>
+
+
+    <!--start - 시간을 출력
+        1000000을 카운트 한후 end 시간을 출력
+        end-시작을 뺀 ms초를 출력-->
+</body>
+</html>

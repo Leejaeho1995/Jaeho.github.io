@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="net.jaehocom.myburger" version="0.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>MyBurger</name>
+    <description>모바일 프로젝트 햄버거 쇼핑몰</description>
+    <author email="p_n_s_m@naver.com" href="https://cordova.apache.org">
+        Hello burger
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

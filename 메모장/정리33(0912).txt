@@ -1,0 +1,64 @@
+request, response 객체 살펴ㄱ보기
+1.req app - req를 통해 app 객체에 접근 ex => req.app.get('port)
+
+2.req.body - body-parser 미들웨어의 요청으로 본문을 해석하는 객체
+
+3.req.cookie - cookie-parser 미들웨어 객체
+
+4.req.ip - 요청한 ip주소가 담겨있음 
+
+5.req.rarms - 라우트 매개변수를 받는 객체
+
+6.req.query - 쿼리 스트링으로 받는 객체
+
+7.req.signedCookies -서명된 쿠키는 req.cookie대신 이곳에 담긴다.
+
+8.req.get(헤더이름) - 헤더값
+
+
+------
+
+1.res.app - res를 통해 app 객채에 접근
+
+2.res.cookie(키,값,옵션)  - 쿠키를 만드는 메서드
+
+3.res.clearCookie(키,값,옵션) - 쿠키 제거
+
+4.res.end() - 데이터 없이 응답
+
+5.res.json(JSON)  - json타입으로 응답
+
+6.res.redirect(주소) - 리다이렉트할 주소와 함께 응답
+
+7.res.render(뷰,데이터) - 템플릿 엔진 렌더링( 오늘 배울 내용)
+
+8.res.send(데이터) - 데이터와 함께 응답
+
+9.res.sendFile(경로) - 경로에 위치한 파일을 응답
+
+10.res.set(헤더, 값) - 응답 헤더 설정
+
+11.res.status(코드) - 응답시 http 상태 코드 지정   ex -> res.status(202).cookie('test','test').redirect('/login');
+
+
+
+-------------------------------
+
+pug -
+
+div는 생략가능 <div id= "box"> div </div> == #box div
+
+id -> <div id="box">  == #box
+
+class -> <div class="box">  ==.box
+
+html텍스트는 속성뒤에 한칸 띄고 입력 -> <p id="welcome">Welcome </p> == p#welcome Welcome Pug
+
+줄바꿈(br)은 | <p>안녕하세여<br>반갑습니다</p> == p|안녕하세요
+                                                | 반갑습니다.
+style script 선언 <style></style> <script></script> \\ .style .script
+
+
+ul == each fruit id["월","화","수","목","금","토","일"]
+li == 
+

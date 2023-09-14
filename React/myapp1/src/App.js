@@ -1,19 +1,15 @@
-//import React, { Component} from 'react';
-import './App.css';
-import Header from './component/Header';
-import Main from './component/Main';
-import Footer from './component/Footer';
-
+import React , {useState } from 'react';
+import Home from './layout/Home';
+import styles from './index.css'
+// const addCount =()=>{
+//   setCount(count + 1)
+//   console.log(count)
 
 function App() {
-  const txt="React 와우"
-  return (
-    <>
-    <Header/>
-    <Main txt={txt} color="rgb(138, 226, 241)" name="철수"/>
-    <Footer/>
-    </>
-  );
-}
-
+return(
+  <div>
+    <Home/>
+  </div>
+)
+  }
 export default App;

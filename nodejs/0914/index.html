@@ -1,0 +1,27 @@
+{% set node = 'Node.js' %}
+{% set js = 'JavaScript' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{title}}</title>
+</head>
+<body>
+    
+    <button class="{{title}}" type="submit">전송</button>
+    <input placeholder="넉적스 연습"/>
+    <ul>
+       {% set %} 
+    </ul>
+
+
+    <h1>조건문-선택문은 없음</h1>
+    {% if isLoggedIn %}
+        <p>로그인 되었습니다.</p>
+    {% else %}
+     <p>손님입니다.</p>
+    {% endif %}
+
+</body>
+</html>

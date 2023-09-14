@@ -1,0 +1,21 @@
+index.html 최종으로 response
+index.js
+app.js
+component.js등등
+
+
+
+input type으로 이름을 입력하고
+화면에 입력한 이름을모두 출력하는
+react를 만드세요
+입력한 이름옆에 버튼을 만들어 입력한
+이름을 삭제도 할수 있게 하세요
+
+1. npm init
+
+2.필요한 설치파일
+npm install -s express
+npm install -D nodemon
+
+3.package.json 파일수정
+script{"start": "nodemon}

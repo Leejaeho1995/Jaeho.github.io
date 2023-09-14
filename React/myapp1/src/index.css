@@ -1,13 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Bungee+Spice&family=Kanit:ital@1&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;900&family=Noto+Serif+KR:wght@700&family=Pacifico&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,800&family=Roboto+Mono:ital,wght@0,500;1,400&family=Sunflower:wght@700&display=swap');
+*{box-sizing: border-box;}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-text-size-adjust: none;
+  background-color: #935d8c;
+  background-image: url("./layout/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f3d93 85%);
+  background-image: url("./layout/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f3d93 85% );
+  background-image: url("./layout/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f3d93 85% );
+  background-image: url("./layout/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f3d93 85% );
+  color: rgba(255,255,255,0.65);
+}
+a{
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  text-decoration: none;
+  border-bottom:  dotted 1px;
+  color: inherit;
+}
+a:hover{
+  border-bottom-color: transparent;
+}
+.nomal{
+  font-weight: 400;
+}
+.strong{
+  font-weight: 600;
+}
+p{
+  margin: 0 0 2em 0;
+}
+p.content{
+  columns: 20em 2;
+  column-gap: 2em;
+  text-align: justify;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 0.7em 0;
+  letter-spacing: -0.025em;
+}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
+  text-decoration: none;
+  color: inherit;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#wrapper{
+  width: 64em;
+  margin: 0 auto;
+  max-width: calc(100% - 2em);
+}
+
+h1{
+  color:calc()
 }

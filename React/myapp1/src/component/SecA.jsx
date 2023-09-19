@@ -18,7 +18,7 @@ const SecA = () => {
   return (
     <div>
     <Seca>Ipsum sed adipiscing</Seca>
-    <Rainbow>.</Rainbow>
+    <Rainbow></Rainbow>
     </div>
   )
 }

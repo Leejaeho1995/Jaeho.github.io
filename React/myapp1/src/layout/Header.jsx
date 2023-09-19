@@ -35,6 +35,8 @@ const Ptext = styled.p`
     text-align:center;
     margin: 20px auto;
 `;
+//style={{}} -<obj타입 이기에 낙타표기법으로 작성
+//예 ) fontSize:"2px", textAlign:"center"
 const Header = () => {
   return (
     <Head>

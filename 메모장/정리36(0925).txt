@@ -1,0 +1,53 @@
+React router 
+
+react--router-dom
+
+BrouserRouter, Routes, Route
+Link
+
+npm i -D react-rouyer-dom@latest  //react 최신버전 다운로드
+
+v 6.4부터 추가된내용
+createBrowserRouter
+Router
+
+<Link to={"detail"+props.id}
+<Link to={`detail/${props.id}`}
+
+
+페이지가 처음 열릴때 useState 가 랜더링됨
+Effect는 처음 열릴때 실행되게 하는것
+
+
+-----
+const dd = useRef(값);
+
+dd= {current: "값"};
+dd.current
+
+
+
+
+---
+node js
+
+1.board
+번호,
+작성자아이디,
+이름, 비밀번호, 제목, 내용
+              bbs
+
+num      int      자동증가        번호
+writer  varchar30   필수     기본값: 작성자이름
+userid  varchar30   필수     기본값: guest
+userpass  varchar30 필수
+title  varchar100   필수
+content text        필수
+hit int             필수     기본값:0
+wdate datetime      필수     기본값:now();또는 current_time_stamp()
+fileCount int       필수     기본값:0
+memCount  int       필수     기본값:0
+
+orNum     int                     원글번호 
+grNum     int                     원글에 대한 순서
+grLayer   int                     계층

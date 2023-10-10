@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Bungee+Spice&family=Kanit:ital@1&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;900&family=Noto+Serif+KR:wght@700&family=Pacifico&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,800&family=Roboto+Mono:ital,wght@0,500;1,400&family=Sunflower:wght@700&display=swap');
+@import url(remixicon.css);
+* {box-sizing: border-box;}
+body{
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#222;
+}
+a, a:link{
+    color:#444;
+    text-decoration: none;
+}
+a:hover{
+    color: #222;
+}
+
+/* 목록 보기 디자인 */
+.bbslist{
+    width: 100%;
+    border-bottom: 2px solid #333;
+    margin-bottom: 40px;
+}
+.bbslist th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #999;
+    border-bottom: 2px solid #666;
+    text-align: center;
+    position: relative;
+}
+.bbslist th:not(:last-child)::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10px;
+    top: 18px;
+    right: 0px;
+    background: #666;
+    position: absolute;
+}
+.bbslist td{
+    padding: 15px;
+    border-bottom: 1px solid #999;
+}
+.bbslist td.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pagination .page-item.active .page-link{
+    background-color: #666 !important;
+}
+
+/******************* 본  문 ***********************/
+.view .title{
+    font-size: 18px;
+    border-bottom: 3px solid #444;
+}
+.view .date, .view .write{
+    position: relative;
+}
+.view .date::after,
+.view .write::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #999;
+    top: 8px;
+    right: 25px;
+}
+
+.view_info{
+    border-bottom: 1px solid #999;
+}
+.content img{
+    max-width: 100%;
+}

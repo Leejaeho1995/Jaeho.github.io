@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="text-center mb-5">{{title}}</h1>
+<div class="row justify-content-center">
+    <table class="bbslist table-hover">
+        <colgroup>
+            <col width="10%">
+            <col>
+            <col width="15%">
+            <col width="15%">
+            <col width="10%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rs in row %}
+            <tr>
+                <td class="text-center">{{rs.num}}</td>
+                <td class="title">
+                    {{rs.grLayer}}
+                 <a href="/view/{{rs.num}}">{{rs.title}}</a></td>
+                <td class="text-center">{{rs.writer}}</td>
+                <td class="text-center">{{rs.wdate}}</td>
+                <td class="text-center">{{rs.hit}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+<div class="offset-md-3 col-md-6">
+<ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+        <a href="#" class="page-link">이전</a></li>
+    <li class="page-item">
+        <a href="#" class="page-link">1</a></li>
+    <li class="page-item">
+        <a href="#" class="page-link">2</a></li>
+    <li class="page-item">
+        <a href="#" class="page-link">3</a></li>
+    <li class="page-item">
+        <a href="#" class="page-link">4</a></li>
+    <li class="page-item">
+        <a href="#" class="page-link">5</a></li>
+    <li class="page-item">
+         <a href="#" class="page-link">6</a></li>
+    <li class="page-item">
+            <a href="#" class="page-link">7</a></li>
+    <li class="page-item">
+            <a href="#" class="page-link">8</a></li>
+    <li class="page-item">
+            <a href="#" class="page-link">9</a></li>
+    <li class="page-item">
+            <a href="#" class="page-link">10</a></li>
+    <li class="page-item disabled">
+            <a href="#" class="page-link">다음</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-right">
+            <a href="#" class="btn btn-secondary mr-4">목록</a>
+            <a href="write" class="btn btn-secondary">글쓰기</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

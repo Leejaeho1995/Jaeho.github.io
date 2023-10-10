@@ -1,0 +1,144 @@
+css --> scss (css이전의 컴파일러버전)
+
+
+
+------------------------
+TypeScript
+1. javascript 의 단점을 보완하기 위해 만든언어 (JS의 확장버전)
+2. javascript 의 런타임전에 컴파일을 함으로써 사용자가 에러를 만날 수 있는 확률을 줄인다.
+3. javascript를 변수에 타입을 부여하는 엄격한 언어로 만들어 메모리의 누수를 줄인다.
+
+TypeScript을 컴파일해서 javascript으로 바꿔서 사용해야함.
+
+1.npm init -y
+2.npm install -D TypeScript
+3.package.json 
+-main 삭제 
+-script "test" 삭제
+-script "build" : "tsc"
+4.tsconfig.json 파일 생성   << src에 ts파일 // js에 컴파일 파일>> 
+5.컴파일 명령 npm run build
+
+let isLogin:boolean = true
+
+================
+//boolean타입
+let isLogin:boolean =true
+//console.log(isLogin);
+
+//number 타입
+let age:number = 30;
+let price:number = 30.5;
+//console.log(age);
+
+//string 타입
+let str:string ="철수";
+//console.log(str);
+
+//array
+// let strArray =[12,"철수",false]; 이렇게 사용불가
+let numArray:number[] =[1,2,3,4];
+let strArray:string[] =["apple","banana","mango"];
+//console.log(strArray);
+
+//Tuple 타입 : 요소의 [수] 와 [타입] 을 고정한 배열 
+let member:[string,number] =["철수",20];
+//console.log(member);
+
+// enum (초기화할때 이름을 미리 지정) 첫글자는 대문자
+
+enum Color { Red,Green, Blue }
+let myFaforiteColor:Color = Color:Blue;
+
+//any (기존에 쓰던 방식대로 동적으로 사용이 가능)
+let dynamicVar:any ="hello"
+dynamicVar = 123;
+
+//void ( 리턴타입이 없는 함수) (void) 안의 message 변수는 string
+function myFunction(message:string):void{
+    console.log(message);
+}
+Null, undefined
+let myVar:number[null] undefined = null;
+
+//항상 오류를 던지는 함수 반환타입, 무한루프와 같이 절대 발생하지 않는값.
+function throwError(message:string) never {
+    throw new Error(message);
+}
+
+
+
+//JavaScript
+interface Person {
+name:string;
+age:number;
+address{
+    street:string;
+    city:string;
+    zip:number;
+}
+}
+
+let member:Person ={
+    name:"철수",
+    age:30,
+    address: {
+        street:"장기동",
+        city:"김포시",
+        zip:12345
+    }
+}
+
+
+===========================
+
+다음 문제를 TypeScript를 이용하여 만드시오
+1. 42인 숫자타입 변수를 만들어 콘솔에 입력
+2. hello TypeScript 값을 가진 문자열 타입 변수를 콘솔에 출력
+3. name(문자열), age(숫자), address(문자열) 속성을 가진 Members 라는
+인터페이스를 만든후 Members인터페이스의 myPerson 객체를 생성하여 콘솔에 출력
+4. number 타입의 두 인수를 받아 두숫자의 합을 반환(retrun)하는 addNumbers 라는 함수를 5와 10을 대입하여 콘솔에 출력
+
+--
+1. let a:number = 42;
+2. let h:string = "Hello TypeScript";
+3. interface Members 
+{name:string; age:number; address:string;}
+
+let myPerson:Members ={
+    name:"철수",
+    age:30,
+    address:"김포시,장기동"
+}
+
+4.
+function addNumbers(number1: number, number2: number): number {
+  return number1 + number2;
+}
+
+const result: number = addNumbers(5, 10);
+console.log(result);
+
+==================================================
+
+새로운 typescript react 프로젝트를 만드는 방법
+
+npx create-react-app myapp --template TypeScript
+
+
+기본의 react를 typescript react로 바꾸는 방법.
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+2.tsconfig.json 생성 (tsconfig.json 환경설정 방법 참고)
+- npx typescript --init or tsc --init (tsconfig.json 생성됌)
+- https://typescriptlang.org/tsconfig 참고
+-include : 컴파일할 파일 경로
+-exclude : 컴파일에서 제외하는 대상
+conpilerOptions: 컴파일할때 적용되는 옵션들 / target :어떤 버전으로 할것인지 / module:어떤 모듈 방식으로 할것인지
+
+3. 파일수정
+- 확장자 수정 : .js or .jsx ==> .tsx
+- 내용을 typescript 타입으로 변경
+
+
+npm i react-click-away-listener <<이벤트 >>

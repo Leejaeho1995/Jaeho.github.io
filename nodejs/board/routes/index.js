@@ -62,8 +62,8 @@ router.post('/write', (req, res, next)=>{
 
 /////////////////////  게시판 클릭해서 내용보기  ////////////////////////
 router.get("/view/:num", (req, res)=>{
-    let num = req.params.num;
-    let sql = "select * from ndboard where num = ?"
+    const { num } = req.params;
+    const sql = "select * from ndboard where num = ?"
     conn.query(sql, [num], (err, row, fields)=>{
         if(err)
         console.log(err);
@@ -73,7 +73,7 @@ router.get("/view/:num", (req, res)=>{
 
 ////////////////// 수정 ////////////
 router.get("/edit/:num", (req, res)=>{
-    const { num} = req.params;
+    const { num } = req.params;
     const sql = "select * from ndboard where num = ?";
     conn.query(sql, [num], (err, row, fields)=>{
         if(err){
@@ -87,7 +87,7 @@ router.get("/edit/:num", (req, res)=>{
 router.post("/edit/:num", (req, res)=>{
     const { num } = req.params;
     const rs = req.body;
-    const sql = "update ndboard set ? where num = ?"
+    let sql = "update ndboard set ? where num = ?"
     conn.query(sql, [{
     title: rs.title,
     content: rs.content},num],
@@ -98,7 +98,59 @@ router.post("/edit/:num", (req, res)=>{
             console.log("업데이트 성공");
         }
     })
-    res.redirect('/edit/:num')
+    res.redirect('/view/'+ num)
+})
+
+router.post("/pwdlogin", (req, rs)=>{
+    console.log("****router.post('/pwdlogin')");
+    const {num, pass, title, content} = req.body;
+    let sql = "select * from ndboard where num = ? and userpass = ?";
+    conn.query(sql, [num, pass],
+        (err, row, fields) => {
+            if(err)
+            console.log(err);
+        else{
+            if(row.length > 0) {
+                sql = "update ndboard set ? where num = ?";
+                conn.query(sql, [{title:title, content:content},num],
+                    (err,res, fields)=>{
+                        if(err)
+                        console.log(err);
+                    else{
+                      rs.send('1');
+                    }
+                    })
+                console.log("수정 성공")
+            }else{
+                rs.send('0');
+            }
+        }
+    })
+})
+/////삭제하기 /////
+
+router.post("/pwdelete", (req, res)=>{
+    console.log("****router.post('/pwdelete')");
+    const pw_check_form ="select * from ndboard where userpass = ?";
+    conn.query(pw_check_form, [req.body.pass], (error, pw_check_result, fields)=>{
+        if(error){
+            console.log(error);
+        }else{
+            if(pw_check_result.length > 0){
+                const delete_query ="delete from ndboard where num = ?"
+                conn.query(delete_query,[req.body.num], (error, delete_result, fields)=>{
+                    if(error){
+                        console.log(error);
+                    }else{
+                        return res.json(1);
+                    }
+                })
+            }
+            else if(pw_check_result.length == 0){
+                return res.json(0);
+            }
+        }
+    })
 })
 /////////// 목록 ////////////////////
 router.post('/write', (req, res)=>{
@@ -106,5 +158,4 @@ router.post('/write', (req, res)=>{
     res.render("index", {data})
     console.log(data)
 })
-
 module.exports = router //router을 내보냄 app에서도 받아야함

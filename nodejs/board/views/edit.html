@@ -6,7 +6,7 @@
 {% block content %}
 
 <h1 class="text-center mb-5">{{title}}</h1>
-<form class="row was-validated" name="write_form" method="post" onsubmit="return checkForm()">
+<form class="row was-validated" id="write_form" name="write_form" method="post">
     <div class="col-md-6 my-3">
         <div class="row align-items-center">
            <label class="col-2" for="writer">이름</label>
@@ -33,15 +33,15 @@
     <div class="col-md-12 row align-items-center my-3">
         <label class="col-md-1" for="content">내용</label>
         <div class="col-md-11">
-           <textarea id="content" name="content" class="form-control">{{row[0].contents}}</textarea>
+           <textarea id="content" name="content" class="form-control">{{row[0].content}}</textarea>
         </div>
     </div>      
     <div class="col-md-12 text-center my-3">
         <button type="reset" class="btn btn-danger mr-3"> 취 소 </button>
-        <button type="submit" class="btn btn-secondary ml-3"> 전 송 </button>
+        <button type="button" id="submit" class="btn btn-secondary ml-3"> 전 송 </button>
     </div>  
     <input type="hidden" name="userid" value={{userid}} />
-    <input type="hidden" name="num" value={{row[0].num}} />
+    <input type="hidden" id="num" name="num" value={{row[0].num}} />
 </form>
 
 {% endblock %}
@@ -56,10 +56,28 @@
             height:300,
             lang:"ko-KR"
         });
-
-        function checkForm(){
-        
-        }
+        $('#submit').click(function(){
+            const forms = $('#write_form').serialize();
+            const num = $("#num").val();
+            $.ajax({
+                url:'/pwdlogin',
+                type:'post',
+                data: forms ,
+                success: function(data){
+                    data = parseInt(data);
+                    console.log(data);
+                    console.log("완료")
+                    if(data > 0){
+                        alert('검증 성공');
+                        location.href='/view/' + num
+                    }else{
+                        alert('검증 실패')
+                        return;
+                    }
+                }
+            })
+        })
     });
+
 </script>
 {% endblock %}

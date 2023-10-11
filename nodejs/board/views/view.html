@@ -49,16 +49,16 @@
                     <i class="ri-close-line"></i>
                 </button>
                 </div>
-                <form>
+                <form id="pw_check_form" name="pw_check_form" method="post">
                 <div class="modal-body">
                     <p>삭제 하시려면 비밀번호를 입력하세요</p>
                 </div>
-                
-                <input type="password" class="form-control" placeholder="비밀번호" />
+                <input type="hidden" id="num" name="num" value={{row[0].num}} />
+                <input type="password" class="form-control" placeholder="비밀번호" id="pass" name="pass" />
                 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">삭제하기</button>
+                    <button id="submit" type="button" class="btn btn-primary">삭제하기</button>
                 </div>
             </form>
             </div>
@@ -67,4 +67,25 @@
 {% endblock %}
 
 {% block script %}
+<script>
+$("#submit").click(function(){
+    const forms = $("#pw_check_form").serialize();
+    $.ajax({
+        url:"/pwdelete",
+        type:"post",
+        data:forms,
+        success: function(data){
+            if(data > 0) {
+                alert("삭제 되었습니다.")
+                location.href= '/';
+            }else{
+                alert("비밀번호가 틀렸습니다.")
+                return;
+            }
+        }
+    })
+    
+
+})
+</script>
 {% endblock %}

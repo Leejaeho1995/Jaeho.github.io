@@ -4,7 +4,7 @@ import { VscClose,VscMenu } from 'react-icons/vsc'
 import { ReactComponent as Logo } from '../assets/images/Logo.svg'
 import './style.css'
 const Header = () => {
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(true);
     const handleToggle = () => {
        setIsActive(!isActive);
     }

@@ -4,6 +4,7 @@ import './portfolio.css'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { portfoliodata, imgData } from '../data/portfolio'
 import {Button, Modal} from 'react-bootstrap'
+
 const Portfolio = () => {
   const [show, setShow] = useState(false);
   const [myImg, setMyImg] = useState(1);
@@ -19,33 +20,36 @@ const Portfolio = () => {
     setMyImg(image)
     setShow(true);
   }
-  const handleCategory = (cate, num) =>{
+  const handleCategory = (cate, num) => {
     setClickStyle1(false);
     setClickStyle2(false);
     setClickStyle3(false);
     setClickStyle4(false);
-    switch(num){
-      case '1':
-        setClickStyle1(true);
-        break;
-      case '2':
-        setClickStyle2(true);
+
+    switch(num) {
+       case 1:
+          setClickStyle1(true);
           break;
-      case '3':
-        setClickStyle3(true);
-            break;
-      case '4':
-        setClickStyle4(true);
-              break;
+       case 2:
+          setClickStyle2(true);
+          break;
+       case 3:
+          setClickStyle3(true);
+          break;                     
+       case 4:
+          setClickStyle4(true);
+          break;                                    
     }
     const newMydata = imgData.filter((item)=>{
+
       if(cate =='all'){
         return imgData;
       }else{
         return item.category === cate;
       }
-    })
+    });
     setMyData(newMydata);
+    console.dir(newMydata)
   }
 
   return (
@@ -53,23 +57,28 @@ const Portfolio = () => {
     <div className='container mt-5'>
       <Helmet>
         <meta charSet='utf-8' />
-        <title>{portfoliodata.title}</title>
+        <title>{portfoliodata.title} | Portfolio</title>
         <meta name='description' content={portfoliodata.description} />
       </Helmet>
       <div className='d-flex justify-content-between'>
 
-      <h1 className='mt-5 mb-5 ms-5 bt-line border-bottom'>
-      MY Poftfolio</h1>
-      <div className='btn-box mb-5 mt-5'>
-      <button type='button' className='btn btn-warning' 
-      style={{backgroundColor: clickStyle1 ? "#ba8c04":"#ffc107"}} onClick={()=>handleCategory('all', 1)}>
+         <h1 className='mt-5 mb-5 ms-5 bt-line border-bottom'>
+           MY Poftfolio</h1>
+       <div className='btn-box mb-5 mt-5'>
+       <button type="button" 
+                     className="btn btn-warning"
+                     style={{ backgroundColor: clickStyle1 ? "#ba8c04":"#ffc107"}}
+                     onClick={()=>handleCategory('all', 1)}>
           All
         </button>
-        <button type='button' className='btn btn-warning ms-4' 
-         style={{ backgroundColor: clickStyle1 ? "#ba8c04":"#ffc107"}} onClick={()=>handleCategory('web', 2)}>
+        <button type="button" 
+                     className="btn btn-warning ms-4"
+                     style={{ backgroundColor: clickStyle2 ? "#ba8c04":"#ffc107"}}
+                     onClick={()=>handleCategory('web', 2)}>
           Web
         </button>
-        <button type='button' className='btn btn-warning ms-4' 
+        <button type='button'
+         className='btn btn-warning ms-4' 
         style={{backgroundColor: clickStyle3 ? "#ba8c04":"#ffc107"}} onClick={()=>handleCategory('app', 3)}>
           App
         </button>
@@ -78,10 +87,10 @@ const Portfolio = () => {
           Design
         </button>
       </div>
-      </div>
+    </div>
       <div className='row'>
         {
-          imgData.map((item, index)=>(
+          myData.map((item, index)=>(
               <div key={index} className='col-6 col-lg-3 portfolio-img'> 
               <img src={`https://picsum.photos/id/${item.img}/400/300`} className="img-fluid img-thumbnail mb-5" onClick={()=> handleShow(item.img)} />
               </div>            

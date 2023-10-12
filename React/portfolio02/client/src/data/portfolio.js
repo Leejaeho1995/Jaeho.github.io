@@ -18,55 +18,39 @@ const portfoliodata = {
     description:"developer, react, nodejs, next, web and app"
 }
 const imgData = [
-    {
-        img: 34,category:'app'
-    },
-    {
-        img: 255,category:'web'
-    },
-    {
-        img: 23,category:'web'
-    },
-    {
-        img: 87,category:'design'
-    },
-    {
-        img: 67,category:'web'
-    },
-    {
-        img: 58,category:'app'
-    },
-    {
-        img: 36,category:'web'
-    },
-    {
-        img: 83,category:'design'
-    },
-    {
-        img: 94,category:'web'
-    },
-    {
-        img: 37,category:'app'
-    },
-    {
-        img: 123,category:'web'
-    },
-    {
-        img: 153,category:'web'
-    },
-    {
-        img: 162,category:'design'
-    },
-    {
-        img: 126,category:'web'
-    },
-    {
-        img: 174,category:'design'
-    },
-    {
-        img: 193,category:'app'
-    },
-]
+    {img: 12, category: 'web'},
+    {img: 121, category: 'web'},
+    {img: 221, category: 'app'},
+    {img: 123, category: 'app'},
+    {img: 3, category: 'web'},
+    {img: 521, category: 'web'},
+    {img: 129, category: 'design'},
+    {img: 238, category: 'web'},
+    {img: 172, category: 'design'},
+    {img: 661, category: 'web'},
+    {img: 164, category: 'app'},
+    {img: 18, category: 'app'},
+    {img: 199, category: 'web'},
+    {img: 22, category: 'web'},
+    {img: 337, category: 'design'},
+    {img: 321, category: 'design'},
+    {img: 164, category: 'design'},
+    {img: 432, category: 'web'},
+    {img: 143, category: 'app'},
+    {img: 164, category: 'app'},
+    {img: 120, category: 'web'},
+    {img: 100, category: 'web'},
+    {img: 99, category: 'app'},
+    {img: 95, category: 'app'},
+    {img: 10, category: 'web'},
+    {img: 9, category: 'design'},
+    {img: 6, category: 'web'},
+    {img: 7, category: 'web'},
+    {img: 3, category: 'web'},
+    {img: 144, category: 'web'},
+    {img: 75, category: 'app'},
+    {img: 157, category: 'app'}
+]; 
 const databout ={ 
     title:'Welcome, About by self',
     content:'안녕하세여 반갑습니다. 모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다. 사법권은 법관으로 구성된 법원에 속한다. 국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외에서 책임을 지지 아니한다.'
@@ -132,6 +116,15 @@ const services =[
         description:"재산권의 행사는 공공복리에 적합하도록 하여야 한다. 헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다."
     }
 ]
+const contact_config ={
+    ADMIN_EMAIL : "p_n_s_m@naver.com",
+    ADMIN_PHONE : "010-7102-7265",
+    description : "대한민국의 국민이 되는 요건은 법률로 정한다. 공공필요에 의한 재산권의 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다.",
+    ADMIN_SERVICE_ID : "Jaeho",
+    ADMIN_TEMPLATE_ID : "template_fzcz0am",
+    ADMIN_API : "WsK_4pCMWtd1w7l77"
+};
+
 export {
     logotext,
     meta,
@@ -141,5 +134,6 @@ export {
     databout,
     mytimeline,
     myskills,
-    services
+    services,
+    contact_config
 }

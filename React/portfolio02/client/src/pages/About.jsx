@@ -28,26 +28,6 @@ const About = () => {
     </Row>
     <Row className="sec_sp">
       <Col lg="5">
-        <h3 className="color_sec py-4">My Work Timeline</h3>
-      </Col>
-      <Col lg="7">
-        <table className="table catption-top">
-          <tbody>
-            {
-              mytimeline.map((item, i)=>(
-                <tr key={i}>
-                  <th scope="row">{item.jobtitle}</th>
-                  <td>{item.where}</td>
-                  <td>{item.date}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </Col>
-    </Row>
-    <Row className="sec_sp">
-      <Col lg="5">
        <h3 className="color_sec py-4">My Skills</h3>
       </Col>
       <Col lg="7">
@@ -65,6 +45,26 @@ const About = () => {
                 </div>
               ))
             }
+      </Col>
+    </Row>
+    <Row className="sec_sp">
+      <Col lg="5">
+        <h3 className="color_sec py-4">My Work Timeline</h3>
+      </Col>
+      <Col lg="7">
+        <table className="table catption-top">
+          <tbody>
+            {
+              mytimeline.map((item, i)=>(
+                <tr key={i}>
+                  <th scope="row">{item.jobtitle}</th>
+                  <td>{item.where}</td>
+                  <td>{item.date}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
       </Col>
     </Row>
     <Row className="sec_sp">

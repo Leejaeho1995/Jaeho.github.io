@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Container, Row, Col, Alert } from 'react-bootstrap'
 import { meta, contact_config } from '../data/portfolio'
 import * as emailjs from 'emailjs-com';
-const Contact = () => {
+const Contact = () => { 
   const [formData, setFormData] = useState({
     email:"",
     name:"",

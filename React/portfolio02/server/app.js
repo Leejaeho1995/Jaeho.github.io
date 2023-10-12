@@ -1,9 +1,9 @@
 const express = require('express');
 const indexRouter = require('./routes')
-
+const connect = require('./schemas')
 const app = express();
 app.set('port',process.env.PORT || 3001);
-
+connect();
 
 
 app.use(express.json());

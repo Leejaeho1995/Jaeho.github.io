@@ -1,0 +1,43 @@
+mongo db 스키마 x
+-nosql ->스키마가 필요가없음 -테이블간 join x
+
+mongoose 스키마 o // join o
+
+sql 스키마 o
+
+
+--- collection ---
+pageinfo
+:title , content , animated(빈값 허용), img(빈값 허용)
+
+portfolio
+:title , content , link , img
+
+timeline
+:jobtitle , where , wdate , createAt
+
+skills
+:name ,value
+
+Mongoose Schema 
+타입
+String  문자열
+Number 정수
+Schema.Types.ObjectId 명시적으로 id 타입을 사용할때 ( 일반적으로는 정의를 하지 않아도 자동으로 생성됨)
+Date 날짜
+Buffer 바이너리 타입
+Boolean 참 거짓
+Array 배열 (예:[Number])
+Schema.types.Mixed 다양한 타입을 저장 , 즉 타입이 없다
+
+
+required 필수
+unique 유일한 값
+trim 공백제거 (문자열 타입에 사용)
+default 기본값으로 저장할 내용 지정 (예: default:'철수')
+lowercase 대문자를 소문자로 저장
+match 정규식으로 저장하려는 값과 비교
+validate 함수로 개발자가 조건을 만듦
+set 값을 입력할때 함수로 조건을 만듦
+get 값을 출력할때 함수로 조건을 만듦
+ref 해당하는 모델을 참조할때 사용

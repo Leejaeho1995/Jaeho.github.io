@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg test</title>
+</head>
+<div>
+    <input type="text" id="reg">
+    <button type="button">전송</button>
+</div>
+<br/>
+<div>
+    <input type="file" id="regfile">
+    <button type="button">파일전송</button>
+</div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // const regx = /d{2,3}[-.]\d{3,4}[-.]\d{4}/; //이곳에 정규식 만들기
+            // $('button').click(function(){
+            //     //정규식과 input text가 일치하는지 검증
+            //     const regtxt = $('#reg').val();
+            //     if(regx.text(regtxt) ){
+            //         alert("전화번호가 맞습니다")
+            //     }else{
+            //         alert("전화번호가 틀립니다.")
+            //     }
+            // })
+        /* *************************************************************************/
+        //     const regx = /(^02|^0606|^1[0-9]{3}|^0[0-9]{2})?([0-9]+)?([0-9]{4})$/
+        //     $('#reg').keyup(function(){
+        //         $(this).val(
+        //             $(this).val().replace(/[^0-9]/g, '')
+        //                          .replace(regx, '$1-$2-$3')
+        //                          .replace('--', '-')
+
+        //         )
+        //         console.log($(this).val());
+        //     });
+        // });
+        const regx = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9=]+\.[a-zA-Z0-9]+/; //이곳에 이메일 검증식을 만드세요
+        $('button').click(function(){
+            //정규식과 input text가 일치하는지
+            const regtxt = $('#reg').val();
+            if(regx.test(regtxt)){
+                alert("이메일 주소가 맞습니다");
+            }else{
+                alert("이메일 형식이 아닙니다.")
+            }
+        })
+        });
+
+    </script>
+    
+</body>
+</html>

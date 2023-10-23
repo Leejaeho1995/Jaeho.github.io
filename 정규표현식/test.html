@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <div>
+        <h2>1.숫자로만 이루어져 있는지 검사</h2>
+        <input type="text" id="reg">
+        <button type="button">검사</button>
+    </div>
+    <div>
+        <h2>아이디가 알파벳 대소문자 또는 숫자로 시작,끝 나며 4-10자리인지 검사</h2>
+        <input type="text" id="id" >
+        <button type="button">검사</button>
+    </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            // const reg = /^\d+$/;
+            // $('button').click(function(){
+            //     const regnum = $("#reg").val()
+            //     if(reg.test(regnum)){
+            //         alert("숫자 확인되었습니다.")
+            //     }else{
+            //         alert("숫자만 입력하세요")
+            //     }
+            // })
+            const id = /^[a-zA-Z0-9]{4,10}$/;
+            $('button').click(function(){
+                const checkid = $("id").val()
+                if(id.test(checkid)){
+                    alert("아이디 형식이 맞습니다")
+                }else{
+                    alert("다시 입력해주세요")
+                }
+            })
+        })
+    </script>
+</body>
+</html>

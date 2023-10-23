@@ -31,7 +31,7 @@
      {{row[0].content | safe}}
     </div>
     <div class="row justify-content-end mb-5">
-        <a href="#" class="btn btn-dark text-white px-3 mr-3">답변</a>
+        <a href="/rewrite/{{row[0].num}}" class="btn btn-dark text-white px-3 mr-3">답변</a>
         <a href="/edit/{{row[0].num}}" class="btn btn-dark text-white px-3 mr-3">수정</a>
         <button type="button" class="btn btn-dark text-white px-3 mr-3"
         data-target="#delModal"
@@ -59,15 +59,70 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
                     <button id="submit" type="button" class="btn btn-primary">삭제하기</button>
+                    <!-- <input type="hidden" id="delnum" value="{{row[0]}}" /> -->
                 </div>
             </form>
             </div>
         </div>
     </div>
+    <hr/>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item d-flex p-4">
+                <div class="col-2">
+                    <h3>홍길동 <small>2023.10.19</small></h3>
+                </div>
+                <div class="col-9">
+                    <p>살ㄹ라라랄라라ㅏ라라랄라라라라라라라라라빵빵아 옥지얌!!</p>
+                </div>
+                <div class="col-1"></div>
+            </li>
+        </ul>
+    </div>
+    <form name="comment_form" id="comment_form" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <label>이름</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label>비밀번호</label>
+                    <input type="password" name="userpass" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-10">
+                <textarea id="memo-content" name="content" class="form-control"></textarea>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-comment">작성</button>
+            </div>
+            </div>
+        </div>
+    </form>
 {% endblock %}
 
 {% block script %}
+<script src="js/summernote-bs4.min.js"></script>
 <script>
+$("#memo-content").summernote({
+        tabsize: 2,
+            height:150,
+            lang:"ko-KR",
+            toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']]
+        ]
+        });
+
+$(".btn-comment").click(function(){
+    const data = $("#comment_form").serialize();
+    
+    })
+
+
 $("#submit").click(function(){
     const forms = $("#pw_check_form").serialize();
     $.ajax({

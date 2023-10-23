@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .popup-category{
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            padding: 30px;
+            border: 1px solid #ededed;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="pageinfo">
+    <div class="container">
+       <h1 class="my-5 py-4 text-center">{{ title }}</h1>
+       <div class="d-flex justify-content-between my-5">
+          <a href="/" class="btn btn-primary">목록</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info addCategory">카테고리 설정</button>
+            <a href="./write" class="btn btn-success ml-4">데이터입력</a>
+          </div>
+       </div>
+        <div class="popup-category">
+            <form name="category-form" action="/portfolio/category-write" method="post">
+            <ui id="sortable" class="list-group">
+                <!--loop-->
+                {% for cat in rs %}
+                <li class="ui-state-default list-group-item py-3 d-flex align-items-center">
+                <div class="col-11">
+                    <input type="text" name="category" value="카테고리1" class="form-control"/>
+                </div>
+                <div class="col-1 text-center">
+                    <a href="#" class="btn-close text-center"></a>
+                </div>
+                </li>
+                {% endfor %}
+                <!--/loop-->
+            </ui>
+            <div class="d-flex py-4 justify-content-between">
+                <button type="button" class="btn btn-warning closebtn">닫기</button>
+                <button type="button" class="btn btn-info addbtn">추가</button>
+                <button type="button" class="btn btn-danger cate-update">전송</button>
+            </div>
+        </form>
+        </div>
+        <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            //show에 값이 있으면
+            {% if show %}
+            $('.popup-category').fadeIn(400);
+            {%  end show %}
+            const popup_update = $('.popup-category').html();
+            const popup_insert = 
+            `<form name="category-form" action="/portfolio/category-write" method="post">
+            <ui id="sortable" class="list-group">
+                <li class="ui-state-default list-group-item py-3">
+                    <input type="text" id="category" name="category" value="카테고리1" class="form-control"/>
+                </li>
+            </ui>
+            <div class="d-flex py-4 justify-content-between">
+                <button class="btn btn-warning closebtn">닫기</button>
+                <button class="btn btn-danger updatebtn">수정</button>
+                <button class="btn btn-info cate-write">전송</button>
+            </div>
+        </form>
+            `
+            $('.addCategory').click(function(){
+            $('.popup-category').fadeIn(400);
+         });
+       $("#sortable").sortable();
+
+       $(document).on('click', '.closebtn', function(){
+         $('.popup-category').fadeOut(400);
+       });
+       $(document).on('click', '.addbtn', function(){
+          $('.popup-category').html(popup_insert);
+       });
+       $(document).on('click', '.updatebtn', function(){
+          $('.popup-category').html(popup_update);
+          $("#sortable").sortable();
+       });
+
+       $(document).on('click', '.cate-update', function(){
+          const data = $("input[name='category']").serializeArray();
+          const id =$("input[name='cate_id']").serializeArray();
+          $.ajax({
+            type: "post",
+            url: '/portfolio/category/update',
+            dataType: 'json',
+            data: { data, id },
+            success: function(){},
+            error: function(){}
+          })
+       });
+
+            $(document).on('click', '.cate-write', function(){
+                const category = $("#category").val();
+                const num = Number($("#num").val())+1;
+            $.ajax({
+                    url:'/portfolio/category/write',
+                    type:'post',
+                    dataType:'json',
+                    data:{category : category , num:num},
+                    success: function(rs){
+                        if (rs==1){
+                            alert("등록 되었습니다")
+                            const addList = `
+                            <li class="ui-state-default list-group-item py-3 d-flex align-items-center">
+                <div class="col-11">
+                    <input type="text" name="category" value="${category}" class="form-control"/>
+                    <input type="hidden" name="num" id="num" >
+                </div>
+                <div class="col-1 text-center">
+                    <a href="#" class="btn-close text-center"></a>
+                </div>
+                </li>`;
+                            // $('.popup-category').html(popup_update).prepend(addList);
+                            // $("#sortable").sortable();
+                            location.reload();
+                        }else{
+                            alert("등록에 실패했습니다.")
+                        }
+                    },
+                    error : function(err){
+                        console.log(err);   
+                    }
+                })
+            })
+        })
+        $(document).on('click', '.del-category', function(e){
+            e.preventDefault();
+            const id = $(this).date("id");
+            $.ajax({
+                url:"/portfolio/category/del",
+                type:"post",
+                data:{ id: id},
+                success: function(rs){
+                    const res = parseInt(rs);
+                    if(res > 0){
+                        alert("삭제되었습니다.")
+                    }else{
+                        alert("문제가 발생했습니다.")
+                    }
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

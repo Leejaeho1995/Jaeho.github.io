@@ -24,7 +24,7 @@ body{
   height: 100%;
   overflow-x: hidden;
   overflow-y: visible;
-  background-color: var(--bg-color);
+  background-color: #ec9b2a;
   color:var(--text-color);
   padding-top: 60px;
   border-left: 10px solid var(--primary-color);

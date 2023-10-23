@@ -1,14 +1,14 @@
 const logotext = "Jaeho";
 const meta ={
     title:" Jaeho Portfolio ",
-    description:"홍길동이 리엑트 웹사이트를 공부하면서 만든 페이지"
+    description:"빵빵이가 처음 제작한 리엑트 홈페이지"
 };
 const introdata = {
-    title:"Hi ! I'm Hong",
+    title:"한국의 스포츠 태권도!!",
     animated: {
-        first:"끼꼬끼꼬.",
-        second:"빵빵아~ 옥찌얌!",
-        third:"끼룩끼룩끼끼끼룩"
+        first:"이선수의 이름은..",
+        second:"노란띠 빵빵이!!",
+        third:"태껀도!!으랴!"
     },
     description:"빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!빵빵아 !! 옥찌얌 !!",
     img_url: "images/jaeho.jpg"
@@ -119,9 +119,9 @@ const services =[
 const contact_config ={
     ADMIN_EMAIL : "p_n_s_m@naver.com",
     ADMIN_PHONE : "010-7102-7265",
-    description : "대한민국의 국민이 되는 요건은 법률로 정한다. 공공필요에 의한 재산권의 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다.",
+    description : "자세한 문의는 위 연락처로 연락바랍니다.",
     ADMIN_SERVICE_ID : "Jaeho",
-    ADMIN_TEMPLATE_ID : "template_fzcz0am",
+    ADMIN_TEMPLATE_ID : "template_91bs35m",
     ADMIN_API : "WsK_4pCMWtd1w7l77"
 };
 

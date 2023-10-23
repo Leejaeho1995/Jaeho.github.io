@@ -15,29 +15,29 @@
   .menu__button svg{
       width:2em;
       height:2em;
-      fill: var(--text-color);
+      fill: var(--primary-color);
       color: var(--text-color);
   }
   .nav_ac{
       padding:5px 15px;
-      background: var(--primary-color);
+      background: #ec9b2a;
       margin:0;
       border:unset;
       font-size: 1.25rem;
-      color:var(--text-color);
+      color:#333;
       line-height: 2;
       height:50px;
       font-weight:700;
       z-index: 100;
   }
   .nav_ac:hover{
-      color:var(--text-color);
+      color:var(--primary-color);
   }
   
   .br-top,.br-bottom,.br-right,.br-left{
       position:fixed;
       z-index:999999;
-      background:var(--primary-color);
+      background:var(--bg-color);
   }
   .br-top{
       top:0;
@@ -82,7 +82,7 @@
       top:0px;
       width:100%;
       height:100%;
-      background-color:var(--primary-color);
+      background-color:#ec9b2a;
       will-change: transform;
       transform: translateY(-100%);
       transition: all .5s ease;

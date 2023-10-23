@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #listbox{
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        #listbox li{
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="listbox">
+
+    </ul>
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+/*
+    listScale 한 페이지에 출력할 게시물 수
+    pageScale 한 페이지에 출력할 페이지 수
+    totalCount 전체 게시글수
+    start // 페이지 시작
+*/
+        $(function(){
+            $("#listbox").html(getPaging(10,10,678,0,'/public/test.html'));
+        });
+
+
+    function getPaging(listScale, pageScale, totalCount, start,link){
+        let li='',sPage,pg, npg,pp,np,preStart,nextStart,lastPage;
+        if(totalCount >listScale) {
+            sPage = Math.floor(start/(listScale * pageScale));
+            pp = start - listScale;
+            np = start + listScale;
+
+            //처음으로 이동
+            if(pp >= 0){
+                li += `<li class="page-item"><a href="${link}">처음</a></li>`;
+            }
+            //이전 페이지 이동 -pageScale 만큼 앞으로 이동함
+            if(start + 1 > listScale * pageScale){
+                preStart = listScale * (sPage * pageScale -1)
+                li += `<li class="page-item"><a href="${link}?page=${preStart}">이전</a></li>`;
+            }
+
+        //pageScale만큼 게시물 출력
+        for(i =0; i<pageScale; i++){
+            pg =(sPage * pageScale + i) *listScale;
+            npg = sPage * pageScale + i + 1;
+            if(pg !=start) {
+                li += `<li class="page-item active"><a href="/?page=${npg}">${npg}</a></li>`
+            }else{
+                li += `<li class="page-item">${npg}</li>`
+            }
+        }
+        //다음 페이지 이동 - pageScale 만큼 뒤로 이동함
+        if(totalCount > (sPage + 1)*listScale*pageScale){
+            nextStart = (sPage + 1)*listScale*pageScale
+            li += `<li class="page-item"><a href="${link}?page=${nextStart}">${nextStart}</a></li>`;
+        }
+        //마지막 페이지
+        if(np < totalCount){
+            lastPage = (Math.floor(totalCount/listScale))*listScale;
+            li += `<li class="page-item"><a href="${link}?page=${lastPage}">마지막</a></li>`;
+        }
+    }else{
+        li = `<li class="page-item">1</li>"`
+    }
+    return li
+}
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import './home.css'
-import Typywiter from 'typewriter-effect'
+import Typewriter from 'typewriter-effect'
 import { Link } from 'react-router-dom'
 import { logotext, meta, introdata} from '../data/portfolio'
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
             <div className='col-lg-6 col-12 ps-5'>
                 <h2 className='ms-5'>{introdata.title}</h2>
                 <h1 className='ms-5 mb-5'>
-                    <Typywiter options={{
+                    <Typewriter options={{
                         strings:[
                             introdata.animated.first,
                             introdata.animated.second,
@@ -31,6 +31,7 @@ const Home = () => {
                 <p className='ms-5'>{introdata.description}</p>
                 <div className='mt-4 ps-5 btn-box'>
                     <Link to='/portfolio' button className='btn btn-light me-4 px-4'>MyPortfolio</Link>
+                    <Link to='/about' button className='btn btn-light me-4 px-4'>about</Link>
                     <Link to='/contact' button className='btn btn-light px-4'>Contact</Link>
                 </div>
             </div>

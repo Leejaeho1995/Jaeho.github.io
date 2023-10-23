@@ -2,14 +2,14 @@
     padding: .4rem 0.8rem;
     line-height: 1.5;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: #ec9b2a;
     border-radius: 0;
     border: 1px solid var(--secondary-color);
 }
 input.form-control::placeholder,
 textarea.form-control::placeholder{
-    color:var(--text-color);
-    opacity: 0.4;
+    color:#fff;
+    opacity: 0.8;
 }
 .btn.btn-action{
     padding: 0.5rem 3rem;

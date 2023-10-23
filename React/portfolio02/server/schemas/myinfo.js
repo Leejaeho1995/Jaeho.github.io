@@ -25,4 +25,4 @@ const myinfoSchema = new Schema({
     }
 });
 
-module.exports.mongoose.model('Myinfo',myinfoSchema)
+module.exports = mongoose.model('Myinfo',myinfoSchema)

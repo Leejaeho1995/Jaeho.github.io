@@ -68,11 +68,12 @@
                     console.log(data);
                     console.log("완료")
                     if(data > 0){
-                        alert('검증 성공');
+                        alert('수정했습니다.');
                         location.href='/view/' + num
                     }else{
-                        alert('검증 실패')
-                        return;
+                        alert('비밀번호가 틀렸습니다.')
+                        $("#pass").focus();
+                        $("#pass").val('');
                     }
                 }
             })

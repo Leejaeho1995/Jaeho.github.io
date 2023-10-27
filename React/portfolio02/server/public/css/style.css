@@ -84,3 +84,13 @@ a:hover>.card{
 .form-range{
     width: 100%;
 }
+.newimg{
+    display: none;
+}
+
+#adminwrite{
+    width: 500px;
+    background: #fff;
+    margin: 40px auto;
+    padding: 50px;
+}

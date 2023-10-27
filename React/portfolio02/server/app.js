@@ -9,6 +9,7 @@ const pageinfoRouter = require('./routes/pageinfo');
 const skillsRouter = require('./routes/skills');
 const timelineRouter = require('./routes/timeline');
 const portfolioRouter = require('./routes/portfolio');
+const adminRouter = require('./routes/admin')
 const app = express();
 
 try{
@@ -32,6 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
+app.use('/admin',adminRouter);
 app.use('/myinfo', myinfoRouter);
 app.use('/pageinfo', pageinfoRouter);
 app.use('/skills', skillsRouter);
@@ -52,5 +54,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(app.get('port'), ()=>{
-    console.log(app.get('port'), '번 포트에서 대기 중');
+    console.log(app.get('port'), '번 포트에서 대기 중, http://localhost:3001');
 });

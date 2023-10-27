@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"> 
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body class="pageinfo">
     <div class="container pagecontainer mt-5">
         <h1 class="text-center">
-                 내용
+                 페이지 정보
         </h1>
         <form name="form" id="form" 
               method="post" 
@@ -20,32 +21,49 @@
         >
         <!-- loop -->    
         <ul class="list-group">
+         
              <li class="list-group-item">
                 <div class="row">
                   <div class="col-12 mt-3">
                      <label class="d-block mx-1 my-2">
-                      장소
+                      내용
                      </label>
-                     <input type="text" name="jobtitle" id="jobtitle" class="form-control" />
+                     <input type="text" 
+                            name="jobtitle" 
+                            id="jobtitle" 
+                            class="form-control" 
+                     >
                    </div>
                 </div>
             </li>
             <li class="list-group-item">
+              <div class="row">
+                <div class="col-12 mt-3">
+                   <label class="d-block mx-1 my-2">
+                    장소
+                   </label>
+                   <input type="text" 
+                          name="where" 
+                          id="where" 
+                          class="form-control" 
+                   >
+                 </div>
+              </div>
+          </li>
+            <li class="list-group-item">
                <div class="row">
                  <div class="col-12 mt-3">
-                    <label class="d-block mx-1 my-2">
+                  <label class="d-block mx-1 my-2 form-label">
                      날짜
                     </label>
-                    <input type="range" id="datepicker" name="value" class="form-control">
+                    <input type="text" 
+                           id="datePicker" 
+                           name="wdate" 
+                           class="form-control">
                   </div>
-                </div>
-           </li>
-           <li class="list-group-item">
-            <div class="row">
-               <div class="col-12 mt-3">
                </div>
-            </div>
-          </li>
+           </li>      
+
             <li class="list-group-item">
               <label class="d-block mx-1 my-2">
                 이미지 업로드
@@ -53,7 +71,7 @@
               <div class="row mb-3">
                 <div class="col-12 img mt-3" id="myfiles">
                     <input type="file" name="img" class="form-control mb-3" /> 
-                </div>
+                  </div>
               </div>
             </li>
         </ul>
@@ -64,11 +82,17 @@
         <!-- / loop -->
         </form>
       </div>      
-<script src="/public/js/bootstrap-datepicker.js"></script>
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="/js/bootstrap-datepicker.min.js"></script>
 <script>
   $(function(){
-    $('datapicker').datepicker()
-  })
+     $('#datePicker').datepicker({
+        format: "yyyy-mm-dd",
+        autoclose: true,
+        language: "ko"
+     });
+  });
 </script>
 </body>
 </html>

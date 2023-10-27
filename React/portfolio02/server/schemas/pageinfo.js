@@ -20,7 +20,7 @@ const pageinfoSchema = new Schema({
     },
     img: {
         type: [String]
-    }, 
+    },
     createAt: {
         type: Date,
         default: Date.now

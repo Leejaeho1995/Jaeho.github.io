@@ -1,0 +1,84 @@
+.cart-list{
+  position: fixed;
+  background:#fff;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  padding-top: 100px 20px;
+  list-style: none;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.25);
+  animation-name:sideIn ;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  font-size: 14px;
+}
+.cart-list li{
+  margin-bottom: 15px;
+  border-bottom: 1px solid dashed #ddd;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-list li img{
+  width: 50%;
+  position: relative;
+}
+header{
+  border-bottom: 1px solid #ddd;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1{
+  font-weight: 700;
+}
+.cart{
+  font-size: 30px;
+  cursor: pointer;
+}
+.cartbox img{
+  width: 80px;
+  float: left;
+}
+.cartbox h5{
+  font-size: 13px;
+  font-weight: bold;
+}
+.cartbox span{
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(147,41,96,0.8);
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  border-radius: 50%;
+  z-index: 2;
+  top: 10px;
+  right: 5 ;
+}
+.btn-button{
+  position: absolute;
+  font-size: 10px;
+  left: 0;
+  top: 0;
+}
+.cart-del{
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+}
+@keyframes sideIn{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 250px;
+  }
+}

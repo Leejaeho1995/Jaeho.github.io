@@ -1,9 +1,9 @@
 import React from 'react'
-import Usememo from './Usememo'
+import Calculator from './component/Calculator'
 const App = () => {
   return (
     <div>
-      <Usememo />
+      <Calculator />
     </div>
   )
 }

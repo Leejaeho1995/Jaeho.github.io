@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="/css/style.css" />
 </head>
-<body class="pageinfo">
+<body class="portfolio">
     <div class="container pagecontainer mt-5">
         <h1 class="text-center">
-                 페이지 정보
+                 포트폴리오 수정
         </h1>
         <form name="form" id="form" 
               method="post" 
-              action="/pageinfo/edit"
+              action="/portfolio/edit"
               enctype="multipart/form-data"
         >
         <!-- loop -->    
@@ -23,23 +23,32 @@
           <li class="list-group-item">
              <div class="row mb-3">
                 <div class="col-6">
-                   <label class="d-block mx-1 my-2">
-                      페이지 제목
-                   </label>          
-                   <select id="pagename" class="form-control" name="pagename">
-                         <option value="">선택하세요.</option>
-                         <option value="meta">SEO 설정</option>
-                         <option value="introdata">MAIN 설정</option>
-                         <option value="portfoliodata">Portfolio설정</option>
-                         <option value="databout" >ABOUT 설정</option>
-                         <option value="services">SERVICES 설정</option>
-                   </select>
+                  <label class="d-block mx-1 my-2">
+                     카테고리
+                  </label>                      
+                     <select class="form-control" id="select-category" name="category">
+                           <option value="">선택하세요.</option>
+                           {% for row in rs %}
+                              <option value="{{row.id}}">{{row.name}}</option>
+                           {% endfor %}
+                     </select>
                 </div>
                 <div class="col-6">
                   <label class="d-block mx-1 my-2">
-                     페이지 타이틀
+                     링크
                   </label>                      
-                  <input type="text" name="title" id="title" class="form-control" value="{{rs.title}}" />
+                     <input type="text" name="link" id="link" class="form-control" value="{{res.link}}">
+                </div>
+               </div>
+               </li>
+
+               <li class="list-group-item">
+                  <div class="row mb-3">        
+                <div class="col-12">
+                  <label class="d-block mx-1 my-2">
+                     포트폴리오제목
+                  </label>                      
+                  <input type="text" name="title" id="title" class="form-control" value="{{res.title}}"/>
                </div>
              </div>
              </li>
@@ -47,29 +56,16 @@
                 <div class="row">
                   <div class="col-12 mt-3">
                      <label class="d-block mx-1 my-2">
-                      페이지 내용
+                      포트폴리오 설명
                      </label>
-                     <textarea rows="5" name="content" id="content" class="form-control" >{{rs.content}}</textarea>
+                     <textarea name="content" 
+                     id="content" 
+                     class="form-control" 
+                     rows="5">{{res.content}}</textarea>
                    </div>
                 </div>
             </li>
-            <li class="list-group-item">
-              <label class="d-block mx-1 my-2">
-                배열 텍스트
-               </label>
-              <div class="row">
-                <div class="col-12 mt-3 d-flex justify-content-end">
-                   <button type="button" class="btn btn-info me-3" id="addInput">폼추가</button>
-                   <button type="button" class="btn btn-danger" id="delInput">폼제거</button> 
-                </div>
-                <div class="col-12 mt-3" id="animated">
-                  {% for row in rs.animated %}
-                    <input type="text" name="animated" value="{{row}}" class="form-control animated mb-3" /> 
-                    {% endfor %}
-                </div>
-              </div>
-            </li>      
-
+           
             <li class="list-group-item">
               <label class="d-block mx-1 my-2">
                 이미지 업로드
@@ -80,21 +76,25 @@
                    <button type="button" class="btn btn-danger" id="delFile">폼제거</button> 
                 </div>
                 <div class="col-12 img mt-3" id="myfiles">
-                  {% for row in rs.orimg %}
-                  <div class="row">
-                     <div class="col-2">{{row}}</div>
-                     <div class="col-3" class="imgtxt">
-                        <label>
-                           <input type="checkbox" value="1" name="imgchk" class="imgchk" />
-                           이미지 업데이트
-                        </label>
-                     </div>
-                     <div class="col-7">
-                    <input type="file" name="img" id="img_{{loop.index}}" class="input_img form-control mb-3" /> 
-                  </div>
+                  {% for img in res.orimg %}
+                    <div class="d-flex align-items-center border-bottom">
+                       <div class="col-2">
+                           <label>
+                              <input type="checkbox" value="ok" name="imgok" class="imgok">
+                              이미지업데이트
+                           </label>
+                       </div>
+                       <div class="col-3">
+                          <p class="imgtxt">{{img}}</p>
+                       </div>
+                       <div class="col-7">
+                           <input type="file" name="img" class="newimg form-control mb-3" /> 
+                       </div>
                     </div>
-                    {% endfor %}
-                </div>
+                  {% endfor %}
+                    
+                
+                  </div>
               </div>
             </li>
         </ul>
@@ -102,42 +102,44 @@
            <button type="reset" id="addFile" class="btn btn-warning mx-4 px-5"> 취소 </button>
            <button type="submit" id="delFile" class="btn btn-success mx-4 px-5"> 전송 </button>
         </div>
-        <input type="hidden" value="{{rs.id}}"/>
         <!-- / loop -->
         </form>
       </div>      
 
 <script>
-   //체크박스와 텍스트, input의 요소를 가져옴
-   const checkboxs = document.querySelector(".imgchk");
-   const imgTexts = document.querySelector(".imgtxt");
-   const imgInputs = document.querySelector(".input_img");
+function selectControl(str) {
+     const el = document.getElementById("select-category");
+     const maxOpt = el.options.length;
+     for(let i = 0; i < maxOpt; i++){
+        if(el.options[i].value == str) {
+           el.options[i].selected = true;
+        }
+     }
+  }
+  selectControl("{{res.category._id}}");
+ 
+   //이미지 삭제 / 보관 이벤트 
+   const checkboxes = document.querySelectorAll(".imgok");
+   const newImgs = document.querySelectorAll(".newimg");
 
-   // checkboxs 이벤트 리스너를 만듬, 여러개 있을 수 있기 때문(배열)에
-   //배열을 이용 (forEach)
-   checkboxs.forEach((checkboxs, index)=>{
-      checkboxs.addEventListener("click",()=>{
-         if(checkbox.checked){
-           imgTexts[index].innerHTML;
-            imgInputs[index].style.display ="blcok";
-         }else{
-            imgInputs[index].style.display ="none"
-         }
+   checkboxes.forEach((checkbox, index)=>{
+       let imgTxt = document.getElementsByClassName("imgtxt")[index];
+       let myTxt = imgTxt.textContent;
+       checkbox.addEventListener("click", ()=>{
+           if(checkbox.checked){
+              imgTxt.textContent = "(삭제)" + myTxt;
+              newImgs[index].style.display = "block";
+           }else{
+              imgTxt.textContent = myTxt;
+              newImgs[index].style.display = "none";          
+           }
+       })
+   });
 
-      })
-   })
 
-   const addForm = (n) => {
-      if(n == 1){
-         const inputList = document.getElementById('animated');
-         const newInput = document.createElement('input');
-         newInput.type='text';
-         newInput.name='animated';
-         newInput.classList.add('animated');
-         newInput.classList.add('form-control');
-         newInput.classList.add('mb-3');
-         inputList.appendChild(newInput);
-      }else{
+
+
+   const addForm = () => {
          const fileList = document.getElementById('myfiles');
          const newFile = document.createElement('input');
          newFile.type='file';
@@ -146,20 +148,9 @@
          newFile.classList.add('form-control');
          newFile.classList.add('mb-3');
          fileList.appendChild(newFile);
-      }
    }
 
-   const delForm = (n) => {
-       if(n == 1) {
-         const delInputs = document.getElementsByClassName('animated');
-         const maxInput = delInputs.length;
-         if(maxInput > 1) {
-            const lastInput = delInputs[maxInput-1];
-            lastInput.parentNode.removeChild(lastInput);
-         }else{
-            alert('더이상 삭제할수 없습니다.');
-         }
-       }else{
+   const delForm = () => {
          const delFiles = document.getElementsByClassName('img');
          const maxInput = delFiles.length;
          if(maxInput > 1) {
@@ -168,32 +159,14 @@
          }else{
             alert('더이상 삭제할수 없습니다.');
          }
-       }
    }
 
-   document.getElementById('addInput').addEventListener('click', ()=>{
-       addForm(1);
-   });  
-   document.getElementById('delInput').addEventListener('click', ()=>{
-       delForm(1);
-   }); 
    document.getElementById('addFile').addEventListener('click', ()=>{
-       addForm(2);
+       addForm();
    });  
    document.getElementById('delFile').addEventListener('click', ()=>{
-       delForm(2);
+       delForm();
    }); 
-
-   function selectControl(str) {
-      const el = document.getElementById("pagename");
-      const maxOpt = el.options.length;
-      for(i=0; i<maxOpt; i++){
-         if(el.options[i].value == str){
-            e.options[i].selected = true;
-         }
-      }
-   }
-   selectControl("{{rs.pagename}}");
 </script>
 
 </body>
